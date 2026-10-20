@@ -8,7 +8,7 @@ atualizado: 2026-10-20
 
 Agora · Próximo · Depois. Cada item aponta para a hipótese ou decisão que o sustenta; item sem hipótese é dívida de produto. Sequência completa e racional em `docs/decisions/004-roadmap.md` do repositório do app.
 
-## Agora (v0.2.x)
+## Agora (v0.2 a v0.4)
 
 | Item | Estado | Sustentação |
 |---|---|---|
@@ -22,23 +22,25 @@ Agora · Próximo · Depois. Cada item aponta para a hipótese ou decisão que o
 | Personas com `@` e handoff pelo agente | em uso (v0.3.0) | [[H03 — Personas com handoff]], D-014 |
 | Painéis Dataview | em uso (v0.3.0) | [[H05 — Painéis Dataview renderizados]], D-015 |
 | Verificação por script após cada rodada | em uso (v0.3.0) | [[H06 — Loop de verificação antes de "terminei"]], D-016 |
+| Aba Time: novidades, propostas do time, rascunhos compartilhados, membros e convites | em teste (v0.4.0) | [[H09 — Novidades do time dentro do app]], D-017 |
+| Avisos de proposta e de comentário (toast, contador, sistema) | em teste (v0.4.0) | [[H09 — Novidades do time dentro do app]], D-018 |
+| Aviso de nova versão do app | em uso (v0.4.0); download automático aguarda assinatura | D-019 |
 
-## Próximo (v0.3 — time)
-
-| Item | Sustentação |
-|---|---|
-| Convidar colega e inbox de propostas (GitHub primeiro) | D-008 |
-| Notificações de proposta e de comentário | dívida (sem hipótese ainda) |
-| Auto-update dos instaladores | dívida |
-
-## Depois (v0.4 — conectar; v0.5 — formatos)
+## Próximo (v0.5 — conectar)
 
 | Item | Sustentação |
 |---|---|
 | Galeria de conectores com OAuth | [[H07 — Galeria de conectores com OAuth]], D-007 |
 | Execuções agendadas como rascunhos | [[H04 — Execuções agendadas que caem como rascunho]] |
+| Sintaxe do Obsidian no modo Rico (callouts, wikilinks, destaques, embeds) | candidato (Feedback de uso) |
+
+## Depois (v0.6 — formatos)
+
+| Item | Sustentação |
+|---|---|
 | XLSX com fórmulas, decks HTML com filmstrip, DOCX/PPTX, embeds | dívida |
 | Web só leitura para revisores | D-009 |
+| Download automático das atualizações (assinatura macOS) | D-019 |
 
 ## O que não vamos fazer agora
 

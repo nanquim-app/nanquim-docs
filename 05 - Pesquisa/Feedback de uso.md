@@ -21,3 +21,7 @@ Uma linha por incômodo ou ideia que apareceu usando o Trunkpad. Triagem semanal
 | 2026-10-20 | assistente | editor rico | Callouts, wikilinks, destaques e embeds do Obsidian aparecem como texto cru no modo Rico (o modo Visualizar renderiza). | novo | candidato a hipótese: plugins do editor para a sintaxe do Obsidian |
 | 2026-10-20 | André | GitHub | Repositório trunkpad-docs criado; espaço publicado. | resolvido | github.com/oandre/trunkpad-docs |
 | 2026-10-20 | assistente | painéis | Os 36 blocos Dataview do product-planning renderizam sem erro na v0.3.0 (15 painéis, 24 linhas nos seis índices testados). | resolvido | H05 em teste |
+| 2026-10-20 | André | roadmap | "Vamos seguir para a v0.4 (time)". | em teste | v0.4.0: aba Time, revisão de proposta no palco, avisos; [[H09 — Novidades do time dentro do app]] |
+| 2026-10-20 | assistente | aba Time | Os caminhos reais do GitHub (colaboradores, aprovar, pedir ajustes, incorporar) não foram exercitados contra a API na sessão da v0.4.0; só a lógica pura tem teste. | novo | validar no primeiro uso com duas pessoas no trunkpad-docs |
+| 2026-10-20 | assistente | versão | Com o repositório do app privado, a verificação de nova versão responde 401 sem token: só quem configurou o token vê a faixa. | novo | tornar o repositório público ou documentar no onboarding |
+

@@ -118,3 +118,25 @@ Log cronológico e cumulativo. Nunca apague: decisão posterior revoga anterior 
 - **Alternativa rejeitada:** auto-revisão por LLM como verificador; bloquear o checkpoint quando falha.
 - **Razão:** script é determinístico e já existe nos espaços (`checar-notas`, `checar-links`); o resultado vira cartão e o assistente ganha uma rodada de correção. O rascunho registra a tentativa mesmo quando falha, para o revisor ver. Hipótese: [[H06 — Loop de verificação antes de "terminei"]].
 - **Quem decidiu:** André ("faz parte do harness"), com o assistente.
+
+### D-017 — O time é o repositório no GitHub; aba Time no app
+
+- **Data:** 2026-10-20
+- **Alternativa rejeitada:** backend próprio para contas, convites e avisos; expor o vocabulário do GitHub (issues, pull requests) na interface.
+- **Razão:** aplica D-008 sem código de servidor: membros são colaboradores, propostas são pull requests, convite é convite do GitHub, e o token que já publica assina revisões e incorporações. A aba Time (`⌘4`) traz tudo em vocabulário de negócio; o link para o github.com fica a um clique. ADR-008 no app. Hipótese: [[H09 — Novidades do time dentro do app]].
+- **Quem decidiu:** André ("Vamos seguir para a v0.4 (time)"), com o assistente.
+
+### D-018 — Avisos por polling a cada dois minutos, com "visto" local por pessoa
+
+- **Data:** 2026-10-20
+- **Alternativa rejeitada:** webhooks (precisam de endereço público); API de notificações do GitHub (mistura tudo que a pessoa acompanha, não só o espaço).
+- **Razão:** com o espaço aberto, o app consulta o GitHub a cada dois minutos e compara com o que esta pessoa viu da última vez (guardado por espaço, fora do repositório). Só o que mudou do outro lado vira aviso: toast, contador e notificação do sistema. A primeira consulta de um espaço só registra a base, sem avisar nada.
+- **Quem decidiu:** assistente, dentro da liberdade dada ("Te libero nas decisões").
+
+### D-019 — Aviso de nova versão pela release do GitHub; download automático só depois da assinatura
+
+- **Data:** 2026-10-20
+- **Alternativa rejeitada:** electron-updater agora.
+- **Razão:** atualização automática exige build assinado (macOS) para funcionar; até os segredos entrarem no repositório, o app só avisa que existe versão mais nova e abre a página da release. Enquanto o repositório for privado, a verificação precisa do token.
+- **Quem decidiu:** assistente, com os segredos pendentes do lado do André (`build/README.md`).
+
