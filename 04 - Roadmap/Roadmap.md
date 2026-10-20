@@ -8,7 +8,7 @@ atualizado: 2026-10-20
 
 Agora · Próximo · Depois. Cada item aponta para a hipótese ou decisão que o sustenta; item sem hipótese é dívida de produto. Sequência completa e racional em `docs/decisions/004-roadmap.md` do repositório do app.
 
-## Agora (v0.2 a v0.6)
+## Agora (v0.2 a v0.7)
 
 | Item | Estado | Sustentação |
 |---|---|---|
@@ -29,14 +29,15 @@ Agora · Próximo · Depois. Cada item aponta para a hipótese ou decisão que o
 | Rotinas com dono, aba Rotinas, rascunho por execução | em teste (v0.5.0) | [[H04 — Execuções agendadas que caem como rascunho]], D-023 |
 | Sintaxe do Obsidian no modo Rico (wikilinks, destaques, marca-texto, embeds) | em teste (v0.6.0) | [[H10 — Sintaxe do Obsidian no modo Rico]], D-024, D-025 |
 | Word e PowerPoint para leitura + cópia editável; apresentações HTML; planilha com fórmulas e gravação no lugar | em teste (v0.6.0) | [[H11 — Formatos de escritório e apresentações dentro do espaço]], D-026, D-027 |
+| Agente edita planilhas (`set_cells`); Word e PowerPoint na revisão; servidores locais preparados pelo app | em teste (v0.7.0) | D-028 a D-030 |
 
-## Próximo (v0.7 — agente e planilhas)
+## Próximo
 
 | Item | Sustentação |
 |---|---|
-| `set_cells` para o agente editar planilhas pelo mesmo gravador | D-027 |
-| Word antes/depois na revisão | ADR-010 (próximo passo) |
-| Servidores locais preparados pelo app (sem pedir instalação) | ADR-009 (próximo passo) |
+| Validação com arquivos reais (planilha de régua, Word com tabelas, conector Postgres preparado pelo app) | H07, H10, H11 — próximas ações |
+| Cabeçalhos no autocompletar `[[` e marcação de slides alterados na revisão | ADR-010 (detalhes) |
+| Rotinas sem o app aberto (GitHub Actions com CLI do Trunkpad) | ADR-009 (rejeitado por ora) |
 
 ## Depois
 

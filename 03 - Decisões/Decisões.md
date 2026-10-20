@@ -196,3 +196,24 @@ Log cronológico e cumulativo. Nunca apague: decisão posterior revoga anterior 
 - **Razão:** "o que você não tocou não muda" vale para planilhas: só os `<c>` editados mudam no XML da aba, o resto do arquivo fica byte-idêntico (teste), e o Excel recalcula ao abrir. Função desconhecida pelo motor fica "calculada ao abrir no Excel" em vez de mostrar número errado. A revisão mostra as células alteradas por aba. Próximo: `set_cells` para o agente pelo mesmo gravador.
 - **Quem decidiu:** assistente, com a crítica de interface.
 
+### D-028 — O agente edita planilhas pelo mesmo gravador e passa pela mesma revisão
+
+- **Data:** 2026-10-20
+- **Alternativa rejeitada:** o agente regravar a planilha inteira (perde estilos e gráficos); passar por CSV (perde fórmulas); caminho de revisão separado para edições do agente.
+- **Razão:** `read_file` devolve a grade com letras e números para o agente endereçar células; `set_cells` aplica valores e fórmulas como a grade faz e grava só as células tocadas (D-027). Pessoa e agente passam pelo mesmo gravador e pelo mesmo diff de células; no nível "Revisar cada alteração" o cartão mostra arquivo, aba e primeiras células. ADR-011 no app. Hipótese: [[H11 — Formatos de escritório e apresentações dentro do espaço]].
+- **Quem decidiu:** assistente, dentro da liberdade dada.
+
+### D-029 — Word e PowerPoint comparam como texto convertido, com antes/depois renderizado para Word
+
+- **Data:** 2026-10-20
+- **Alternativa rejeitada:** manter "compare as versões visualmente" sem nada para ver; diff binário.
+- **Razão:** conversão determinística das duas versões (mammoth; roteiro dos slides) dá Linhas e Lado a lado como qualquer texto; Word ganha Antes / Depois renderizado; o cabeçalho avisa que o texto é convertido e a formatação não aparece.
+- **Quem decidiu:** assistente, dentro da liberdade dada.
+
+### D-030 — Servidores locais preparados pelo app, com o npm embutido e o runtime do próprio app
+
+- **Data:** 2026-10-20
+- **Alternativa rejeitada:** pedir instalação do Node ("peça à engenharia"); instalador próprio de pacotes (resolver dependências é trabalho do npm); embutir os servidores no app (licenças, tamanho, versões).
+- **Razão:** o app leva o npm (fora do asar) e o roda com o próprio Node para instalar o servidor uma vez em pasta própria; depois roda o executável do pacote com o mesmo runtime. A linha mostra Preparar → Preparando… → preparado pelo app. Servidores em Python (uvx) continuam pedindo instalação. Fecha o próximo passo da ADR-009. Hipótese: [[H07 — Galeria de conectores com OAuth]].
+- **Quem decidiu:** assistente, dentro da liberdade dada.
+
