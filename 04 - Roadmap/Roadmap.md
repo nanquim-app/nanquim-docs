@@ -17,6 +17,8 @@ Agora · Próximo · Depois. Cada item aponta para a hipótese ou decisão que o
 | Instaladores macOS e Windows por GitHub Actions | em andamento | pedido do fundador (instalável) |
 | Assinatura e notarização macOS | aguardando segredos no repositório | `build/README.md` do app |
 | Dogfooding neste espaço e no `product-planning` | em andamento | D-010 |
+| Conversas paralelas (cópia por conversa), lista de conversas, Conversa \| Arquivos | em uso (v0.2.1) | [[H08 — Conversas paralelas, cada uma na sua cópia]], D-011, D-012 |
+| Trocar de espaço, clonar do GitHub, espaço de testes | em uso (v0.2.1) | D-013 |
 
 ## Próximo (v0.3 — time)
 

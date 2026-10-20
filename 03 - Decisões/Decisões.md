@@ -76,3 +76,24 @@ Log cronológico e cumulativo. Nunca apague: decisão posterior revoga anterior 
 - **Alternativa rejeitada:** documentar o produto só no repositório do código.
 - **Razão:** usar o Trunkpad para planejar o Trunkpad expõe os incômodos antes dos clientes; tudo vira [[05 - Pesquisa/Feedback de uso|feedback]], hipótese ou decisão aqui.
 - **Quem decidiu:** André, com o assistente.
+
+### D-011 — Cada conversa que escreve trabalha numa cópia própria (git worktree)
+
+- **Data:** 2026-10-20
+- **Alternativa rejeitada:** fila global (uma conversa por vez no diretório principal); copiar o repositório inteiro por conversa; mostrar na aba Arquivos a cópia da conversa selecionada.
+- **Razão:** paralelismo real sem mexer nos arquivos que a pessoa está vendo; worktrees compartilham o histórico, então revisar e incorporar continuam iguais. A pasta e as abas mostram sempre a cópia da pessoa; o trabalho da conversa aparece nos cartões, nos diffs e em Revisar e incorporar. ADR-006 no repositório do app. Hipótese: [[H08 — Conversas paralelas, cada uma na sua cópia]].
+- **Quem decidiu:** André (pedido de 2026-10-20), com o assistente.
+
+### D-012 — Controle Conversa | Arquivos no lugar do botão de palco
+
+- **Data:** 2026-10-20
+- **Alternativa rejeitada:** três posições (conversa, lado a lado, arquivos); manter o palco sempre visível em janelas largas.
+- **Razão:** espelha o controle do app do Claude que o fundador mostrou; duas posições bastam porque em janela larga "Arquivos" já mostra a conversa ao lado. Abrir qualquer coisa muda para Arquivos; fechar a última aba volta para Conversa.
+- **Quem decidiu:** André, com o assistente.
+
+### D-013 — Trocar de espaço pelo nome no topo; uma janela, um espaço
+
+- **Data:** 2026-10-20
+- **Alternativa rejeitada:** várias janelas simultâneas; abas de espaços.
+- **Razão:** igual aos editores que o público já conhece; recentes, abrir pasta e clonar do GitHub cobrem os casos. Várias janelas ficam para quando houver pedido.
+- **Quem decidiu:** André ("queria poder abrir/mudar de repositório"), com o assistente.
