@@ -19,3 +19,5 @@ Uma linha por incômodo ou ideia que apareceu usando o Trunkpad. Triagem semanal
 | 2026-10-20 | André | onboarding | Quer um repositório de teste com todos os tipos de conteúdo. | resolvido | v0.2.1: espaço de testes Café do Vale (`npm run playground`, menu de espaços, tela inicial) |
 | 2026-10-20 | assistente | editor rico | "R$ 1,4 mi … R$ 2,0 mi" virava fórmula matemática (cifrão simples abre math). | resolvido | v0.2.1: math só com `$$…$$`; cifrão simples é texto |
 | 2026-10-20 | assistente | editor rico | Callouts, wikilinks, destaques e embeds do Obsidian aparecem como texto cru no modo Rico (o modo Visualizar renderiza). | novo | candidato a hipótese: plugins do editor para a sintaxe do Obsidian |
+| 2026-10-20 | André | GitHub | Repositório trunkpad-docs criado; espaço publicado. | resolvido | github.com/oandre/trunkpad-docs |
+| 2026-10-20 | assistente | painéis | Os 36 blocos Dataview do product-planning renderizam sem erro na v0.3.0 (15 painéis, 24 linhas nos seis índices testados). | resolvido | H05 em teste |

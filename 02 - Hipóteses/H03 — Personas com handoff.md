@@ -1,16 +1,16 @@
 ---
-status: backlog
+status: em-teste
 area: [agente]
 nivel_evidencia: evidência
 impacto_estimado: "provisório: alcance = notas que mudam de status (todas passam por revisão); efeito sobre 'desfazer' e retrabalho é chute"
-esforço: "2–3 pessoas-semana (assistente): invocar @persona na conversa e nos comentários, handoff com brief, checkpoints atribuídos à persona"
+esforço: "feito em v0.3.0 (1 pessoa-semana, assistente): @persona na caixa e nos comentários, consult_persona para o agente"
 ice_impacto: 5
 ice_confianca: 3
-ice_facilidade: 5
+ice_facilidade: 9
 impacto_real:
 analises: []
 bloqueada_por: []
-proxima_acao: "piloto no product-planning: toda mudança de status passa por @head-of-product; comparar bloqueios achados com a revisão manual"
+proxima_acao: "quatro semanas de uso no product-planning: toda mudança de status passa por @head-of-product; comparar bloqueios achados com a revisão manual"
 tags: [trunkpad/hipotese]
 ---
 

@@ -97,3 +97,24 @@ Log cronológico e cumulativo. Nunca apague: decisão posterior revoga anterior 
 - **Alternativa rejeitada:** várias janelas simultâneas; abas de espaços.
 - **Razão:** igual aos editores que o público já conhece; recentes, abrir pasta e clonar do GitHub cobrem os casos. Várias janelas ficam para quando houver pedido.
 - **Quem decidiu:** André ("queria poder abrir/mudar de repositório"), com o assistente.
+
+### D-014 — Personas no formato do Claude Code, com handoff pelo próprio agente
+
+- **Data:** 2026-10-20
+- **Alternativa rejeitada:** personas configuradas no app; personas como conversas separadas.
+- **Razão:** o formato `.claude/agents/<id>.md` já existe no product-planning e é lido pelo Claude Code; `@id` na caixa de texto ou num comentário chama a persona; o agente executor consulta o revisor certo (`consult_persona`) antes de dizer que terminou. Persona sem permissão de edição roda só leitura. ADR-007 no app. Hipótese: [[H03 — Personas com handoff]].
+- **Quem decidiu:** André ("gosto da ideia e handoffs"), com o assistente.
+
+### D-015 — Dataview renderizado ao vivo, subconjunto, só leitura
+
+- **Data:** 2026-10-20
+- **Alternativa rejeitada:** gerar os índices por script; embutir o plugin do Obsidian.
+- **Razão:** os 36 blocos do product-planning usam um subconjunto pequeno (TABLE WITHOUT ID, WHERE com startswith/contains/list, SORT, default e aritmética); um motor próprio cobre tudo isso e mostra o erro quando não cobre. Hipótese: [[H05 — Painéis Dataview renderizados]].
+- **Quem decidiu:** André ("podemos avançar"), com o assistente.
+
+### D-016 — Verificação por script depois de cada rodada que escreve
+
+- **Data:** 2026-10-20
+- **Alternativa rejeitada:** auto-revisão por LLM como verificador; bloquear o checkpoint quando falha.
+- **Razão:** script é determinístico e já existe nos espaços (`checar-notas`, `checar-links`); o resultado vira cartão e o assistente ganha uma rodada de correção. O rascunho registra a tentativa mesmo quando falha, para o revisor ver. Hipótese: [[H06 — Loop de verificação antes de "terminei"]].
+- **Quem decidiu:** André ("faz parte do harness"), com o assistente.

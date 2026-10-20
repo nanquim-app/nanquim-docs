@@ -14,6 +14,7 @@
     "title": "Checar notas",
     "description": "Valida o front matter das hipóteses (campos obrigatórios, ICE justificado) e a numeração das decisões. Sai com erro se houver problema.",
     "command": "node scripts/checar-notas.mjs",
-    "timeoutMs": 20000
+    "timeoutMs": 20000,
+    "verify": true
   }
 ]

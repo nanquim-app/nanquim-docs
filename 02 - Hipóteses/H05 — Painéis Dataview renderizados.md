@@ -1,16 +1,16 @@
 ---
-status: backlog
+status: em-teste
 area: [editor]
 nivel_evidencia: dados
 impacto_estimado: "provisório: alcance = vaults do Obsidian com índices em Dataview (o product-planning tem ao menos cinco); efeito é retirar o último motivo de abrir o Obsidian, chute"
-esforço: "2–3 pessoas-semana (assistente): TABLE e LIST sobre front matter, só leitura, subconjunto de funções"
+esforço: "feito em v0.3.0 (1 pessoa-semana, assistente): TABLE/LIST, FROM, WHERE, SORT, LIMIT, inlinks; sem FLATTEN e GROUP BY"
 ice_impacto: 5
 ice_confianca: 5
-ice_facilidade: 5
+ice_facilidade: 9
 impacto_real:
 analises: []
 bloqueada_por: []
-proxima_acao: "inventariar as queries dos índices do product-planning e listar as funções Dataview necessárias"
+proxima_acao: "duas semanas sem abrir o Obsidian; registrar em Feedback de uso qualquer painel que renderize diferente"
 tags: [trunkpad/hipotese]
 ---
 

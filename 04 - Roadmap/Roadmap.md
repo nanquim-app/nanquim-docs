@@ -19,12 +19,14 @@ Agora · Próximo · Depois. Cada item aponta para a hipótese ou decisão que o
 | Dogfooding neste espaço e no `product-planning` | em andamento | D-010 |
 | Conversas paralelas (cópia por conversa), lista de conversas, Conversa \| Arquivos | em uso (v0.2.1) | [[H08 — Conversas paralelas, cada uma na sua cópia]], D-011, D-012 |
 | Trocar de espaço, clonar do GitHub, espaço de testes | em uso (v0.2.1) | D-013 |
+| Personas com `@` e handoff pelo agente | em uso (v0.3.0) | [[H03 — Personas com handoff]], D-014 |
+| Painéis Dataview | em uso (v0.3.0) | [[H05 — Painéis Dataview renderizados]], D-015 |
+| Verificação por script após cada rodada | em uso (v0.3.0) | [[H06 — Loop de verificação antes de "terminei"]], D-016 |
 
 ## Próximo (v0.3 — time)
 
 | Item | Sustentação |
 |---|---|
-| Personas com `@` e handoffs | [[H03 — Personas com handoff]], D-006 |
 | Convidar colega e inbox de propostas (GitHub primeiro) | D-008 |
 | Notificações de proposta e de comentário | dívida (sem hipótese ainda) |
 | Auto-update dos instaladores | dívida |
@@ -34,9 +36,7 @@ Agora · Próximo · Depois. Cada item aponta para a hipótese ou decisão que o
 | Item | Sustentação |
 |---|---|
 | Galeria de conectores com OAuth | [[H07 — Galeria de conectores com OAuth]], D-007 |
-| Painéis Dataview | [[H05 — Painéis Dataview renderizados]] |
 | Execuções agendadas como rascunhos | [[H04 — Execuções agendadas que caem como rascunho]] |
-| Loop de verificação | [[H06 — Loop de verificação antes de "terminei"]] |
 | XLSX com fórmulas, decks HTML com filmstrip, DOCX/PPTX, embeds | dívida |
 | Web só leitura para revisores | D-009 |
 
