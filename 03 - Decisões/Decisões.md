@@ -140,3 +140,31 @@ Log cronológico e cumulativo. Nunca apague: decisão posterior revoga anterior 
 - **Razão:** atualização automática exige build assinado (macOS) para funcionar; até os segredos entrarem no repositório, o app só avisa que existe versão mais nova e abre a página da release. Enquanto o repositório for privado, a verificação precisa do token.
 - **Quem decidiu:** assistente, com os segredos pendentes do lado do André (`build/README.md`).
 
+### D-020 — Catálogo curado de conectores, não registro ao vivo nem só hospedados
+
+- **Data:** 2026-10-20
+- **Alternativa rejeitada:** buscar o registro público de servidores MCP (milhares de entradas de desenvolvedor, código arbitrário no computador); só servidores hospedados com OAuth (perde Postgres e as fontes dos repositórios irmãos).
+- **Razão:** o catálogo cobre as fontes dos perfis reais sem abrir a porta a servidores desconhecidos; a ordem é entrar com a conta → chave → roda no computador; "Avançado: outro conector…" é o único lugar com endereço ou comando. ADR-009 no app. Hipótese: [[H07 — Galeria de conectores com OAuth]].
+- **Quem decidiu:** assistente, com a crítica de interface; dentro da liberdade dada.
+
+### D-021 — Lista do time, credencial da pessoa
+
+- **Data:** 2026-10-20
+- **Alternativa rejeitada:** segredos no `connectors.json`; conectores configurados só no app de cada pessoa.
+- **Razão:** `.trunkpad/connectors.json` (versionado, sem segredos) diz quais fontes o espaço usa e o que o time permite; chaves e tokens OAuth ficam no chaveiro de cada pessoa (`connector:<id>`). A linha mostra as duas camadas; "Ligado para mim" fica fora do repositório.
+- **Quem decidiu:** assistente, com a crítica de interface.
+
+### D-022 — Ler é livre, alterar pede: acesso por conector em vez de política de aprovação
+
+- **Data:** 2026-10-20
+- **Alternativa rejeitada:** política por conector com quatro estados (segue o nível / sempre perguntar / nunca perguntar / desligado) — duplica o dial de confiança e mistura decisão do time com a da pessoa.
+- **Razão:** o time decide `access: read | read-write` (padrão read); as ferramentas do conector são classificadas em ler/alterar (anotação do servidor, senão o verbo do nome). Ler funciona em qualquer nível, inclusive Somente leitura; alterar só existe com "Lê e altera", acima de Somente leitura, e sempre pede aprovação, porque mudança em sistema externo não entra no rascunho nem no desfazer.
+- **Quem decidiu:** assistente, com a crítica de interface.
+
+### D-023 — Rotina tem dono e roda só no computador dele; aba Rotinas no palco
+
+- **Data:** 2026-10-20
+- **Alternativa rejeitada:** toda instância aberta roda toda rotina (N rascunhos iguais na segunda às 9h); seção no navegador (navegação, não ações); só em Configurações (estado escondido); "a cada N horas".
+- **Razão:** sem servidor (D-009) a única forma de uma rotina rodar uma vez é ter um dono; os outros veem e podem assumir. A aba Rotinas reusa cartão, segmentado, atalho (`⌘5`) e contador das abas Rascunhos e Time; cada cartão tem um botão de próximo passo (Revisar / Executar agora / Trabalhando…). Execução nunca pede aprovação; o que pediria é negado. Hipótese: [[H04 — Execuções agendadas que caem como rascunho]].
+- **Quem decidiu:** assistente, com a crítica de interface.
+

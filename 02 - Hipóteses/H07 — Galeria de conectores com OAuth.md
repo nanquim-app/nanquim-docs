@@ -1,16 +1,16 @@
 ---
-status: backlog
+status: em-teste
 area: [agente, time]
 nivel_evidencia: evidência
 impacto_estimado: "provisório: alcance = espaços que precisam de dado externo (Metabase, Postgres, Drive, Slack); efeito sobre ativação, chute"
-esforço: "4–6 pessoas-semana (assistente): galeria, OAuth no app, política por espaço (permitir, perguntar, bloquear), conectores compartilhados pelo repositório"
+esforço: "feito em v0.5.0 (3 pessoas-semana, assistente): catálogo curado, OAuth no navegador, acesso Lê / Lê e altera por conector, chave no chaveiro de cada pessoa"
 ice_impacto: 5
 ice_confianca: 3
-ice_facilidade: 3
+ice_facilidade: 9
 impacto_real:
 analises: []
 bloqueada_por: []
-proxima_acao: "listar os servidores MCP oficiais ou mantidos que cobrem as fontes do product-planning (Metabase, Postgres, Customer.io) e testar cada um pelo connectors.json atual"
+proxima_acao: "uma pessoa não técnica conecta o Postgres (ou o Notion) pela galeria no product-planning e roda uma pergunta com dado real; cronometrar e anotar em Feedback de uso"
 tags: [trunkpad/hipotese]
 ---
 
@@ -32,3 +32,10 @@ Ativação e uso por perfis não técnicos ([[01 - Base/Usuários|Usuários]]). 
 
 - Confirma: uma pessoa não técnica conecta o Metabase e roda uma pergunta com dado real em menos de dez minutos, sem ajuda.
 - Refuta: os servidores disponíveis não cobrem as fontes que importam, ou OAuth no desktop se mostra frágil; nesse caso, priorizar scripts permitidos com interface.
+
+## Estado em v0.5.0
+
+- Galeria em Configurações → Conectores com catálogo curado (Notion, Linear, Jira/Confluence, HubSpot, Intercom, Asana entrando com a conta; GitHub e Zapier com chave; Slack, Postgres, busca e páginas da web no computador). ADR-009 no app; decisões D-020 a D-022.
+- Metabase e Customer.io não têm servidor MCP do fornecedor: continuam pelos repositórios irmãos (`mecani-metabase`, `mecani-cio`) ou por "Avançado: outro conector…" quando existir um servidor.
+- Não exercitado ao vivo: OAuth real e servidor hospedado real (sem conta de fornecedor na sessão). O primeiro uso é o teste.
+

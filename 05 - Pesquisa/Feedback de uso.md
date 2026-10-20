@@ -24,4 +24,9 @@ Uma linha por incômodo ou ideia que apareceu usando o Trunkpad. Triagem semanal
 | 2026-10-20 | André | roadmap | "Vamos seguir para a v0.4 (time)". | em teste | v0.4.0: aba Time, revisão de proposta no palco, avisos; [[H09 — Novidades do time dentro do app]] |
 | 2026-10-20 | assistente | aba Time | Os caminhos reais do GitHub (colaboradores, aprovar, pedir ajustes, incorporar) não foram exercitados contra a API na sessão da v0.4.0; só a lógica pura tem teste. | novo | validar no primeiro uso com duas pessoas no trunkpad-docs |
 | 2026-10-20 | assistente | versão | Com o repositório do app privado, a verificação de nova versão responde 401 sem token: só quem configurou o token vê a faixa. | novo | tornar o repositório público ou documentar no onboarding |
+| 2026-10-20 | André | roadmap | "Vamos seguir para a v0.5 (conectar)". | em teste | v0.5.0: galeria de conectores e rotinas; [[H07 — Galeria de conectores com OAuth]], [[H04 — Execuções agendadas que caem como rascunho]] |
+| 2026-10-20 | crítica de interface | conectores | Política de quatro estados duplicava o dial; cartão de aprovação mostrava JSON cru; conectores desligados em Somente leitura. | resolvido | v0.5.0: acesso Lê / Lê e altera, cartão humano, leitura livre (D-022) |
+| 2026-10-20 | crítica de interface | rotinas | schedules.json compartilhado rodaria em todo app aberto (N rascunhos iguais). | resolvido | v0.5.0: rotina com dono e "Assumir" (D-023) |
+| 2026-10-20 | assistente | conectores | OAuth real e servidor hospedado real não exercitados na sessão da v0.5.0; servidores locais pedem Node/uv instalados. | novo | primeiro uso no product-planning (Postgres ou Notion); preparar servidores pelo app no próximo ciclo |
+| 2026-10-20 | assistente | conectores | Metabase e Customer.io não têm servidor MCP do fornecedor; seguem por repositório irmão. | novo | reavaliar quando houver servidor; candidato a "Avançado" |
 

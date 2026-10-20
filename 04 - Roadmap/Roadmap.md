@@ -8,7 +8,7 @@ atualizado: 2026-10-20
 
 Agora · Próximo · Depois. Cada item aponta para a hipótese ou decisão que o sustenta; item sem hipótese é dívida de produto. Sequência completa e racional em `docs/decisions/004-roadmap.md` do repositório do app.
 
-## Agora (v0.2 a v0.4)
+## Agora (v0.2 a v0.5)
 
 | Item | Estado | Sustentação |
 |---|---|---|
@@ -25,22 +25,24 @@ Agora · Próximo · Depois. Cada item aponta para a hipótese ou decisão que o
 | Aba Time: novidades, propostas do time, rascunhos compartilhados, membros e convites | em teste (v0.4.0) | [[H09 — Novidades do time dentro do app]], D-017 |
 | Avisos de proposta e de comentário (toast, contador, sistema) | em teste (v0.4.0) | [[H09 — Novidades do time dentro do app]], D-018 |
 | Aviso de nova versão do app | em uso (v0.4.0); download automático aguarda assinatura | D-019 |
+| Galeria de conectores (catálogo, OAuth, Lê / Lê e altera) | em teste (v0.5.0) | [[H07 — Galeria de conectores com OAuth]], D-020 a D-022 |
+| Rotinas com dono, aba Rotinas, rascunho por execução | em teste (v0.5.0) | [[H04 — Execuções agendadas que caem como rascunho]], D-023 |
 
-## Próximo (v0.5 — conectar)
+## Próximo (v0.6 — formatos e editor)
 
 | Item | Sustentação |
 |---|---|
-| Galeria de conectores com OAuth | [[H07 — Galeria de conectores com OAuth]], D-007 |
-| Execuções agendadas como rascunhos | [[H04 — Execuções agendadas que caem como rascunho]] |
 | Sintaxe do Obsidian no modo Rico (callouts, wikilinks, destaques, embeds) | candidato (Feedback de uso) |
+| Servidores locais preparados pelo app (sem pedir instalação) | ADR-009 (próximo passo) |
+| XLSX com fórmulas, decks HTML com filmstrip, DOCX/PPTX, embeds | dívida |
 
-## Depois (v0.6 — formatos)
+## Depois
 
 | Item | Sustentação |
 |---|---|
-| XLSX com fórmulas, decks HTML com filmstrip, DOCX/PPTX, embeds | dívida |
 | Web só leitura para revisores | D-009 |
 | Download automático das atualizações (assinatura macOS) | D-019 |
+| Rotinas sem o app aberto (GitHub Actions com CLI do Trunkpad) | ADR-009 (rejeitado por ora) |
 
 ## O que não vamos fazer agora
 
