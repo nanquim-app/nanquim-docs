@@ -17,3 +17,5 @@ Uma linha por incômodo ou ideia que apareceu usando o Trunkpad. Triagem semanal
 | 2026-10-20 | André | título | Quer abrir e trocar de repositório sem sair do app. | resolvido | v0.2.1: menu de espaços (recentes, abrir, clonar, exemplo, testes), D-013 |
 | 2026-10-20 | André | conversa | Vários chats em paralelo dentro do repositório, visão arquivo/conversa como no app do Claude. | em teste | v0.2.1: worktree por conversa, lista de conversas, Conversa \| Arquivos; [[H08 — Conversas paralelas, cada uma na sua cópia]] |
 | 2026-10-20 | André | onboarding | Quer um repositório de teste com todos os tipos de conteúdo. | resolvido | v0.2.1: espaço de testes Café do Vale (`npm run playground`, menu de espaços, tela inicial) |
+| 2026-10-20 | assistente | editor rico | "R$ 1,4 mi … R$ 2,0 mi" virava fórmula matemática (cifrão simples abre math). | resolvido | v0.2.1: math só com `$$…$$`; cifrão simples é texto |
+| 2026-10-20 | assistente | editor rico | Callouts, wikilinks, destaques e embeds do Obsidian aparecem como texto cru no modo Rico (o modo Visualizar renderiza). | novo | candidato a hipótese: plugins do editor para a sintaxe do Obsidian |
