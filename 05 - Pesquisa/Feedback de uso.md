@@ -29,4 +29,8 @@ Uma linha por incômodo ou ideia que apareceu usando o Trunkpad. Triagem semanal
 | 2026-10-20 | crítica de interface | rotinas | schedules.json compartilhado rodaria em todo app aberto (N rascunhos iguais). | resolvido | v0.5.0: rotina com dono e "Assumir" (D-023) |
 | 2026-10-20 | assistente | conectores | OAuth real e servidor hospedado real não exercitados na sessão da v0.5.0; servidores locais pedem Node/uv instalados. | novo | primeiro uso no product-planning (Postgres ou Notion); preparar servidores pelo app no próximo ciclo |
 | 2026-10-20 | assistente | conectores | Metabase e Customer.io não têm servidor MCP do fornecedor; seguem por repositório irmão. | novo | reavaliar quando houver servidor; candidato a "Avançado" |
+| 2026-10-20 | André | roadmap | "Vamos seguir para a v0.6 (formatos e editor)". | em teste | v0.6.0; [[H10 — Sintaxe do Obsidian no modo Rico]], [[H11 — Formatos de escritório e apresentações dentro do espaço]] |
+| 2026-10-20 | crítica de interface | editor rico | Parágrafo editado com `[[Nota]]` era salvo como `\[\[Nota]]`; `[[Glossário]]` abria a primeira das três notas com esse nome. | resolvido | v0.6.0: `unescapeObsidian` ao salvar; resolução por pasta e popover com candidatos (D-024, D-025) |
+| 2026-10-20 | crítica de interface | planilhas | Regravar o XLSX pela biblioteca perderia estilos, gráficos e validações. | resolvido | v0.6.0: gravação no lugar só das células editadas, com teste de bytes (D-027) |
+| 2026-10-20 | assistente | formatos | Word real com tabelas/imagens, planilha com gráficos e deck com reveal.js não foram exercitados na sessão. | novo | validar com arquivos reais do product-planning e de um e-mail de verdade |
 

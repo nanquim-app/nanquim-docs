@@ -8,7 +8,7 @@ atualizado: 2026-10-20
 
 Agora · Próximo · Depois. Cada item aponta para a hipótese ou decisão que o sustenta; item sem hipótese é dívida de produto. Sequência completa e racional em `docs/decisions/004-roadmap.md` do repositório do app.
 
-## Agora (v0.2 a v0.5)
+## Agora (v0.2 a v0.6)
 
 | Item | Estado | Sustentação |
 |---|---|---|
@@ -27,14 +27,16 @@ Agora · Próximo · Depois. Cada item aponta para a hipótese ou decisão que o
 | Aviso de nova versão do app | em uso (v0.4.0); download automático aguarda assinatura | D-019 |
 | Galeria de conectores (catálogo, OAuth, Lê / Lê e altera) | em teste (v0.5.0) | [[H07 — Galeria de conectores com OAuth]], D-020 a D-022 |
 | Rotinas com dono, aba Rotinas, rascunho por execução | em teste (v0.5.0) | [[H04 — Execuções agendadas que caem como rascunho]], D-023 |
+| Sintaxe do Obsidian no modo Rico (wikilinks, destaques, marca-texto, embeds) | em teste (v0.6.0) | [[H10 — Sintaxe do Obsidian no modo Rico]], D-024, D-025 |
+| Word e PowerPoint para leitura + cópia editável; apresentações HTML; planilha com fórmulas e gravação no lugar | em teste (v0.6.0) | [[H11 — Formatos de escritório e apresentações dentro do espaço]], D-026, D-027 |
 
-## Próximo (v0.6 — formatos e editor)
+## Próximo (v0.7 — agente e planilhas)
 
 | Item | Sustentação |
 |---|---|
-| Sintaxe do Obsidian no modo Rico (callouts, wikilinks, destaques, embeds) | candidato (Feedback de uso) |
+| `set_cells` para o agente editar planilhas pelo mesmo gravador | D-027 |
+| Word antes/depois na revisão | ADR-010 (próximo passo) |
 | Servidores locais preparados pelo app (sem pedir instalação) | ADR-009 (próximo passo) |
-| XLSX com fórmulas, decks HTML com filmstrip, DOCX/PPTX, embeds | dívida |
 
 ## Depois
 

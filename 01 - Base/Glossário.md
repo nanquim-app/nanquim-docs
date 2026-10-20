@@ -27,3 +27,12 @@ Vocabulário da interface e o que ele é por baixo. Novo termo de interface entr
 | **Playbook** | `SKILL.md` em `.trunkpad/playbooks/` ou `.claude/skills/` | Aparece com `/` na caixa de texto |
 | **Script permitido** | entrada em `.trunkpad/scripts.json` | Única forma de o agente executar algo |
 | **Conector** | servidor MCP em `.trunkpad/connectors.json` | Ferramentas externas para o agente |
+
+## Termos do editor (v0.6)
+
+- **Destaque** — bloco de nota com ícone e título (callout do Obsidian, `> [!tipo]`). Tipos: Nota, Dica, Atenção, Informação, Citação, Perigo.
+- **Marca-texto** — trecho realçado (`==texto==`).
+- **Trecho de outra nota** — embed (`![[nota]]`, `![[nota#seção]]`), mostrado como bloco só-leitura.
+- **Cópia editável** — o `.md` criado ao lado de um Word ou PowerPoint, com `origem:` no front matter; o original fica como está.
+- **Apresentação** — página HTML com uma `<section>` por slide, aberta com miniaturas e *Apresentar*.
+

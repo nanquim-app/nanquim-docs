@@ -168,3 +168,31 @@ Log cronológico e cumulativo. Nunca apague: decisão posterior revoga anterior 
 - **Razão:** sem servidor (D-009) a única forma de uma rotina rodar uma vez é ter um dono; os outros veem e podem assumir. A aba Rotinas reusa cartão, segmentado, atalho (`⌘5`) e contador das abas Rascunhos e Time; cada cartão tem um botão de próximo passo (Revisar / Executar agora / Trabalhando…). Execução nunca pede aprovação; o que pediria é negado. Hipótese: [[H04 — Execuções agendadas que caem como rascunho]].
 - **Quem decidiu:** assistente, com a crítica de interface.
 
+### D-024 — Sintaxe do Obsidian no modo Rico por decorações, não por nós nativos
+
+- **Data:** 2026-10-20
+- **Alternativa rejeitada:** nós e marcas nativos no Milkdown (cada variante precisa do próprio serializador e de prova no corpus); Live Preview em CodeMirror no lugar do editor (perde barra de ferramentas, menu `/`, edição com IA e âncoras de comentário).
+- **Razão:** o texto fica como está e as decorações desenham wikilinks, destaques, marca-textos e embeds; o round-trip do vault continua byte-idêntico. O bug real estava ao salvar: o serializador escapava `[` em parágrafos editados; `unescapeObsidian` corrige isso antes do salvamento que preserva blocos. Hipótese: [[H10 — Sintaxe do Obsidian no modo Rico]].
+- **Quem decidiu:** assistente, com a crítica de interface (que pediu nós nativos; a decisão manteve decorações porque a correção do escape resolve o bloqueio apontado sem o custo dos serializadores).
+
+### D-025 — Links resolvem como no Obsidian; clique abre popover, ⌘-clique abre direto
+
+- **Data:** 2026-10-20
+- **Alternativa rejeitada:** abrir a primeira nota com o nome (três `Glossário.md` no product-planning); navegar no clique simples (troca de aba ao posicionar o cursor).
+- **Razão:** caminho explícito → mesma pasta → nome único → lista quando ambíguo; `[[` insere o nome quando único e o caminho quando se repete (regra do próprio product-planning: "linke com caminho"). Vocabulário: destaque (callout), marca-texto (`==`), trecho de outra nota (embed); modo *Texto*.
+- **Quem decidiu:** assistente, com a crítica de interface.
+
+### D-026 — Word e PowerPoint abrem para leitura; cópia editável explícita, nunca automática
+
+- **Data:** 2026-10-20
+- **Alternativa rejeitada:** converter ao abrir (arquivos que a pessoa não pediu, duas fontes da verdade); só o assistente lê (o Revisor aprovaria o que não vê); rotular "somente leitura" (o cadeado já significa "o assistente está editando").
+- **Razão:** um botão de próximo passo no cabeçalho, *Criar cópia editável*, grava `Nome.md` com `origem:`; com a cópia existente, o botão a abre. PowerPoint é roteiro de texto, não slide falso. O assistente lê os três formatos como texto. Hipótese: [[H11 — Formatos de escritório e apresentações dentro do espaço]].
+- **Quem decidiu:** assistente, com a crítica de interface.
+
+### D-027 — Planilha edita só com gravação no lugar e diff de células
+
+- **Data:** 2026-10-20
+- **Alternativa rejeitada:** regravar o arquivo com a biblioteca (perde estilos, gráficos, validações e imagens); edição sem revisão célula a célula.
+- **Razão:** "o que você não tocou não muda" vale para planilhas: só os `<c>` editados mudam no XML da aba, o resto do arquivo fica byte-idêntico (teste), e o Excel recalcula ao abrir. Função desconhecida pelo motor fica "calculada ao abrir no Excel" em vez de mostrar número errado. A revisão mostra as células alteradas por aba. Próximo: `set_cells` para o agente pelo mesmo gravador.
+- **Quem decidiu:** assistente, com a crítica de interface.
+
