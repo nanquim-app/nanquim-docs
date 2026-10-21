@@ -8,7 +8,7 @@ atualizado: 2026-10-21
 
 Agora · Próximo · Depois. Cada item aponta para a hipótese ou decisão que o sustenta; item sem hipótese é dívida de produto. Sequência completa e racional em `docs/decisions/004-roadmap.md` do repositório do app.
 
-## Agora (v0.2 a v0.8)
+## Agora (v0.2 a v0.9)
 
 | Item | Estado | Sustentação |
 |---|---|---|
@@ -31,6 +31,7 @@ Agora · Próximo · Depois. Cada item aponta para a hipótese ou decisão que o
 | Word e PowerPoint para leitura + cópia editável; apresentações HTML; planilha com fórmulas e gravação no lugar | em teste (v0.6.0) | [[H11 — Formatos de escritório e apresentações dentro do espaço]], D-026, D-027 |
 | Agente edita planilhas (`set_cells`); Word e PowerPoint na revisão; servidores locais preparados pelo app | em teste (v0.7.0) | D-028 a D-030 |
 | Um caminho só para conectores (pacotes mantidos, versão fixa, preparar sempre, Páginas da web embutido); cabeçalhos no `[[`; preço ao lado do modelo | em teste (v0.8.0) | D-031 a D-033 |
+| Propriedades acima da nota; células de propriedade editáveis nos painéis; nova nota a partir de modelo de nota | em teste (v0.9.0) | D-034 a D-036 |
 
 ## Próximo
 

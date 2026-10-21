@@ -237,3 +237,24 @@ Log cronológico e cumulativo. Nunca apague: decisão posterior revoga anterior 
 - **Alternativa rejeitada:** seção "Modelos e preços" com a tabela inteira (ruído para quem usa um modelo); custo por rascunho e orçamento mensal agora (sem uso real para olhar); `policy.json` novo quando `config.json` já guarda a única regra do espaço.
 - **Razão:** o custo mostrado na conversa vinha de uma tabela fixa no código, sem data nem fonte. Configurações → IA mostra, sob o modelo, o preço de lista por milhão de tokens, a data em que a tabela foi conferida e o link para a página do provedor, e deixa corrigir (fica nas configurações, marcado "corrigido por você"). O rodapé diz "Custo estimado" no formato do idioma. Slides na revisão, custo por rascunho e regras do espaço (dentro do `config.json`, absorvendo "Exigir rascunhos") entram quando houver uso para sustentar.
 - **Quem decidiu:** assistente, pela recomendação da crítica de interface.
+
+### D-034 — Propriedades da nota num bloco editável acima do texto, gravadas linha a linha
+
+- **Data:** 2026-10-21
+- **Alternativa rejeitada:** painel lateral de propriedades (o Obsidian tem, mas o bloco fica onde a pessoa já olha); registro de tipos do espaço agora (`.obsidian/types.json` não existe no vault; honrar quando aparecer); conversão silenciosa para kebab-case.
+- **Razão:** no `product-planning` o estado de tudo vive no front matter (47 `status`, 18 hipóteses com os 17 campos do template) e o CLAUDE.md do vault diz que o estado muda pelo `status:`; no Trunkpad o front matter ficava escondido no Rico. O bloco mostra uma linha por propriedade, com tipo inferido do valor (texto, número, data, caixa, link, lista em fichas), sugestões dos valores que o espaço já usa (só os que se repetem ou são curtos; *Criar "x"* antes de gravar; kebab-case só quando todos os valores da chave são kebab), *Adicionar propriedade* e `⌘;`. A gravação muda só as linhas daquela propriedade (ordem, comentários e aspas preservados); teste contra o vault real: regravar cada propriedade de cada nota com o próprio valor devolve as 91 notas idênticas. Recolhido mostra um resumo; estado lembrado por espaço. ADR-013 no app. Hipótese: [[H10 — Sintaxe do Obsidian no modo Rico]].
+- **Quem decidiu:** assistente, com os ajustes da crítica de interface (hierarquia: recolhido por padrão acima de seis propriedades; texto longo em campo que cresce; links dentro de listas; teclado).
+
+### D-035 — Células de propriedade nos painéis editam no lugar e gravam na nota
+
+- **Data:** 2026-10-21
+- **Alternativa rejeitada:** ordenação por cabeçalho (a consulta já ordena e a ordem não iria para o arquivo); edição em massa (nem o Bases do Obsidian tem); gravar direto no disco uma nota aberta em outra aba (perderia uma das duas edições).
+- **Razão:** os painéis reais do vault carregam `status`, `proxima_acao`, `bloqueada_por` e os campos do backlog; triagem de status e próxima ação vira um clique na tabela. Coluna calculada (ICE) e `file.*` ficam só leitura; repontuar ICE acontece na nota. Nota aberta grava pela aba (autosave); nota fechada é lida, corrigida e gravada com o mtime lido; o índice reflete na hora; linhas não se movem enquanto a célula está em edição e, se a nota sair do painel, um aviso oferece Desfazer. ADR-013. Hipótese: [[H05 — Painéis Dataview renderizados]].
+- **Quem decidiu:** assistente, pela crítica de interface (escopo reduzido ao que os painéis sustentam).
+
+### D-036 — Nova nota a partir de modelo de nota, lendo a convenção do Obsidian
+
+- **Data:** 2026-10-21
+- **Alternativa rejeitada:** pasta nova `.trunkpad/templates/` (Princípio 9: convenções existentes são lidas, não reinventadas); criar na raiz (hipótese fora da pasta não aparece em painel nenhum); o app "saber" o que é hipótese (deriva da numeração das notas vizinhas).
+- **Razão:** modelos vêm de `.obsidian/templates.json` ou das pastas Templates/Modelos (as cópias iguais por contexto viram uma entrada); o menu `+` e a paleta os listam como "A partir de um modelo de nota" ("modelo" sozinho é o modelo de IA na interface); a nota nasce na pasta da nota lida, com o próximo número livre do espaço quando as vizinhas são numeradas (`H15 — `, editável), com `{{date}}`, `{{time}}` e `{{title}}` preenchidos nos formatos do Obsidian, e abre no Rico com as propriedades à mostra e o cursor no texto. As dicas `<!-- -->` dos modelos aparecem em cinza no Rico sem mudar bytes. ADR-013.
+- **Quem decidiu:** assistente, com os ajustes da crítica de interface.

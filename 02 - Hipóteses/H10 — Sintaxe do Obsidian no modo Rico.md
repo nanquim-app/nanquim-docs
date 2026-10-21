@@ -40,3 +40,7 @@ Métricas de suporte *Rodadas revisadas* e *Ativação* para o perfil Analista/P
 ## Estado em v0.8.0
 
 - `[[Nota#` lista os cabeçalhos da nota (pelo caminho; com nome repetido, escolhe-se a nota antes), `[[#` os da nota aberta, `![[` oferece imagens; Enter numa nota fecha o link como antes. Corrigida a primeira lista vazia depois de `[[`. ADR-012; decisão D-032. Cobre o "cabeçalhos no autocompletar" que a validação pedia.
+
+## Estado em v0.9.0
+
+- Propriedades (front matter) num bloco editável acima do texto, com sugestões do espaço e gravação linha a linha; `⌘;`. Fecha o item "o front matter não aparece no Rico" que a validação apontaria primeiro. ADR-013; decisão D-034.

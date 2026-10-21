@@ -36,6 +36,12 @@ Vocabulário da interface e o que ele é por baixo. Novo termo de interface entr
 - **Cópia editável** — o `.md` criado ao lado de um Word ou PowerPoint, com `origem:` no front matter; o original fica como está.
 - **Apresentação** — página HTML com uma `<section>` por slide, aberta com miniaturas e *Apresentar*.
 
+## Termos de notas (v0.9)
+
+- **Propriedades** — os campos do front matter da nota (`status`, `area`, `ice_impacto`…), mostrados num bloco acima do texto e editáveis ali.
+- **Modelo de nota** — nota-padrão em `99 - Templates/` (ou na pasta de modelos do Obsidian) a partir da qual uma nota nova nasce; não confundir com o modelo de IA.
+- **Painel** — tabela ou lista Dataview renderizada ao vivo; nas colunas de propriedade, a célula edita a nota.
+
 ## Termos de conectores (v0.8)
 
 - **Preparar** — instalar o servidor de um conector local uma vez, pelo próprio app (sem Node no computador); depois funciona sem internet.

@@ -31,3 +31,7 @@ Indireto na métrica primária (mais trabalho acontecendo no Trunkpad). Alcance 
 
 - Confirma: os índices do `product-planning` renderizam as mesmas linhas que no Obsidian (comparar à mão nas quatro pastas), e o fundador passa duas semanas sem abrir o Obsidian.
 - Refuta: as queries usam funções demais para um subconjunto razoável; nesse caso, avaliar gerar os índices como arquivos (script permitido) em vez de renderizar ao vivo.
+
+## Estado em v0.9.0
+
+- Células das colunas de propriedade (status, próxima ação, listas) editam no lugar e gravam na nota; Desfazer quando a nota sai do painel. ADR-013; decisão D-035.

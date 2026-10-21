@@ -14,6 +14,7 @@ Os três relatórios completos estão no repositório do app: [código](https://
 - **Linear e Notion:** densidade, hierarquia tipográfica e estados vazios que ensinam.
 - **Cursor / Claude Code:** harness de agente com ferramentas confinadas, skills e agentes versionados no repositório.
 - **dbt Cloud:** um único botão de próximo passo que muda de nome conforme o contexto.
+- **Obsidian Properties e Bases, propriedades do Notion (v0.9):** bloco de propriedades no topo da nota com tipos e sugestões dos valores já usados; tabelas com células editáveis no lugar, sem edição em massa; linha "Criar opção" e propriedades recolhidas em "n mais".
 
 ## Processo
 
