@@ -36,3 +36,10 @@ Vocabulário da interface e o que ele é por baixo. Novo termo de interface entr
 - **Cópia editável** — o `.md` criado ao lado de um Word ou PowerPoint, com `origem:` no front matter; o original fica como está.
 - **Apresentação** — página HTML com uma `<section>` por slide, aberta com miniaturas e *Apresentar*.
 
+## Termos de conectores (v0.8)
+
+- **Preparar** — instalar o servidor de um conector local uma vez, pelo próprio app (sem Node no computador); depois funciona sem internet.
+- **Atualizar** — preparar de novo quando o catálogo fixa uma versão mais nova; o conector continua usável enquanto isso.
+- **Trocar** — reescrever a entrada do time quando o pacote que ela usa foi descontinuado; nome, id e acesso continuam.
+- **Embutido no app** — conector que o próprio Trunkpad oferece, sem servidor, instalação ou chave (Páginas da web).
+- **Só lê** — servidor configurado para só leitura: toda ação conta como leitura e funciona em qualquer nível de confiança.

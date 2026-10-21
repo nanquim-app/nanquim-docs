@@ -36,3 +36,7 @@ Métricas de suporte *Rodadas revisadas* e *Ativação* para o perfil Analista/P
 ## Estado em v0.6.0
 
 - Decorações sobre o texto (estilo Live Preview), sem mudar bytes; `unescapeObsidian` ao salvar; popover no clique, ⌘-clique abre; `[[` lista nota e pasta e insere o caminho quando o nome se repete; grupo *Destaque* no menu `/`; embed de nota como bloco só-leitura; faixa "o editor Rico reescreveria trechos" com *Abrir em Texto*. ADR-010 no app; decisões D-024 e D-025.
+
+## Estado em v0.8.0
+
+- `[[Nota#` lista os cabeçalhos da nota (pelo caminho; com nome repetido, escolhe-se a nota antes), `[[#` os da nota aberta, `![[` oferece imagens; Enter numa nota fecha o link como antes. Corrigida a primeira lista vazia depois de `[[`. ADR-012; decisão D-032. Cobre o "cabeçalhos no autocompletar" que a validação pedia.

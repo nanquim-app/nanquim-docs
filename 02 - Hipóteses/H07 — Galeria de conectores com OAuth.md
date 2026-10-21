@@ -39,3 +39,7 @@ Ativação e uso por perfis não técnicos ([[01 - Base/Usuários|Usuários]]). 
 - Metabase e Customer.io não têm servidor MCP do fornecedor: continuam pelos repositórios irmãos (`mecani-metabase`, `mecani-cio`) ou por "Avançado: outro conector…" quando existir um servidor.
 - Não exercitado ao vivo: OAuth real e servidor hospedado real (sem conta de fornecedor na sessão). O primeiro uso é o teste.
 
+## Estado em v0.8.0
+
+- Verificado no npm em 21/10/2026: os pacotes locais do catálogo (Postgres, Slack, Brave) estavam descontinuados. Catálogo refeito com pacotes mantidos e versão fixa: Banco de dados (DBHub, só leitura), Busca na web (Brave oficial), Slack (comunitário, token de usuário); Páginas da web embutido no app. Todo conector local é preparado pelo app, com ou sem Node, e funciona sem internet depois; a linha oferece Atualizar e Trocar quando cabe. ADR-012; decisão D-031.
+- Próxima ação continua: uma pessoa não técnica prepara o Banco de dados pela galeria no `product-planning`, cola a URL de conexão e roda uma pergunta com dado real; cronometrar e anotar em Feedback de uso.

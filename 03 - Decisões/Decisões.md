@@ -217,3 +217,23 @@ Log cronológico e cumulativo. Nunca apague: decisão posterior revoga anterior 
 - **Razão:** o app leva o npm (fora do asar) e o roda com o próprio Node para instalar o servidor uma vez em pasta própria; depois roda o executável do pacote com o mesmo runtime. A linha mostra Preparar → Preparando… → preparado pelo app. Servidores em Python (uvx) continuam pedindo instalação. Fecha o próximo passo da ADR-009. Hipótese: [[H07 — Galeria de conectores com OAuth]].
 - **Quem decidiu:** assistente, dentro da liberdade dada.
 
+### D-031 — Um caminho só para conectores locais: pacotes mantidos com versão fixa, preparados sempre pelo app; Páginas da web embutido
+
+- **Data:** 2026-10-21
+- **Alternativa rejeitada:** manter `npx` ao vivo quando há Node (dois caminhos, versão flutuante, nada offline); servidor oficial do Slack agora (exige app registrado e porta fixa de retorno, sem registro dinâmico de cliente); tokens de sessão do navegador para o Slack (segurança); adivinhar leitura/escrita tirando prefixos dos nomes das ações.
+- **Razão:** verificado no npm em 21/10/2026 que os três pacotes locais do catálogo estavam descontinuados ("no longer supported") e que o servidor de páginas só existe em Python. O catálogo passa a apontar para pacotes mantidos com versão fixa (DBHub em modo só leitura por arquivo de configuração escrito na hora pelo app; servidor oficial do Brave; servidor comunitário do Slack com token de usuário), todo conector local é preparado pelo app (com ou sem Node) e funciona sem internet depois, e Páginas da web vira conector embutido (sem instalação nem chave, leitura em janelas de 8 mil caracteres, nada em redes privadas). Linha com um único próximo passo: Preparar, Atualizar (catálogo fixou versão nova) ou Trocar (pacote descontinuado; mantém id, nome e acesso). Entrada do catálogo pode declarar que o servidor só lê. ADR-012 no app. Hipótese: [[H07 — Galeria de conectores com OAuth]].
+- **Quem decidiu:** assistente, com os ajustes da crítica de interface (ação de consulta do banco tratada como leitura; um botão por linha; embutido entra pelo catálogo; pré-requisito visível antes da chave).
+
+### D-032 — Cabeçalhos no autocompletar `[[`, com Enter fechando o link como antes
+
+- **Data:** 2026-10-21
+- **Alternativa rejeitada:** abrir a lista de cabeçalhos ao escolher a nota (um passo a mais para os 76% dos links sem cabeçalho); resolver cabeçalhos pelo nome da nota (com nomes repetidos entre contextos, listaria a nota errada).
+- **Razão:** 73 dos 304 wikilinks do `product-planning` apontam para cabeçalho e o CLAUDE.md do vault pede `[[Nota#Seção]]`. `[[Nota#` lista os cabeçalhos daquela nota (lidos pelo caminho; com nome repetido, escolhe-se a nota antes), `[[#` os da nota aberta (direto do editor), `![[` oferece também imagens; Enter numa nota continua inserindo `[[Nota]]` e fechando; `|` fecha a lista para o apelido. Corrigido de passagem: a primeira lista depois de `[[` vinha vazia desde a v0.6. Hipótese: [[H10 — Sintaxe do Obsidian no modo Rico]].
+- **Quem decidiu:** assistente, com os ajustes da crítica de interface.
+
+### D-033 — Preço por milhão de tokens ao lado do modelo, com data e fonte; custo por rascunho e regras do espaço ficam para a v0.9
+
+- **Data:** 2026-10-21
+- **Alternativa rejeitada:** seção "Modelos e preços" com a tabela inteira (ruído para quem usa um modelo); custo por rascunho e orçamento mensal agora (sem uso real para olhar); `policy.json` novo quando `config.json` já guarda a única regra do espaço.
+- **Razão:** o custo mostrado na conversa vinha de uma tabela fixa no código, sem data nem fonte. Configurações → IA mostra, sob o modelo, o preço de lista por milhão de tokens, a data em que a tabela foi conferida e o link para a página do provedor, e deixa corrigir (fica nas configurações, marcado "corrigido por você"). O rodapé diz "Custo estimado" no formato do idioma. Slides na revisão, custo por rascunho e regras do espaço (dentro do `config.json`, absorvendo "Exigir rascunhos") entram quando houver uso para sustentar.
+- **Quem decidiu:** assistente, pela recomendação da crítica de interface.

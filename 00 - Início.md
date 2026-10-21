@@ -17,5 +17,5 @@ SORT status ASC, file.name ASC
 
 ## Agora
 
-- v0.2 está em uso neste espaço e no `product-planning`. Todo incômodo vira linha em [[05 - Pesquisa/Feedback de uso|Feedback de uso]].
-- Instaladores assinados (macOS) e o fluxo de time são o próximo bloco: ver [[04 - Roadmap/Roadmap|Roadmap]].
+- v0.8.0 publicada (Mac e Windows): instale e abra o `product-planning`. Todo incômodo vira linha em [[05 - Pesquisa/Feedback de uso|Feedback de uso]].
+- Próximo bloco: validação com arquivos e conectores reais, slides na revisão, custo por rascunho e regras do espaço — ver [[04 - Roadmap/Roadmap|Roadmap]].
