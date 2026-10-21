@@ -265,3 +265,17 @@ Log cronológico e cumulativo. Nunca apague: decisão posterior revoga anterior 
 - **Alternativa rejeitada:** seguir sem assinatura e documentar o `xattr -cr` (na primeira abertura da v0.9.0 no Mac do fundador o sistema disse "Trunkpad está danificado", sem botão de saída: só o Terminal abre); assinar e notarizar já (exige conta Apple Developer e os segredos no repositório — continua sendo o destino, D-019).
 - **Razão:** com assinatura ad-hoc (`identity: "-"` do electron-builder, sem carimbo de tempo nem notarização) o Gatekeeper trata o app como de desenvolvedor não verificado e oferece **Abrir mesmo assim** em Ajustes do Sistema → Privacidade e Segurança; ninguém precisa de Terminal. O entitlement `keychain-access-groups` saiu: é restrito (pediria perfil de provisionamento) e o `safeStorage` usa o chaveiro de login sem ele. Quando os segredos entrarem, o mesmo workflow assina com o certificado e notariza. v0.9.1.
 - **Quem decidiu:** assistente, a partir do feedback do fundador.
+
+### D-038 — Uma pessoa por instalação, obrigatória, no rodapé da barra lateral
+
+- **Data:** 2026-10-21
+- **Alternativa rejeitada:** identidade por espaço, obrigatória no onboarding do espaço (o sinal de onboarding é global: só dispara uma vez, e todo espaço depois do primeiro assinava como `usuario@trunkpad.local` em silêncio); "entrar com GitHub" como identidade (obriga GitHub a quem só abre uma pasta e deixa e-mail `noreply` no histórico).
+- **Razão:** o fundador procurou a si mesmo embaixo à esquerda, como no Claude Desktop e no Slack. A pessoa passa a ser do app (`settings.person`), pedida na primeira abertura num diálogo que não fecha sem nome e e-mail (pré-preenchidos do git), e assina as versões em todos os espaços; identidade já definida no repositório por outra ferramenta continua valendo (Princípio 9), com aviso e botão em Configurações → Espaço. Rodapé de 44 px com avatar (iniciais ou foto do GitHub), nome e uma linha de estado por prioridade (nova versão › GitHub expirou › `@login` › conectar); menu com uma linha por conexão, estado normal em uma palavra e estado anormal com o verbo; versão só em *Sobre*. Na tela inicial, que não tem barra lateral, a mesma pessoa é um chip. ADR-014. v0.10.0.
+- **Quem decidiu:** assistente, com os ajustes da crítica de interface (versão fora do rodapé, identidade local respeitada, vocabulário sem "ambiente").
+
+### D-039 — Verificação de versão diz o que aconteceu; chave do terminal nunca aparece como "salva"
+
+- **Data:** 2026-10-21
+- **Alternativa rejeitada:** manter "Você já usa a versão mais recente" para qualquer falha (sem token num repositório privado o app mentia); mostrar o nome da variável de ambiente na interface (vocabulário de programador, D-003).
+- **Razão:** a verificação devolve um estado (nova versão, em dia, precisa do GitHub, sem conexão) e "em dia" só sai com resposta real; nova versão chega como um aviso com *Baixar* e fica no rodapé (a faixa sobre a conversa saiu). Chave vinda do terminal (`ANTHROPIC_API_KEY` no shell do `launch.sh`) era a causa de "a conexão com o Claude sumiu" no app instalado: a interface dizia *Chave salva* para uma chave que não estava salva. Agora diz *Chave do terminal*, explica que só vale pelo terminal e oferece *Guardar no app*. ADR-014. v0.10.0.
+- **Quem decidiu:** assistente, a partir do feedback do fundador.

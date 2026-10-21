@@ -49,3 +49,9 @@ Vocabulário da interface e o que ele é por baixo. Novo termo de interface entr
 - **Trocar** — reescrever a entrada do time quando o pacote que ela usa foi descontinuado; nome, id e acesso continuam.
 - **Embutido no app** — conector que o próprio Trunkpad oferece, sem servidor, instalação ou chave (Páginas da web).
 - **Só lê** — servidor configurado para só leitura: toda ação conta como leitura e funciona em qualquer nível de confiança.
+
+## Termos da pessoa (v0.10)
+
+- **Pessoa** — quem usa esta instalação: nome e e-mail que assinam as versões em todos os espaços; fica no rodapé da barra lateral e no chip da tela inicial.
+- **Chave do terminal** — chave de IA que o app recebeu do terminal que o abriu; só vale nessa abertura. *Guardar no app* copia para o chaveiro.
+- **Nova versão disponível** — estado do rodapé quando existe uma release mais nova; o menu oferece *Baixar Trunkpad x.y.z*.

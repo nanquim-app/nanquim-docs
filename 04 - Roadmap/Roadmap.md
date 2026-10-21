@@ -8,7 +8,7 @@ atualizado: 2026-10-21
 
 Agora · Próximo · Depois. Cada item aponta para a hipótese ou decisão que o sustenta; item sem hipótese é dívida de produto. Sequência completa e racional em `docs/decisions/004-roadmap.md` do repositório do app.
 
-## Agora (v0.2 a v0.9)
+## Agora (v0.2 a v0.10)
 
 | Item | Estado | Sustentação |
 |---|---|---|
@@ -24,7 +24,8 @@ Agora · Próximo · Depois. Cada item aponta para a hipótese ou decisão que o
 | Verificação por script após cada rodada | em uso (v0.3.0) | [[H06 — Loop de verificação antes de "terminei"]], D-016 |
 | Aba Time: novidades, propostas do time, rascunhos compartilhados, membros e convites | em teste (v0.4.0) | [[H09 — Novidades do time dentro do app]], D-017 |
 | Avisos de proposta e de comentário (toast, contador, sistema) | em teste (v0.4.0) | [[H09 — Novidades do time dentro do app]], D-018 |
-| Aviso de nova versão do app | em uso (v0.4.0); download automático aguarda assinatura | D-019 |
+| Aviso de nova versão do app | em uso (v0.10.0: estado no rodapé, verificação diz o que aconteceu); download automático aguarda assinatura | D-019, D-039 |
+| Pessoa obrigatória e rodapé com GitHub, assistente e versão | em uso (v0.10.0) | D-038, ADR-014 |
 | Galeria de conectores (catálogo, OAuth, Lê / Lê e altera) | em teste (v0.5.0) | [[H07 — Galeria de conectores com OAuth]], D-020 a D-022 |
 | Rotinas com dono, aba Rotinas, rascunho por execução | em teste (v0.5.0) | [[H04 — Execuções agendadas que caem como rascunho]], D-023 |
 | Sintaxe do Obsidian no modo Rico (wikilinks, destaques, marca-texto, embeds) | em teste (v0.6.0) | [[H10 — Sintaxe do Obsidian no modo Rico]], D-024, D-025 |
