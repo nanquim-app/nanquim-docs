@@ -14,8 +14,8 @@ Agora · Próximo · Depois. Cada item aponta para a hipótese ou decisão que o
 |---|---|---|
 | Interface conversa + palco, composer, chips, atalhos | em uso | [[H01 — Conversa como visão principal, arquivos no palco]], D-004 |
 | Editar no documento com diff e comentários ancorados | em uso | [[H02 — Comentários ancorados com @assistente]], D-005 |
-| Instaladores macOS e Windows por GitHub Actions | em uso (v0.7.0: .exe, .dmg Intel e Apple Silicon, sem assinatura) | pedido do fundador (instalável) |
-| Assinatura e notarização macOS | aguardando segredos no repositório | `build/README.md` do app |
+| Instaladores macOS e Windows por GitHub Actions | em uso (v0.9.1: .exe, .dmg Intel e Apple Silicon; macOS assinado ad-hoc, sem notarização) | pedido do fundador (instalável), D-037 |
+| Assinatura Developer ID e notarização macOS (abre sem aviso) | aguardando conta Apple Developer e segredos no repositório | `build/README.md` do app, D-019, D-037 |
 | Dogfooding neste espaço e no `product-planning` | em andamento | D-010 |
 | Conversas paralelas (cópia por conversa), lista de conversas, Conversa \| Arquivos | em uso (v0.2.1) | [[H08 — Conversas paralelas, cada uma na sua cópia]], D-011, D-012 |
 | Trocar de espaço, clonar do GitHub, espaço de testes | em uso (v0.2.1) | D-013 |

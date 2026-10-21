@@ -258,3 +258,10 @@ Log cronológico e cumulativo. Nunca apague: decisão posterior revoga anterior 
 - **Alternativa rejeitada:** pasta nova `.trunkpad/templates/` (Princípio 9: convenções existentes são lidas, não reinventadas); criar na raiz (hipótese fora da pasta não aparece em painel nenhum); o app "saber" o que é hipótese (deriva da numeração das notas vizinhas).
 - **Razão:** modelos vêm de `.obsidian/templates.json` ou das pastas Templates/Modelos (as cópias iguais por contexto viram uma entrada); o menu `+` e a paleta os listam como "A partir de um modelo de nota" ("modelo" sozinho é o modelo de IA na interface); a nota nasce na pasta da nota lida, com o próximo número livre do espaço quando as vizinhas são numeradas (`H15 — `, editável), com `{{date}}`, `{{time}}` e `{{title}}` preenchidos nos formatos do Obsidian, e abre no Rico com as propriedades à mostra e o cursor no texto. As dicas `<!-- -->` dos modelos aparecem em cinza no Rico sem mudar bytes. ADR-013.
 - **Quem decidiu:** assistente, com os ajustes da crítica de interface.
+
+### D-037 — App do macOS assinado ad-hoc enquanto não há certificado da Apple
+
+- **Data:** 2026-10-21
+- **Alternativa rejeitada:** seguir sem assinatura e documentar o `xattr -cr` (na primeira abertura da v0.9.0 no Mac do fundador o sistema disse "Trunkpad está danificado", sem botão de saída: só o Terminal abre); assinar e notarizar já (exige conta Apple Developer e os segredos no repositório — continua sendo o destino, D-019).
+- **Razão:** com assinatura ad-hoc (`identity: "-"` do electron-builder, sem carimbo de tempo nem notarização) o Gatekeeper trata o app como de desenvolvedor não verificado e oferece **Abrir mesmo assim** em Ajustes do Sistema → Privacidade e Segurança; ninguém precisa de Terminal. O entitlement `keychain-access-groups` saiu: é restrito (pediria perfil de provisionamento) e o `safeStorage` usa o chaveiro de login sem ele. Quando os segredos entrarem, o mesmo workflow assina com o certificado e notariza. v0.9.1.
+- **Quem decidiu:** assistente, a partir do feedback do fundador.

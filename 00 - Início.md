@@ -17,5 +17,5 @@ SORT status ASC, file.name ASC
 
 ## Agora
 
-- v0.9.0 publicada (Mac e Windows): instale e abra o `product-planning`; mude status e repontue ICE pelas Propriedades. Todo incômodo vira linha em [[05 - Pesquisa/Feedback de uso|Feedback de uso]].
+- v0.9.1 publicada (Mac e Windows): instale, libere a primeira abertura em Ajustes do Sistema → Privacidade e Segurança → *Abrir mesmo assim*, e abra o `product-planning`; mude status e repontue ICE pelas Propriedades. Todo incômodo vira linha em [[05 - Pesquisa/Feedback de uso|Feedback de uso]].
 - Próximo bloco: uma semana de uso real; depois slides na revisão, custo por rascunho e regras do espaço — ver [[04 - Roadmap/Roadmap|Roadmap]].
