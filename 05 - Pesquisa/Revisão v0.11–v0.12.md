@@ -231,6 +231,6 @@ No GitHub de verdade, neste repositório: rascunho publicado pela sincronizaçã
 
 ### O que não entrou nesta revisão
 
-- Comparação de interface entre as linhas (o crítico de interface sobre a barra lateral mesclada ficou pendente desde a 0.11.0).
+- Comparação de interface entre as linhas: feita em seguida, por jornada, em [[05 - Pesquisa/Crítica de interface — jornadas v0.12|Crítica de interface — jornadas v0.12]] (veredito: reprova por enquanto; três bloqueios, treze confusões, ordem de ataque sem esperar o sistema de design).
 - Conectores e fontes de dados contra serviços reais (Metabase, Amplitude): só contra imitações.
 - Windows: nada aqui foi exercitado num Windows real.
