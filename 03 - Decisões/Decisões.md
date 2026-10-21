@@ -293,3 +293,10 @@ Log cronológico e cumulativo. Nunca apague: decisão posterior revoga anterior 
 - **Alternativa rejeitada:** cada sessão continuar numerando (deu 0.10.1 e 0.10.2 lançadas fora da main, 0.11.0 e 0.12.0 em paralelo e dois ADR-008); manter o CI só nos ramos de lançamento (quatro sessões mesclaram na main sem ninguém rodar lint, build e smokes sobre o resultado).
 - **Razão:** a revisão de 21/10 mostrou que a v0.11.0 não continha a v0.10.1 nem a v0.10.2 e que a main dizia 0.12.0 sem instalador. A 0.13.0 fecha a conta: mescla o ramo das 0.10.x, renumera a estratégia de harness para ADR-017 (ADR-008 é o time no GitHub), liga o workflow *Checks* (typecheck, lint, testes, build e smokes) em todo push na main e em todo pull request, e fixa a regra: ramo de sessão não muda `version` nem escreve número de ADR; quem mescla atribui os dois.
 - **Quem decidiu:** fundador ("Podemos seguir com isso"), com a ordem proposta pelo assistente.
+
+### D-042 — Instaladores do Mac saem do Mac do fundador; o GitHub só constrói o Windows, e só quando pedido
+
+- **Data:** 2026-10-21
+- **Alternativa rejeitada:** continuar gerando os dois instaladores no GitHub Actions a cada push de release (repositório privado: os minutos de macOS são os caros, e o job do macOS ficou preso na fila e foi cancelado três vezes seguidas na 0.13.0); runner próprio no Mac (de graça, mas o Mac precisa ficar ligado e o Windows continuaria dependendo de Wine); tornar o repositório público (Actions ilimitado, mas abre o código); gerar o `.exe` no Mac (o NSIS exige Wine, testado no Linux: falha sem ele).
+- **Razão:** `npm run release:mac` compila, assina ad hoc, cria a tag da versão do `package.json` sobre a `origin/main` e sobe DMG e ZIP direto para a release do GitHub, em uns cinco minutos de um Mac com chip Apple e zero minutos do Actions. O workflow *Release installers* passa a ser manual, com o Windows como padrão. Um push na `main` roda só o *Checks* em Linux. Ritual em `docs/guide/distribuicao.md` §5 do app.
+- **Quem decidiu:** fundador ("Boa, gostei das recomendações"), entre as opções levantadas pelo assistente.
