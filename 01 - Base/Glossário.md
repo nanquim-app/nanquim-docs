@@ -55,3 +55,8 @@ Vocabulário da interface e o que ele é por baixo. Novo termo de interface entr
 - **Pessoa** — quem usa esta instalação: nome e e-mail que assinam as versões em todos os espaços; fica no rodapé da barra lateral e no chip da tela inicial.
 - **Chave do terminal** — chave de IA que o app recebeu do terminal que o abriu; só vale nessa abertura. *Guardar no app* copia para o chaveiro.
 - **Nova versão disponível** — estado do rodapé quando existe uma release mais nova; o menu oferece *Baixar Trunkpad x.y.z*.
+
+## Termos do motor (v0.11)
+
+- **Motor da IA** — quem pensa pelo assistente: *Modelo via API* (o Trunkpad chama o provedor com a sua chave) ou *Claude Code* (o `claude` instalado e logado na sua máquina, dirigido pelo Trunkpad, que continua cuidando de rascunhos, regras, aprovações e versões).
+- **Colega** — agente nomeado do espaço (`.trunkpad/agents/<id>.md` ou `.claude/agents/<id>.md`), com figura, escopo de escrita e limites por ferramenta; é chamado com `@id`.
