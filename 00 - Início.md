@@ -4,7 +4,7 @@
 
 **Base:** [[01 - Base/Visão e tese|Visão e tese]] · [[01 - Base/Princípios|Princípios]] · [[01 - Base/Usuários|Usuários]] · [[01 - Base/Glossário|Glossário]] · [[01 - Base/Métricas|Métricas]] · [[01 - Base/Concorrentes|Concorrentes]]
 
-**Trabalho:** [[02 - Hipóteses/_index|Hipóteses]] · [[03 - Decisões/Decisões|Decisões]] · [[04 - Roadmap/Roadmap|Roadmap]] · [[05 - Pesquisa/Feedback de uso|Feedback de uso]] · [[05 - Pesquisa/Benchmarks|Benchmarks]] · [[05 - Pesquisa/Revisão v0.11–v0.12|Revisão v0.11–v0.12]] · [[05 - Pesquisa/Crítica de interface — jornadas v0.12|Crítica de interface]]
+**Trabalho:** [[02 - Hipóteses/_index|Hipóteses]] · [[03 - Decisões/Decisões|Decisões]] · [[04 - Roadmap/Roadmap|Roadmap]] · [[05 - Pesquisa/Feedback de uso|Feedback de uso]] · [[05 - Pesquisa/Benchmarks|Benchmarks]] · [[05 - Pesquisa/Revisão v0.11–v0.12|Revisão v0.11–v0.12]] · [[05 - Pesquisa/Crítica de interface — jornadas v0.12|Crítica de interface]] · [[05 - Pesquisa/Jornadas de entrada|Jornadas de entrada]]
 
 ## Em movimento
 
@@ -17,6 +17,7 @@ SORT status ASC, file.name ASC
 
 ## Agora
 
+- v0.14.0 na main, pronta para `npm run release:mac`: *Trazer do Google Drive* nas boas-vindas (baixe a pasta no Drive, traga o .zip; os Docs viram páginas), colegas criados com o assistente no Time (*Gerar com o assistente* ou *Criar conversando*), o cartão "Montar o espaço e o time" em todo espaço sem instruções, e edição no documento, combinar conflito, título de versão e consultar colega funcionando com o Claude Code sem chave (D-043). Teste com uma pasta real do Drive e anote em [[05 - Pesquisa/Feedback de uso|Feedback de uso]] o que não veio igual.
 - A partir da 0.14.0, os instaladores do Mac saem do seu Mac (`npm run release:mac`) e o Windows só roda no GitHub quando você mandar (D-042).
 - v0.13.0 publicada (Mac e Windows): o primeiro instalador que soma as quatro linhas (pessoa e versões, infraestrutura, colaboração, GitHub por padrão) mais as 0.10.x que tinham ficado fora. *Entrar com GitHub* só aparece no instalador quando a variável `TRUNKPAD_GITHUB_CLIENT_ID` existe no repositório; até lá, o token. Próximo: respostas a D1, D2 e D6 da revisão; depois a linha de interface reaplicada e o crítico.
 - Revisão grande de 21/10 em [[05 - Pesquisa/Revisão v0.11–v0.12|Revisão v0.11–v0.12]]: a v0.11.0 não contém a v0.10.1 nem a v0.10.2; a main (0.12.0) soma quatro linhas e duas ainda estão fora; colaboração, login, conexão com o repositório e Claude Code avaliados, com seis decisões a tomar.

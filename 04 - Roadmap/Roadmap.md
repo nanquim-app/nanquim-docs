@@ -1,7 +1,7 @@
 ---
 tags: [trunkpad/roadmap]
 status: ativo
-atualizado: 2026-10-21
+atualizado: 2026-10-22
 ---
 
 # Roadmap
@@ -28,6 +28,7 @@ Agora · Próximo · Depois. Cada item aponta para a hipótese ou decisão que o
 | Pessoa obrigatória e rodapé com GitHub, assistente e versão | em uso (v0.10.0) | D-038, ADR-014 |
 | Motor Claude Code (o `claude` da própria máquina atrás da política do Trunkpad), colegas nomeados com figuras, fontes de dados, modelos de espaço, página do time | em uso (v0.11.0, linha de infraestrutura mesclada) | D-040, ADR-015, ADR-008 do app |
 | Um instalador com tudo que já foi publicado (0.10.x + 0.12.0 + GitHub por padrão); *Checks* em todo push na main; só a main numera | em uso (v0.13.0) | D-041, [[05 - Pesquisa/Revisão v0.11–v0.12\|Revisão v0.11–v0.12]] |
+| Portas de entrada: *Trazer do Google Drive* (.zip baixado vira espaço), colegas criados com o assistente (*Gerar* e *Criar conversando*), "Montar o espaço e o time" em todo espaço novo; toda IA do núcleo pelo motor escolhido | em teste (v0.14.0); a conferir com uma pasta real do Drive; fluxo guiado e ficha do colega com a sessão de interface | D-043, [[05 - Pesquisa/Jornadas de entrada\|Jornadas de entrada]] |
 | Galeria de conectores (catálogo, OAuth, Lê / Lê e altera) | em teste (v0.5.0) | [[H07 — Galeria de conectores com OAuth]], D-020 a D-022 |
 | Rotinas com dono, aba Rotinas, rascunho por execução | em teste (v0.5.0) | [[H04 — Execuções agendadas que caem como rascunho]], D-023 |
 | Sintaxe do Obsidian no modo Rico (wikilinks, destaques, marca-texto, embeds) | em teste (v0.6.0) | [[H10 — Sintaxe do Obsidian no modo Rico]], D-024, D-025 |
