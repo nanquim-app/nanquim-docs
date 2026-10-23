@@ -1,5 +1,5 @@
 ---
-tags: [trunkpad/roadmap]
+tags: [nanquim/roadmap]
 status: ativo
 atualizado: 2026-10-22
 ---
@@ -26,7 +26,7 @@ Agora · Próximo · Depois. Cada item aponta para a hipótese ou decisão que o
 | Avisos de proposta e de comentário (toast, contador, sistema) | em teste (v0.4.0) | [[H09 — Novidades do time dentro do app]], D-018 |
 | Aviso de nova versão do app | em uso (v0.10.0: estado no rodapé, verificação diz o que aconteceu); download automático aguarda assinatura | D-019, D-039 |
 | Pessoa obrigatória e rodapé com GitHub, assistente e versão | em uso (v0.10.0) | D-038, ADR-014 |
-| Motor Claude Code (o `claude` da própria máquina atrás da política do Trunkpad), colegas nomeados com figuras, fontes de dados, modelos de espaço, página do time | em uso (v0.11.0, linha de infraestrutura mesclada) | D-040, ADR-015, ADR-008 do app |
+| Motor Claude Code (o `claude` da própria máquina atrás da política do Nanquim), colegas nomeados com figuras, fontes de dados, modelos de espaço, página do time | em uso (v0.11.0, linha de infraestrutura mesclada) | D-040, ADR-015, ADR-008 do app |
 | Um instalador com tudo que já foi publicado (0.10.x + 0.12.0 + GitHub por padrão); *Checks* em todo push na main; só a main numera | em uso (v0.13.0) | D-041, [[05 - Pesquisa/Revisão v0.11–v0.12\|Revisão v0.11–v0.12]] |
 | Portas de entrada: *Trazer do Google Drive* (.zip baixado vira espaço), colegas criados com o assistente (*Gerar* e *Criar conversando*), "Montar o espaço e o time" em todo espaço novo; toda IA do núcleo pelo motor escolhido | em teste (v0.14.0); a conferir com uma pasta real do Drive; fluxo guiado e ficha do colega com a sessão de interface | D-043, [[05 - Pesquisa/Jornadas de entrada\|Jornadas de entrada]] |
 | Galeria de conectores (catálogo, OAuth, Lê / Lê e altera) | em teste (v0.5.0) | [[H07 — Galeria de conectores com OAuth]], D-020 a D-022 |
@@ -44,7 +44,7 @@ Agora · Próximo · Depois. Cada item aponta para a hipótese ou decisão que o
 | Validação com arquivos reais (planilha de régua, Word com tabelas, Banco de dados preparado pelo app com um Postgres de verdade) | H07, H10, H11 — próximas ações |
 | Slides alterados na revisão (filmstrip, antes/depois por slide) | ADR-012 (adiado: nenhum deck no product-planning) |
 | Custo por rascunho e regras do espaço dentro do `config.json` (piso de confiança, modelos permitidos, aviso de orçamento) | D-033 |
-| Rotinas sem o app aberto (GitHub Actions com CLI do Trunkpad) | ADR-009 (rejeitado por ora) |
+| Rotinas sem o app aberto (GitHub Actions com CLI do Nanquim) | ADR-009 (rejeitado por ora) |
 
 ## Depois
 
@@ -52,7 +52,7 @@ Agora · Próximo · Depois. Cada item aponta para a hipótese ou decisão que o
 |---|---|
 | Web só leitura para revisores | D-009 |
 | Download automático das atualizações (assinatura macOS) | D-019 |
-| Rotinas sem o app aberto (GitHub Actions com CLI do Trunkpad) | ADR-009 (rejeitado por ora) |
+| Rotinas sem o app aberto (GitHub Actions com CLI do Nanquim) | ADR-009 (rejeitado por ora) |
 
 ## O que não vamos fazer agora
 

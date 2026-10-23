@@ -11,7 +11,7 @@ impacto_real:
 analises: []
 bloqueada_por: []
 proxima_acao: "uma semana de uso com duas ou três conversas abertas no product-planning; registrar em Feedback de uso cada vez que o trabalho de uma conversa ficou difícil de encontrar"
-tags: [trunkpad/hipotese]
+tags: [nanquim/hipotese]
 ---
 
 ## Sinal

@@ -1,6 +1,6 @@
 ---
 name: critico-de-interface
-description: Crítico de interface e experiência. Use ao avaliar uma proposta de tela, fluxo ou mudança visual do Trunkpad, ou para comparar opções antes de decidir. Não implementa — devolve problemas por severidade e a opção recomendada.
+description: Crítico de interface e experiência. Use ao avaliar uma proposta de tela, fluxo ou mudança visual do Nanquim, ou para comparar opções antes de decidir. Não implementa — devolve problemas por severidade e a opção recomendada.
 tools: Read, Bash
 ---
 

@@ -1,5 +1,5 @@
 ---
-tags: [trunkpad/pesquisa]
+tags: [nanquim/pesquisa]
 status: ativo
 data: 2026-10-21
 ---
@@ -93,7 +93,7 @@ A junção das linhas deixou o mesmo objeto com dois nomes em telas vizinhas. Na
 - **O CI só roda `typecheck` e `test`, e só em `release/**`.** Nenhuma verificação roda em push na `main` nem em pull request; `lint`, `build` e os smokes vivem só no CLAUDE.md. É assim que quatro sessões conseguiram mesclar na main sem ninguém rodar a bateria inteira sobre o resultado.
 ## 3. Colaboração entre membros — é só Git, ou criamos um "nosso"?
 
-**Resposta curta.** A infraestrutura é só Git e GitHub: não existe servidor do Trunkpad, nem websocket, nem banco; todo estado compartilhado vive no repositório ou na API do GitHub (confirmado por busca no código: as únicas URLs externas são `github.com`, os servidores MCP de conectores e `trunkpad.app` como texto). O que criamos de "nosso" não é infraestrutura, são **quatro atalhos que passam por fora do GitHub** e um quinto só proposto. É neles que a sensação de "algo nosso" nasce.
+**Resposta curta.** A infraestrutura é só Git e GitHub: não existe servidor do Nanquim, nem websocket, nem banco; todo estado compartilhado vive no repositório ou na API do GitHub (confirmado por busca no código: as únicas URLs externas são `github.com`, os servidores MCP de conectores e `trunkpad.app` como texto). O que criamos de "nosso" não é infraestrutura, são **quatro atalhos que passam por fora do GitHub** e um quinto só proposto. É neles que a sensação de "algo nosso" nasce.
 
 ### Inventário (o que existe e onde vive o estado)
 
@@ -183,14 +183,14 @@ No GitHub de verdade, neste repositório: rascunho publicado pela sincronizaçã
 
 ### Recomendação (em ordem)
 
-1. **A conta do GitHub vira *a* identidade, e isso sai no próximo instalador.** Registrar uma *OAuth App* clássica (token sem validade) ou tratar `refresh_token`; definir `TRUNKPAD_GITHUB_CLIENT_ID` no repositório antes do lançamento. Mover *Entrar com GitHub* para o portão do primeiro uso: nome, e-mail e foto vêm do perfil; o diálogo digitado vira o caminho de quem não tem GitHub. Adotar a identidade com força quando a atual foi escrita pelo Trunkpad. Adicionar "Sair". Tratar 403 com limite de taxa zerado como "sem conexão", não "expirou".
+1. **A conta do GitHub vira *a* identidade, e isso sai no próximo instalador.** Registrar uma *OAuth App* clássica (token sem validade) ou tratar `refresh_token`; definir `TRUNKPAD_GITHUB_CLIENT_ID` no repositório antes do lançamento. Mover *Entrar com GitHub* para o portão do primeiro uso: nome, e-mail e foto vêm do perfil; o diálogo digitado vira o caminho de quem não tem GitHub. Adotar a identidade com força quando a atual foi escrita pelo Nanquim. Adicionar "Sair". Tratar 403 com limite de taxa zerado como "sem conexão", não "expirou".
 2. **Acertar escopos e planos antes do primeiro time.** Pedir `admin:org` só na hora do convite por e-mail (ou trocar por "copiar o texto do convite"); ler `x-oauth-scopes` na resposta e dizer qual recurso está desligado; avisar sobre restrição de OAuth App na organização.
 3. **Endurecer a conexão.** Askpass restrito ao host do remoto; `git ls-remote` antes de gravar um remoto; confirmação antes de `trunkpad://join` clonar; registrar o protocolo no `electron-builder.yml` e testar o link num Mac empacotado.
 4. **Médio prazo: GitHub App instalada na organização** (permissões finas por repositório, tokens de instalação que nunca saem do processo principal, instalação pelo dono da organização). O token de usuário fica só para "quem sou eu".
 5. SSH como reserva para quem já usa chave, repassando `SSH_AUTH_SOCK`. Baixa prioridade.
 ## 5. Integração com o Claude Code
 
-**O que existe.** O motor `claude-code` roda o `claude -p` da própria pessoa, um processo por conversa, dentro da cópia da conversa (worktree). Toda permissão que o Claude Code pede volta para o Trunkpad por uma ponte MCP própria (`--permission-prompt-tool mcp__trunkpad__approve`), e as ferramentas do Trunkpad (ler playbook, consultar colega, fontes de dados…) entram no Claude Code pela mesma ponte. Edições feitas pelo Claude Code viram cartões de mudança e checkpoint como as do motor nativo. O `CLAUDE.md`, os `.claude/agents` e os `.claude/skills` do cofre carregam sem configuração, porque é o CLI real. Login nunca acontece dentro do app: o botão abre o Terminal em `claude auth login`; o status vem de `claude --version` e `claude auth status`. Em modo "conta do Claude Code", a chave de API do Trunkpad é retirada do ambiente do filho; em modo "chave de API", ela é exportada só para aquele processo. Nada lê credenciais do Claude Code (confirmado por busca no código), o Agent SDK não é dependência, o aviso de cobrança está na tela.
+**O que existe.** O motor `claude-code` roda o `claude -p` da própria pessoa, um processo por conversa, dentro da cópia da conversa (worktree). Toda permissão que o Claude Code pede volta para o Nanquim por uma ponte MCP própria (`--permission-prompt-tool mcp__trunkpad__approve`), e as ferramentas do Nanquim (ler playbook, consultar colega, fontes de dados…) entram no Claude Code pela mesma ponte. Edições feitas pelo Claude Code viram cartões de mudança e checkpoint como as do motor nativo. O `CLAUDE.md`, os `.claude/agents` e os `.claude/skills` do cofre carregam sem configuração, porque é o CLI real. Login nunca acontece dentro do app: o botão abre o Terminal em `claude auth login`; o status vem de `claude --version` e `claude auth status`. Em modo "conta do Claude Code", a chave de API do Nanquim é retirada do ambiente do filho; em modo "chave de API", ela é exportada só para aquele processo. Nada lê credenciais do Claude Code (confirmado por busca no código), o Agent SDK não é dependência, o aviso de cobrança está na tela.
 
 **Como a pessoa configura.** Primeiro uso: "Quem vai pensar?" com dois cartões, "Minha conta do Claude Code" primeiro. Ao escolher, o app testa na hora e mostra "Claude Code encontrado · versão" e "conectado · claude.ai · e-mail". Se já roda `claude` no terminal (instalador nativo, Homebrew, npm global), são dois cliques. Se não está instalado: guia com "Ver como instalar" (site da Anthropic) e "Verificar de novo". Instalado sem login: guia em três passos e botão "Abrir o Terminal para entrar".
 

@@ -1,5 +1,5 @@
 ---
-tags: [trunkpad/pesquisa]
+tags: [nanquim/pesquisa]
 status: ativo
 data: 2026-10-21
 ---
@@ -49,7 +49,7 @@ Formato: **onde** — o que a pessoa vê — por que é problema para um PM sem 
 - **Mesa do time com um colega** (`32-e2e-time-mesa.png`) — duas colunas "ninguém aqui agora" ocupando metade da tela. Visual (densidade): colunas vazias viram uma linha.
 - **Composer mostra id de modelo** ("Claude · claude-opus-5-5"). Fazer: o nome amigável que o select de Configurações já tem.
 - **Linha de preço no primeiro uso** ("US$ 4,00 entrada · US$ 20,00 saída, por milhão de tokens (estimativa) · tabela de 21/10/2026 · ver preços · Corrigir") dentro do modal de boas-vindas. Fazer: mover para "Mais detalhes" em Configurações › IA.
-- **"Sobre o Trunkpad 44.9.1"** (`25-person-menu.png`) é a versão do Electron (dev; o E2E empacotado mostra 0.12.0). Só confirmar no build.
+- **"Sobre o Nanquim 44.9.1"** (`25-person-menu.png`) é a versão do Electron (dev; o E2E empacotado mostra 0.12.0). Só confirmar no build.
 - **"chaveiro deste Mac" / "neste Mac"** (l.64, 495) em app Linux/Windows. Fazer: "deste computador" (l.76 já usa).
 - **"O que mudou · Working changes"** (`06-review.png`) vem do título passado por `scripts/screenshot.cjs:48`, não do produto; corrigir no script para a captura não enganar.
 - **Toast + cartão iguais** ao aprovar e ao criar colega. Fazer: só o cartão quando ele está visível.

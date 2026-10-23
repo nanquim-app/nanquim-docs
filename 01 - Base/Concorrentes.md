@@ -1,5 +1,5 @@
 ---
-tags: [trunkpad/base]
+tags: [nanquim/base]
 status: ativo
 ---
 

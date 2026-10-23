@@ -10,8 +10,8 @@ ice_facilidade: 9
 impacto_real:
 analises: []
 bloqueada_por: []
-proxima_acao: "abrir no Trunkpad uma planilha real de régua e um Word real com tabelas; editar uma célula, salvar, reabrir no Excel e conferir que nada mais mudou; registrar em Feedback de uso"
-tags: [trunkpad/hipotese]
+proxima_acao: "abrir no Nanquim uma planilha real de régua e um Word real com tabelas; editar uma célula, salvar, reabrir no Excel e conferir que nada mais mudou; registrar em Feedback de uso"
+tags: [nanquim/hipotese]
 ---
 
 ## Sinal
@@ -30,7 +30,7 @@ Se o que chega por e-mail abre, se lê pelo assistente e vira cópia editável c
 
 ## Como validar
 
-- Confirma: uma planilha real editada e salva pelo Trunkpad reabre no Excel com estilos, gráficos e validações intactos e só as células editadas diferentes; um Word recebido por e-mail é revisado e comentado dentro do Trunkpad sem abrir o Word.
+- Confirma: uma planilha real editada e salva pelo Nanquim reabre no Excel com estilos, gráficos e validações intactos e só as células editadas diferentes; um Word recebido por e-mail é revisado e comentado dentro do Nanquim sem abrir o Word.
 - Refuta: a gravação no lugar quebra um arquivo real (Excel pede reparo) ou o Word perde conteúdo relevante (tabelas, imagens); nesse caso, voltar a planilha para só leitura e priorizar a conversão.
 
 ## Estado em v0.6.0

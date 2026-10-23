@@ -1,5 +1,5 @@
 ---
-tags: [trunkpad/base]
+tags: [nanquim/base]
 status: ativo
 ---
 
@@ -7,7 +7,7 @@ status: ativo
 
 Cada princípio tem uma consequência prática. Se uma decisão contraria um deles, registre em [[03 - Decisões/Decisões|Decisões]] por quê.
 
-1. **O arquivo é a fonte da verdade.** Tudo que o produto sabe está em arquivos no repositório, legíveis por qualquer outra ferramenta. Nada vive só no app. Consequência: comentários ficam em `.trunkpad/comments.json`, configuração do time em `.trunkpad/`, sessões do assistente fora do repositório porque são pessoais.
+1. **O arquivo é a fonte da verdade.** Tudo que o produto sabe está em arquivos no repositório, legíveis por qualquer outra ferramenta. Nada vive só no app. Consequência: comentários ficam em `.nanquim/comments.json`, configuração do time em `.nanquim/`, sessões do assistente fora do repositório porque são pessoais.
 2. **Agentes nunca escrevem no Principal.** Toda escrita do agente nasce em um rascunho e vira checkpoint atribuído. Consequência: o botão de revisar existe em toda rodada que mudou algo.
 3. **Linguagem de negócio, sempre.** Salvar versão, iniciar rascunho, revisar e incorporar, desfazer, trazer novidades, publicar. Nunca commit, branch, stage, rebase. Consequência: toda string da interface passa por esse filtro; ver [[01 - Base/Glossário|Glossário]].
 4. **O que você não tocou não muda.** O editor rico preserva byte a byte o que o usuário não editou. Consequência: o teste de round-trip no vault real é bloqueante.

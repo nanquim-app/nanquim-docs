@@ -11,12 +11,12 @@ impacto_real:
 analises: []
 bloqueada_por: []
 proxima_acao: "uma pessoa não técnica conecta o Postgres (ou o Notion) pela galeria no product-planning e roda uma pergunta com dado real; cronometrar e anotar em Feedback de uso"
-tags: [trunkpad/hipotese]
+tags: [nanquim/hipotese]
 ---
 
 ## Sinal
 
-- Hoje conectores são JSON em `.trunkpad/connectors.json`; só quem programa configura.
+- Hoje conectores são JSON em `.nanquim/connectors.json`; só quem programa configura.
 - Pergunta do fundador em 2026-10-20: "teríamos que construir cada um deles?". Resposta registrada em [[03 - Decisões/Decisões#D-007|D-007]]: não; MCP é padrão aberto e os fornecedores publicam os servidores.
 - O `product-planning` já depende de duas fontes externas via repositórios irmãos (`mecani-metabase`, `mecani-cio`).
 

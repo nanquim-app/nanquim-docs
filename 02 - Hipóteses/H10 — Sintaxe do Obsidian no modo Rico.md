@@ -11,7 +11,7 @@ impacto_real:
 analises: []
 bloqueada_por: []
 proxima_acao: "uma semana editando o product-planning só no modo Rico; anotar em Feedback de uso cada vez que a pessoa voltou para o Obsidian ou para o modo Texto, e por quê"
-tags: [trunkpad/hipotese]
+tags: [nanquim/hipotese]
 ---
 
 ## Sinal
@@ -22,7 +22,7 @@ tags: [trunkpad/hipotese]
 
 ## Mecanismo
 
-Se a sintaxe do Obsidian aparece renderizada e os links funcionam (clicar, completar com `[[`), a pessoa que vive no Obsidian consegue editar no Trunkpad sem perder o que já usa, e o arquivo continua servindo ao Obsidian. Menos ida e volta entre apps → mais rodadas do assistente revisadas dentro do Trunkpad.
+Se a sintaxe do Obsidian aparece renderizada e os links funcionam (clicar, completar com `[[`), a pessoa que vive no Obsidian consegue editar no Nanquim sem perder o que já usa, e o arquivo continua servindo ao Obsidian. Menos ida e volta entre apps → mais rodadas do assistente revisadas dentro do Nanquim.
 
 ## Impacto esperado
 

@@ -1,5 +1,5 @@
 ---
-tags: [trunkpad/base]
+tags: [nanquim/base]
 status: ativo
 ---
 
@@ -7,7 +7,7 @@ status: ativo
 
 Perfis iniciais, com o trabalho que cada um precisa fazer. Nenhum deles foi entrevistado formalmente ainda: a fonte é o uso interno e as conversas de construção do produto. Entrevistas são um pré-requisito antes de validar hipóteses de adoção.
 
-| Perfil | Hoje usa | Trabalho a fazer | O que o Trunkpad muda |
+| Perfil | Hoje usa | Trabalho a fazer | O que o Nanquim muda |
 |---|---|---|---|
 | **Fundador / Head de produto** | Obsidian + Claude Desktop + Claude Code | Planejar, decidir, revisar o trabalho dos outros, manter padrão de documentação | Uma ferramenta só; revisão com diff; agentes e personas do repositório |
 | **Analista / PM de growth** | Obsidian, Metabase, planilhas | Escrever hipóteses e análises, rodar queries, atualizar painéis | Scripts e conectores permitidos no lugar de copiar e colar; checkpoints do agente |

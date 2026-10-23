@@ -11,21 +11,21 @@ impacto_real:
 analises: []
 bloqueada_por: []
 proxima_acao: "duas semanas sem abrir o Obsidian; registrar em Feedback de uso qualquer painel que renderize diferente"
-tags: [trunkpad/hipotese]
+tags: [nanquim/hipotese]
 ---
 
 ## Sinal
 
-- No `product-planning`, `00 - Index.md` e os `_index.md` de hipóteses, análises e propostas de cada contexto usam blocos `dataview` (`TABLE … FROM … WHERE …`). No Trunkpad eles aparecem como código (verificado no smoke de vault de 2026-10-20).
+- No `product-planning`, `00 - Index.md` e os `_index.md` de hipóteses, análises e propostas de cada contexto usam blocos `dataview` (`TABLE … FROM … WHERE …`). No Nanquim eles aparecem como código (verificado no smoke de vault de 2026-10-20).
 - O fundador quer "parar de usar o Obsidian": esses painéis são o que ainda o obriga a abri-lo.
 
 ## Mecanismo
 
-Renderizar os blocos como tabela, a partir do front matter dos arquivos, tira o último motivo para manter o Obsidian aberto. Um espaço em uma ferramenta só → mais uso do Trunkpad → mais rodadas e incorporações nele.
+Renderizar os blocos como tabela, a partir do front matter dos arquivos, tira o último motivo para manter o Obsidian aberto. Um espaço em uma ferramenta só → mais uso do Nanquim → mais rodadas e incorporações nele.
 
 ## Impacto esperado
 
-Indireto na métrica primária (mais trabalho acontecendo no Trunkpad). Alcance medido: cinco índices no `product-planning`; ampliar o inventário antes de pontuar de novo.
+Indireto na métrica primária (mais trabalho acontecendo no Nanquim). Alcance medido: cinco índices no `product-planning`; ampliar o inventário antes de pontuar de novo.
 
 ## Como validar
 

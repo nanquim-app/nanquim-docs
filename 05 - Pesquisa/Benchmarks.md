@@ -1,5 +1,5 @@
 ---
-tags: [trunkpad/pesquisa]
+tags: [nanquim/pesquisa]
 status: ativo
 ---
 

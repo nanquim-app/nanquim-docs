@@ -1,11 +1,11 @@
 ---
-tags: [trunkpad/pesquisa]
+tags: [nanquim/pesquisa]
 status: ativo
 ---
 
 # Feedback de uso (dogfooding)
 
-Uma linha por incômodo ou ideia que apareceu usando o Trunkpad. Triagem semanal: cada linha vira correção, hipótese ou descarte, com link. Use o playbook `registrar-feedback` (`/` na caixa de texto).
+Uma linha por incômodo ou ideia que apareceu usando o Nanquim. Triagem semanal: cada linha vira correção, hipótese ou descarte, com link. Use o playbook `registrar-feedback` (`/` na caixa de texto).
 
 | Data | Quem | Onde | O que aconteceu | Status | Destino |
 |---|---|---|---|---|---|
@@ -51,7 +51,7 @@ Uma linha por incômodo ou ideia que apareceu usando o Trunkpad. Triagem semanal
 | 2026-10-21 | crítica de interface | painéis | "O backlog por ICE reordena ao repontuar" não acontecia nos painéis reais: a coluna ICE é calculada e `ice_*` não são colunas; gravar direto no disco uma nota aberta em outra aba perderia uma edição. | resolvido | v0.9.0: células editáveis só nas colunas de propriedade; gravação pela aba aberta; Desfazer quando a nota sai do painel (D-035) |
 | 2026-10-21 | crítica de interface | propriedades | 17 propriedades a 26 px = a primeira tela vira metadado; sugestões listariam parágrafos de 300 caracteres; links vivem em listas, não em escalares. | resolvido | v0.9.0: recolhido por padrão acima de seis, resumo no cabeçalho; sugestões só repetidas ou curtas; fichas de lista reconhecem links (D-034) |
 | 2026-10-21 | crítica de interface | modelos de nota | `{{date:YYYY-MM-DD}}` dos templates do vault nasceria literal; nota criada na raiz não entra em painel; `.trunkpad/templates/` reinventaria a convenção do Obsidian. | resolvido | v0.9.0: placeholders preenchidos; pasta da nota lida; pastas Templates/Modelos e `.obsidian/templates.json` (D-036) |
-| 2026-10-21 | assistente | modelos de nota | Não exercitado: `.obsidian/templates.json` e `.obsidian/types.json` (o vault não tem nenhum dos dois); uma semana de uso real das Propriedades no product-planning. | novo | primeira semana no product-planning: mudar status e repontuar ICE só pelo Trunkpad; anotar o que faltou |
+| 2026-10-21 | assistente | modelos de nota | Não exercitado: `.obsidian/templates.json` e `.obsidian/types.json` (o vault não tem nenhum dos dois); uma semana de uso real das Propriedades no product-planning. | novo | primeira semana no product-planning: mudar status e repontuar ICE só pelo Nanquim; anotar o que faltou |
 | 2026-10-21 | André | instalação no Mac | v0.9.0 pelo `.dmg`: "Trunkpad está danificado e não pode ser aberto" na primeira abertura (build sem assinatura + quarentena do download; sem botão de saída). | resolvido | v0.9.0 abre com `xattr -cr /Applications/Trunkpad.app`; v0.9.1 assinada ad-hoc com *Abrir mesmo assim* (D-037); assinatura Developer ID segue no roadmap |
 | 2026-10-21 | André | atualização | Perguntou como saber que há versão nova e como atualizar. A verificação ao abrir só funciona com o token do GitHub (repositório privado); sem token, *Verificar agora* responde "Você já usa a versão mais recente", que é falso. | novo | próxima versão: sem token, dizer "Conecte o GitHub para verificar" em vez de "em dia"; download automático segue dependendo de assinatura (D-019) |
 | 2026-10-21 | André | barra lateral | "Cadê meu usuário na parte de baixo? Precisamos exigir que exista um usuário conectado." Não havia pessoa no app, só identidade por espaço, pulável. | resolvido | v0.10.0: pessoa obrigatória na primeira abertura, rodapé com estados e menu (D-038) |
@@ -71,4 +71,6 @@ Uma linha por incômodo ou ideia que apareceu usando o Trunkpad. Triagem semanal
 | 2026-10-23 | André | aprovar | "A ideia é boa, mas está tudo caótico" ao aprovar. Parte era a lista errada de 111 arquivos (acima); a revisão agora abre em largura total. Falta entender por que um pedido só de pergunta ficou "pronto para aprovar". | em análise | pedir um print da revisão depois de atualizar |
 | 2026-10-23 | André | nome | Ao abrir, o Mac pedia a senha para "Trunkpad Safe Storage": o app ainda se chamava Trunkpad por dentro. "Gostaria que você alterasse todos os lugares que falam sobre Trunkpad e virasse Nanquim." | resolvido (main `495f852`, v0.16.0) | D-045; o Mac pergunta uma última vez ao abrir a 0.16 (*Permitir*) e não volta a perguntar |
 | 2026-10-23 | André | abrir pasta | "Isso daqui é o início do Git?" sobre a janela "Esta pasta vai ganhar um histórico". Sim: o app começa o histórico da pasta; o texto não dizia que ele só acrescenta `.gitignore`, `CLAUDE.md` e `AGENTS.md` quando faltam. | resolvido (main `495f852`, v0.16.0) | a janela diz o que muda e o que não muda |
+| 2026-10-23 | André | testar | "Como que eu consigo pra testar mais facilmente o que estamos fazendo pra conseguir iterar." Hoje cada teste pedia gerar, assinar e instalar um instalador. | resolvido (main, v0.16.0) | D-047: `npm run follow` abre o app pelo código e acompanha a `main` |
+| 2026-10-23 | André | nome | "Pode fazer todas as mudanças para nanquim, é fundamental e estamos no começo": o identificador do app, o histórico, este repositório e o ramo ainda diziam Trunkpad. | resolvido em parte (main, v0.16.0) | D-046; falta renomear o repositório no GitHub e apagar o ramo antigo (cliques do fundador) |
 

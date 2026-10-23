@@ -11,7 +11,7 @@ impacto_real:
 analises: []
 bloqueada_por: []
 proxima_acao: "contar nas próximas vinte rodadas quantas vezes a verificação falhou e quantas o assistente corrigiu sozinho"
-tags: [trunkpad/hipotese]
+tags: [nanquim/hipotese]
 ---
 
 ## Sinal
@@ -22,7 +22,7 @@ tags: [trunkpad/hipotese]
 
 ## Mecanismo
 
-Depois de escrever, o agente reabre o arquivo, confere front matter e valores contra os templates e as regras do `CLAUDE.md`/`TRUNKPAD.md` e roda o script de checagem permitido. Erros são corrigidos antes do checkpoint final, então a revisão humana encontra menos problemas.
+Depois de escrever, o agente reabre o arquivo, confere front matter e valores contra os templates e as regras do `CLAUDE.md`/`NANQUIM.md` e roda o script de checagem permitido. Erros são corrigidos antes do checkpoint final, então a revisão humana encontra menos problemas.
 
 ## Impacto esperado
 

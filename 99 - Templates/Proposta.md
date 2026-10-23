@@ -2,7 +2,7 @@
 status: rascunho
 hipoteses: []
 area: []
-tags: [trunkpad/proposta]
+tags: [nanquim/proposta]
 ---
 
 ## Problema

@@ -11,7 +11,7 @@ impacto_real:
 analises: []
 bloqueada_por: []
 proxima_acao: "usar comentários na revisão das próximas cinco propostas do product-planning e contar quantos pedidos com @assistente viraram mudança incorporada"
-tags: [trunkpad/hipotese]
+tags: [nanquim/hipotese]
 ---
 
 ## Sinal

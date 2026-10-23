@@ -1,5 +1,5 @@
 ---
-tags: [trunkpad/base]
+tags: [nanquim/base]
 status: proposto
 ---
 
@@ -9,7 +9,7 @@ Nenhuma destas métricas está instrumentada ainda. O app não envia telemetria;
 
 ## Métrica primária (proposta)
 
-**Incorporações por espaço ativo por semana** — rascunhos (de pessoas ou do agente) que viraram Principal. É a unidade de valor do produto: trabalho revisado que entrou. Fonte: histórico do git (`Merged draft:` com trailer `Trunkpad-Draft`).
+**Incorporações por espaço ativo por semana** — rascunhos (de pessoas ou do agente) que viraram Principal. É a unidade de valor do produto: trabalho revisado que entrou. Fonte: histórico do git (`Merged draft:` com trailer `Nanquim-Draft`).
 
 ## KPIs de suporte
 
@@ -19,7 +19,7 @@ Nenhuma destas métricas está instrumentada ainda. O app não envia telemetria;
 | Rodadas revisadas | % de rodadas do agente com mudança que foram revisadas (incorporadas ou descartadas) em 24h | git + sessões | Mede se a revisão virou hábito ou gargalo |
 | Tempo até revisar | mediana entre o fim da rodada e a incorporação | git + sessões | Fricção do fluxo de revisão |
 | Desfazer | incorporações desfeitas / incorporações | git | Qualidade do que entra |
-| Comentários resolvidos | comentários resolvidos / criados, e % com `@assistente` | `.trunkpad/comments.json` | Uso da revisão no documento |
+| Comentários resolvidos | comentários resolvidos / criados, e % com `@assistente` | `.nanquim/comments.json` | Uso da revisão no documento |
 | Edições inline aceitas | aceitas / (aceitas + rejeitadas) | a instrumentar | Qualidade do editar-no-documento |
 
 ## Priorização ICE

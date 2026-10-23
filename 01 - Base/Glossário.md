@@ -1,5 +1,5 @@
 ---
-tags: [trunkpad/base]
+tags: [nanquim/base]
 status: ativo
 ---
 
@@ -14,19 +14,19 @@ Vocabulário da interface e o que ele é por baixo. Novo termo de interface entr
 | **Rascunho** | branch `draft/<slug>` | Único lugar onde o agente escreve |
 | **Salvar versão** | commit | Mensagem sugerida pelo assistente |
 | **Checkpoint** | commit `[checkpoint]` com `Co-authored-by` do agente | Escondido do histórico por padrão |
-| **Revisar e incorporar** | merge `--no-ff` com trailer `Trunkpad-Draft` | Diff renderizado por formato |
+| **Revisar e incorporar** | merge `--no-ff` com trailer `Nanquim-Draft` | Diff renderizado por formato |
 | **Desfazer incorporação** | `revert -m 1` | Sempre disponível; reincorporar reverte o revert |
 | **Histórico / Restaurar** | log e checkout de arquivo | Não destrutivo |
 | **Trazer novidades** | fetch + merge | Conflitos resolvidos por arquivo |
 | **Publicar** | push | |
 | **Enviar para revisão** | pull request | Via GitHub |
-| **Exigir rascunhos** | política em `.trunkpad/config.json` | Bloqueia salvar direto no Principal |
+| **Exigir rascunhos** | política em `.nanquim/config.json` | Bloqueia salvar direto no Principal |
 | **Palco** | área de abas ao lado da conversa | Arquivos, diffs, revisão, aba Espaço |
-| **Comentário** | thread em `.trunkpad/comments.json` ancorada a um trecho | `@assistente` passa para a conversa |
+| **Comentário** | thread em `.nanquim/comments.json` ancorada a um trecho | `@assistente` passa para a conversa |
 | **Persona** | agente em `.claude/agents/*.md` | Revisor com critérios fixos, não edita |
-| **Playbook** | `SKILL.md` em `.trunkpad/playbooks/` ou `.claude/skills/` | Aparece com `/` na caixa de texto |
-| **Script permitido** | entrada em `.trunkpad/scripts.json` | Única forma de o agente executar algo |
-| **Conector** | servidor MCP em `.trunkpad/connectors.json` | Ferramentas externas para o agente |
+| **Playbook** | `SKILL.md` em `.nanquim/playbooks/` ou `.claude/skills/` | Aparece com `/` na caixa de texto |
+| **Script permitido** | entrada em `.nanquim/scripts.json` | Única forma de o agente executar algo |
+| **Conector** | servidor MCP em `.nanquim/connectors.json` | Ferramentas externas para o agente |
 
 ## Termos do editor (v0.6)
 
@@ -47,16 +47,16 @@ Vocabulário da interface e o que ele é por baixo. Novo termo de interface entr
 - **Preparar** — instalar o servidor de um conector local uma vez, pelo próprio app (sem Node no computador); depois funciona sem internet.
 - **Atualizar** — preparar de novo quando o catálogo fixa uma versão mais nova; o conector continua usável enquanto isso.
 - **Trocar** — reescrever a entrada do time quando o pacote que ela usa foi descontinuado; nome, id e acesso continuam.
-- **Embutido no app** — conector que o próprio Trunkpad oferece, sem servidor, instalação ou chave (Páginas da web).
+- **Embutido no app** — conector que o próprio Nanquim oferece, sem servidor, instalação ou chave (Páginas da web).
 - **Só lê** — servidor configurado para só leitura: toda ação conta como leitura e funciona em qualquer nível de confiança.
 
 ## Termos da pessoa (v0.10)
 
 - **Pessoa** — quem usa esta instalação: nome e e-mail que assinam as versões em todos os espaços; fica no rodapé da barra lateral e no chip da tela inicial.
 - **Chave do terminal** — chave de IA que o app recebeu do terminal que o abriu; só vale nessa abertura. *Guardar no app* copia para o chaveiro.
-- **Nova versão disponível** — estado do rodapé quando existe uma release mais nova; o menu oferece *Baixar Trunkpad x.y.z*.
+- **Nova versão disponível** — estado do rodapé quando existe uma release mais nova; o menu oferece *Baixar Nanquim x.y.z*.
 
 ## Termos do motor (v0.11)
 
-- **Motor da IA** — quem pensa pelo assistente: *Modelo via API* (o Trunkpad chama o provedor com a sua chave) ou *Claude Code* (o `claude` instalado e logado na sua máquina, dirigido pelo Trunkpad, que continua cuidando de rascunhos, regras, aprovações e versões).
-- **Colega** — agente nomeado do espaço (`.trunkpad/agents/<id>.md` ou `.claude/agents/<id>.md`), com figura, escopo de escrita e limites por ferramenta; é chamado com `@id`.
+- **Motor da IA** — quem pensa pelo assistente: *Modelo via API* (o Nanquim chama o provedor com a sua chave) ou *Claude Code* (o `claude` instalado e logado na sua máquina, dirigido pelo Nanquim, que continua cuidando de rascunhos, regras, aprovações e versões).
+- **Colega** — agente nomeado do espaço (`.nanquim/agents/<id>.md` ou `.claude/agents/<id>.md`), com figura, escopo de escrita e limites por ferramenta; é chamado com `@id`.

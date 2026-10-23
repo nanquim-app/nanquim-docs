@@ -11,7 +11,7 @@ impacto_real:
 analises: []
 bloqueada_por: []
 proxima_acao: "duas semanas de uso neste espaço e no product-planning; registrar em Feedback de uso cada vez que a pessoa precisou abrir algo pela árvore em vez de pelo chip"
-tags: [trunkpad/hipotese]
+tags: [nanquim/hipotese]
 ---
 
 ## Sinal

@@ -11,7 +11,7 @@ impacto_real:
 analises: []
 bloqueada_por: []
 proxima_acao: "quatro semanas de uso no product-planning: toda mudança de status passa por @head-of-product; comparar bloqueios achados com a revisão manual"
-tags: [trunkpad/hipotese]
+tags: [nanquim/hipotese]
 ---
 
 ## Sinal

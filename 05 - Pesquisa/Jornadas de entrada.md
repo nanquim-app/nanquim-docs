@@ -1,5 +1,5 @@
 ---
-tags: [trunkpad/pesquisa]
+tags: [nanquim/pesquisa]
 status: ativo
 data: 2026-10-22
 ---
@@ -45,7 +45,7 @@ Pedido do André (22/10): "fazer a jornada de clientes novos e clientes que já 
 
 | | Como é | Configuração do Google | Construir | Risco |
 |---|---|---|---|---|
-| **A. Trazer o .zip do Drive** | No Drive: pasta → *Fazer download*. No Trunkpad: *Trazer do Google Drive* → escolher o(s) .zip → novo espaço em `~/Trunkpad`, primeira versão, e cópias em Markdown dos documentos para o assistente ler e editar. | Nenhuma. | Pequeno (JSZip e conversores já estão no app). | Baixo. Comportamento do .zip do Drive a confirmar com uma pasta real. |
+| **A. Trazer o .zip do Drive** | No Drive: pasta → *Fazer download*. No Nanquim: *Trazer do Google Drive* → escolher o(s) .zip → novo espaço em `~/Trunkpad`, primeira versão, e cópias em Markdown dos documentos para o assistente ler e editar. | Nenhuma. | Pequeno (JSZip e conversores já estão no app). | Baixo. Comportamento do .zip do Drive a confirmar com uma pasta real. |
 | **B. Entrar com Google e escolher a pasta** | Consentimento e seletor do Google no navegador; importação única pela API (Docs em Markdown, Sheets em .xlsx). | Cliente OAuth, tela de consentimento; se `drive.file` não cobrir pastas, escopo restrito com verificação e avaliação anual. | Médio. | A pergunta da pasta e o prazo de verificação. |
 | **C. Drive como fonte de leitura** | Conector: o assistente lê no Drive sob demanda, nada é copiado. | Servidor MCP oficial do Google, ainda em prévia para desenvolvedores. | Pequeno quando sair da prévia. | Depende do Google. |
 | **D. Sincronização contínua** | O Drive vira espelho do espaço. | Como B, com tokens que não expiram. | Grande. | Duas fontes de verdade por desenho. |

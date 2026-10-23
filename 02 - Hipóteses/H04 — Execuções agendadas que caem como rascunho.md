@@ -11,7 +11,7 @@ impacto_real:
 analises: []
 bloqueada_por: []
 proxima_acao: "criar as duas primeiras rotinas do product-planning (repontuar ICE; registrar questions do Metabase) pela aba Rotinas e medir por duas semanas quantos rascunhos são incorporados e em quanto tempo"
-tags: [trunkpad/hipotese]
+tags: [nanquim/hipotese]
 ---
 
 ## Sinal

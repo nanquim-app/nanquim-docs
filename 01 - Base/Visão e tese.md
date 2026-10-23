@@ -1,5 +1,5 @@
 ---
-tags: [trunkpad/base]
+tags: [nanquim/base]
 status: ativo
 ---
 
@@ -22,7 +22,7 @@ Um espaço de trabalho que é um repositório git, com interface em linguagem de
 
 Primeiro: fundadores, PMs e analistas que já vivem em Obsidian, Notion ou Claude Desktop e sentem falta de histórico, revisão e colaboração com agentes. Depois: o time inteiro de uma empresa, com políticas por espaço. Detalhe em [[01 - Base/Usuários|Usuários]].
 
-## O que o Trunkpad não é
+## O que o Nanquim não é
 
 - Não é um chat com upload de arquivos: o arquivo é o centro, a conversa é o meio.
 - Não é um banco de dados proprietário: tudo é arquivo em disco, em git.

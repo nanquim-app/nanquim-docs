@@ -1,5 +1,5 @@
 ---
-tags: [trunkpad/decisoes]
+tags: [nanquim/decisoes]
 status: ativo
 ---
 
@@ -74,7 +74,7 @@ Log cronológico e cumulativo. Nunca apague: decisão posterior revoga anterior 
 
 - **Data:** 2026-10-20
 - **Alternativa rejeitada:** documentar o produto só no repositório do código.
-- **Razão:** usar o Trunkpad para planejar o Trunkpad expõe os incômodos antes dos clientes; tudo vira [[05 - Pesquisa/Feedback de uso|feedback]], hipótese ou decisão aqui.
+- **Razão:** usar o Nanquim para planejar o Nanquim expõe os incômodos antes dos clientes; tudo vira [[05 - Pesquisa/Feedback de uso|feedback]], hipótese ou decisão aqui.
 - **Quem decidiu:** André, com o assistente.
 
 ### D-011 — Cada conversa que escreve trabalha numa cópia própria (git worktree)
@@ -242,7 +242,7 @@ Log cronológico e cumulativo. Nunca apague: decisão posterior revoga anterior 
 
 - **Data:** 2026-10-21
 - **Alternativa rejeitada:** painel lateral de propriedades (o Obsidian tem, mas o bloco fica onde a pessoa já olha); registro de tipos do espaço agora (`.obsidian/types.json` não existe no vault; honrar quando aparecer); conversão silenciosa para kebab-case.
-- **Razão:** no `product-planning` o estado de tudo vive no front matter (47 `status`, 18 hipóteses com os 17 campos do template) e o CLAUDE.md do vault diz que o estado muda pelo `status:`; no Trunkpad o front matter ficava escondido no Rico. O bloco mostra uma linha por propriedade, com tipo inferido do valor (texto, número, data, caixa, link, lista em fichas), sugestões dos valores que o espaço já usa (só os que se repetem ou são curtos; *Criar "x"* antes de gravar; kebab-case só quando todos os valores da chave são kebab), *Adicionar propriedade* e `⌘;`. A gravação muda só as linhas daquela propriedade (ordem, comentários e aspas preservados); teste contra o vault real: regravar cada propriedade de cada nota com o próprio valor devolve as 91 notas idênticas. Recolhido mostra um resumo; estado lembrado por espaço. ADR-013 no app. Hipótese: [[H10 — Sintaxe do Obsidian no modo Rico]].
+- **Razão:** no `product-planning` o estado de tudo vive no front matter (47 `status`, 18 hipóteses com os 17 campos do template) e o CLAUDE.md do vault diz que o estado muda pelo `status:`; no Nanquim o front matter ficava escondido no Rico. O bloco mostra uma linha por propriedade, com tipo inferido do valor (texto, número, data, caixa, link, lista em fichas), sugestões dos valores que o espaço já usa (só os que se repetem ou são curtos; *Criar "x"* antes de gravar; kebab-case só quando todos os valores da chave são kebab), *Adicionar propriedade* e `⌘;`. A gravação muda só as linhas daquela propriedade (ordem, comentários e aspas preservados); teste contra o vault real: regravar cada propriedade de cada nota com o próprio valor devolve as 91 notas idênticas. Recolhido mostra um resumo; estado lembrado por espaço. ADR-013 no app. Hipótese: [[H10 — Sintaxe do Obsidian no modo Rico]].
 - **Quem decidiu:** assistente, com os ajustes da crítica de interface (hierarquia: recolhido por padrão acima de seis propriedades; texto longo em campo que cresce; links dentro de listas; teclado).
 
 ### D-035 — Células de propriedade nos painéis editam no lugar e gravam na nota
@@ -284,7 +284,7 @@ Log cronológico e cumulativo. Nunca apague: decisão posterior revoga anterior 
 
 - **Data:** 2026-10-21
 - **Alternativa rejeitada:** portar só o motor Claude Code para a main (o primeiro commit dele, a refatoração do harness, conflita com tudo que a main fez desde a 0.3; seria reescrever à mão e manter duas implementações); deixar a main sem o motor (o fundador seguiria usando outra versão pelo `launch.sh`, e os instaladores continuariam sem o que ele usa todo dia).
-- **Razão:** o motor Claude Code, os colegas nomeados com figuras, fontes de dados, modelos de espaço, página do time e a reforma de interface viviam no ramo da sessão "Mecanizou infrastructure" (82 commits), que mesclou a main até a 0.9.1 mas nunca entrou nela; os instaladores saem da main. "Sumiu a conexão com o Claude Code" era o motor nunca ter sido publicado. Mesclagem completa como v0.11.0, com 10 conflitos resolvidos: rodapé da pessoa (D-038) ganha a linha "tudo salvo / N alterações suas", o próximo passo compacto e a engrenagem dessa linha; onboarding do espaço mantém a escolha de motor e perde os campos de identidade; verificação de versão da 0.10.0 preservada. Motor padrão continua sendo chave de API; Claude Code é uma opção que dirige o `claude` já instalado e logado na máquina da pessoa, sem o Trunkpad guardar credencial (ADR-008 daquela linha). ADR-015.
+- **Razão:** o motor Claude Code, os colegas nomeados com figuras, fontes de dados, modelos de espaço, página do time e a reforma de interface viviam no ramo da sessão "Mecanizou infrastructure" (82 commits), que mesclou a main até a 0.9.1 mas nunca entrou nela; os instaladores saem da main. "Sumiu a conexão com o Claude Code" era o motor nunca ter sido publicado. Mesclagem completa como v0.11.0, com 10 conflitos resolvidos: rodapé da pessoa (D-038) ganha a linha "tudo salvo / N alterações suas", o próximo passo compacto e a engrenagem dessa linha; onboarding do espaço mantém a escolha de motor e perde os campos de identidade; verificação de versão da 0.10.0 preservada. Motor padrão continua sendo chave de API; Claude Code é uma opção que dirige o `claude` já instalado e logado na máquina da pessoa, sem o Nanquim guardar credencial (ADR-008 daquela linha). ADR-015.
 - **Quem decidiu:** fundador, com o diagnóstico e as opções medidas pelo assistente.
 
 ### D-041 — Só a main numera versões e ADRs; a bateria inteira roda em todo push na main
@@ -321,4 +321,19 @@ Log cronológico e cumulativo. Nunca apague: decisão posterior revoga anterior 
 - **Alternativa rejeitada:** manter `trunkpad` por dentro até uma migração futura (o Mac continuaria pedindo a senha de "Trunkpad Safe Storage" a cada instalação nova, e o nome antigo seguiria aparecendo em pastas e arquivos); trocar tudo de uma vez sem ler os nomes antigos (as chaves guardadas no Chaveiro, as configurações, os espaços com `.trunkpad/`, os convites `trunkpad://` já enviados e as variáveis do CI parariam de funcionar); trocar também o identificador do pacote (`app.trunkpad.desktop`), que o macOS e o Windows tratariam como outro app, com outra pasta e outras permissões.
 - **Razão:** o fundador viu o pedido de senha do Chaveiro com "Trunkpad Safe Storage" ao abrir o Nanquim e pediu que todos os lugares que falam Trunkpad virassem Nanquim. A partir da 0.16.0: a pasta de configurações, o arquivo de configurações e o item do Chaveiro passam a se chamar Nanquim; na primeira abertura a pasta antiga é copiada (sem caches; a antiga fica como estava) e as chaves são abertas uma vez com o item antigo e guardadas de novo com o novo, então o Mac pergunta uma última vez. Espaços novos usam `.nanquim/` e `NANQUIM.md`; os antigos continuam com `.trunkpad/` e `TRUNKPAD.md` e funcionam, também para colegas em versões anteriores. Links `nanquim://`, marcas no histórico (*Nanquim Agent*, `Nanquim-Draft`), o servidor de ferramentas que o Claude Code vê e as variáveis `NANQUIM_*` também mudam; os nomes antigos continuam sendo lidos em todos esses pontos. Ficam com o nome antigo: o identificador do pacote, o histórico (changelog, ADRs, pesquisa) e este repositório de documentação, cujo nome só muda se o fundador quiser.
 - **Quem decidiu:** fundador ("Eu gostaria que você alterasse todos os lugares que falam sobre Trunkpad e virasse Nanquim"), com o desenho da compatibilidade feito pelo assistente.
+
+### D-046 — Nada mais se chama Trunkpad: identificador do app, histórico, este repositório e o ramo de trabalho
+
+- **Data:** 2026-10-23
+- **REVOGA em parte D-045**, que mantinha o nome antigo no identificador do pacote, no histórico e no nome deste repositório.
+- **Alternativa rejeitada:** manter o identificador `app.trunkpad.desktop` (ninguém vê, mas aparece em pastas do sistema e no Chaveiro); trocar o identificador e deixar o Windows tratar o Nanquim como outro app (a instalação deixaria de se atualizar no lugar); reescrever também os nomes literais que cada versão usou (`.trunkpad/` na 0.13), o que tornaria o histórico falso.
+- **Razão:** "pode fazer todas as mudanças para nanquim, é fundamental e estamos no começo". O identificador passa a `com.nanquimapp.desktop` na mesma 0.16.0 (ainda não publicada), então o item do Chaveiro já nasce com o app novo; o macOS pode pedir de novo, uma vez, o acesso a pastas como Documentos. O instalador do Windows mantém o GUID antigo e continua atualizando a mesma instalação. Histórico, ADRs, pesquisa, as notas deste espaço e o ramo de trabalho (`feat/nanquim-v1`) passam a dizer Nanquim; ficam com o nome antigo só as linhas que contam a própria troca e os nomes literais de cada época. Este espaço agora usa `.nanquim/` e `NANQUIM.md`. O nome do repositório no GitHub (`trunkpad-docs` → `nanquim-docs`) depende de um clique do fundador nas configurações do repositório; o ramo antigo também, porque a sessão não consegue apagar ramos no GitHub. O app continua lendo os nomes antigos, sem mostrá-los, para não perder chaves, espaços e convites de quem vem de antes.
+- **Quem decidiu:** fundador, com a execução feita pelo assistente.
+
+### D-047 — Testar a main sem instalador: `npm run follow`
+
+- **Data:** 2026-10-23
+- **Alternativa rejeitada:** gerar um instalador a cada mudança (assinar, notarizar e instalar leva uns dez minutos por volta); publicar uma versão de testes a cada push no GitHub Actions (minutos de macOS caros, D-042); só `npm run dev` (exige lembrar de `git pull` e reiniciar quando muda o processo principal ou as dependências).
+- **Razão:** o fundador pediu um jeito mais fácil de testar o que estamos fazendo para iterar. `npm run follow`, na mesma pasta onde ele roda o `release:mac`, abre o app a partir do código e acompanha a `main`: a cada 20 segundos busca a versão nova, a janela se atualiza nas mudanças de tela e o app reabre nas outras, instalando dependências novas quando preciso. Usa os mesmos ajustes, espaços e chaves do app instalado (feche o instalado antes); `--fresh` abre uma cópia limpa, como no primeiro uso, ao lado do instalado; com o nome de um ramo, acompanha esse ramo. O instalador continua sendo o teste final de cada release. Testado aqui contra um repositório local: mudança de tela, do processo principal e de dependências, fechar o app e Ctrl+C.
+- **Quem decidiu:** fundador ("Como que eu consigo pra testar mais facilmente o que estamos fazendo pra conseguir iterar"), com a solução proposta pelo assistente.
 
