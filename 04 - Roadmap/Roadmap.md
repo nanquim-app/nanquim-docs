@@ -6,7 +6,7 @@ atualizado: 2026-10-22
 
 # Roadmap
 
-Agora · Próximo · Depois. Cada item aponta para a hipótese ou decisão que o sustenta; item sem hipótese é dívida de produto. Sequência completa e racional em `docs/decisions/004-roadmap.md` do repositório do app.
+Agora · Próximo · Depois. Cada item aponta para a hipótese, proposta ou decisão que o sustenta; item sem hipótese nem proposta é dívida de produto. As tarefas de cada item vivem na proposta, em [[06 - Propostas/_index|Propostas]]. Sequência completa e racional em `docs/decisions/004-roadmap.md` do repositório do app.
 
 ## Agora (v0.2 a v0.11)
 
@@ -41,6 +41,8 @@ Agora · Próximo · Depois. Cada item aponta para a hipótese ou decisão que o
 
 | Item | Sustentação |
 |---|---|
+| Portão de entrada do beta fechado (conversas de descoberta, crítica nova, assinatura no Mac, ativação medida) | [[06 - Propostas/P02 — Critério de pronto para o beta\|P02]] (rascunho), D-048 |
+| Arquivo, pedido ou os dois, com o pedido sempre à direita | [[06 - Propostas/P01 — Arquivo, conversa ou os dois, com a conversa sempre do mesmo lado\|P01]] (rascunho), [[H01 — Conversa como visão principal, arquivos no palco]] |
 | Validação com arquivos reais (planilha de régua, Word com tabelas, Banco de dados preparado pelo app com um Postgres de verdade) | H07, H10, H11 — próximas ações |
 | Slides alterados na revisão (filmstrip, antes/depois por slide) | ADR-012 (adiado: nenhum deck no product-planning) |
 | Custo por rascunho e regras do espaço dentro do `config.json` (piso de confiança, modelos permitidos, aviso de orçamento) | D-033 |

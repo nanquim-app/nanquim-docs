@@ -1,0 +1,12 @@
+{
+  "title": "GitHub",
+  "kind": "http",
+  "url": "https://api.githubcopilot.com/mcp/",
+  "auth": "token",
+  "tokenHeader": "Authorization",
+  "tokenPrefix": "Bearer ",
+  "catalog": "github",
+  "description": "Repositórios, issues, pull requests e os quadros do GitHub Projects além deste espaço.",
+  "id": "github",
+  "access": "read-write"
+}

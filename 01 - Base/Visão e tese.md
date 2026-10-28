@@ -5,18 +5,27 @@ status: ativo
 
 # Visão e tese
 
+## Posicionamento
+
+Para times de negócio cujo conhecimento está espalhado entre documentos, planilhas e sistemas, o Nanquim é a fonte única da verdade da empresa: um espaço que reúne essas fontes e onde as pessoas, e os agentes de IA quando o time quiser, mudam o mesmo material juntas, com cada mudança revisada e reversível. Diferente do Notion, nada muda sem revisão e tudo fica em arquivos abertos, que qualquer ferramenta lê.
+
+O valor não depende da IA: um time sem nenhum agente já ganha a fonte única, a revisão e o desfazer. A IA acelera o trabalho dentro dessas mesmas regras (D-048). A frase vem do fundador em 28/10 e ainda não foi testada com ninguém de fora; validar nas entrevistas do beta.
+
 ## O problema
 
-Times de negócio usam IA em janelas de chat: pedem, copiam, colam em documentos, perdem o histórico. Quem revisa não vê o que mudou; quem errou não tem como desfazer; a empresa não sabe o que foi feito por pessoa e o que foi feito por agente. Engenharia resolveu esse problema há anos com git: diff, revisão, incorporação, reversão. Ninguém levou isso para quem não programa.
+O que a empresa sabe está espalhado: documentos no Drive, páginas no Notion, planilhas, números em sistemas. Ninguém sabe qual versão vale, quem mudou o quê, nem como desfazer, e quem não programa não tem um jeito de trabalhar junto sobre o mesmo material com revisão.
+
+A IA piora o quadro. Times de negócio usam IA em janelas de chat: pedem, copiam, colam em documentos, perdem o histórico. Quem revisa não vê o que mudou; quem errou não tem como desfazer; a empresa não sabe o que foi feito por pessoa e o que foi feito por agente. Engenharia resolveu esse problema há anos com git: diff, revisão, incorporação, reversão. Ninguém levou isso para quem não programa.
 
 ## A tese
 
 Um espaço de trabalho que é um repositório git, com interface em linguagem de negócio, onde:
 
-1. o agente lê e edita os mesmos arquivos que as pessoas (Markdown, planilhas, páginas),
-2. toda escrita do agente nasce em um rascunho e vira um checkpoint atribuído,
-3. revisar é ver o diff renderizado (texto, células, páginas) e incorporar com um clique, com desfazer,
-4. o repositório continua legível por Claude Code, Cursor e CI, então engenharia e negócio trabalham no mesmo lugar.
+1. as fontes que o time já usa entram no espaço ou são consultadas a partir dele (pastas do Drive, planilhas, bancos de dados, conectores),
+2. pessoas e agentes leem e editam os mesmos arquivos (Markdown, planilhas, páginas),
+3. toda escrita do agente nasce em um rascunho e vira um checkpoint atribuído,
+4. revisar é ver o diff renderizado (texto, células, páginas) e incorporar com um clique, com desfazer,
+5. o repositório continua legível por Claude Code, Cursor e CI, então engenharia e negócio trabalham no mesmo lugar.
 
 ## Para quem
 
@@ -24,7 +33,7 @@ Primeiro: fundadores, PMs e analistas que já vivem em Obsidian, Notion ou Claud
 
 ## O que o Nanquim não é
 
-- Não é um chat com upload de arquivos: o arquivo é o centro, a conversa é o meio.
+- Não é um chat com upload de arquivos: a fonte da verdade é o centro, a conversa é um dos jeitos de trabalhar nela.
 - Não é um banco de dados proprietário: tudo é arquivo em disco, em git.
 - Não é um cliente git: ninguém vê commit, branch, stage ou rebase. Ver [[01 - Base/Glossário|Glossário]].
 

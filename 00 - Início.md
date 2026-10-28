@@ -1,10 +1,10 @@
 # Nanquim — início
 
-**Tese em uma linha:** empresas já têm a matéria-prima de um cérebro organizacional (documentos, planilhas, páginas, vaults). Falta um lugar onde pessoas e agentes de IA mudam esse material juntos, com cada mudança visível, atribuída, revisável e reversível. O Nanquim é esse lugar, e o "cérebro" é um repositório git comum que todas as outras ferramentas também leem.
+**Tese em uma linha:** empresas já têm a matéria-prima de uma fonte única da verdade (documentos, planilhas, páginas, sistemas), mas espalhada. Falta um lugar que reúna essas fontes e onde times não técnicos, com ou sem agentes de IA, mudam esse material juntos, com cada mudança visível, atribuída, revisável e reversível. O Nanquim é esse lugar, e a fonte é um repositório git comum que todas as outras ferramentas também leem. Posicionamento em [[01 - Base/Visão e tese#Posicionamento|Visão e tese]] (D-048).
 
 **Base:** [[01 - Base/Visão e tese|Visão e tese]] · [[01 - Base/Princípios|Princípios]] · [[01 - Base/Usuários|Usuários]] · [[01 - Base/Glossário|Glossário]] · [[01 - Base/Métricas|Métricas]] · [[01 - Base/Concorrentes|Concorrentes]]
 
-**Trabalho:** [[02 - Hipóteses/_index|Hipóteses]] · [[03 - Decisões/Decisões|Decisões]] · [[04 - Roadmap/Roadmap|Roadmap]] · [[05 - Pesquisa/Feedback de uso|Feedback de uso]] · [[05 - Pesquisa/Benchmarks|Benchmarks]] · [[05 - Pesquisa/Revisão v0.11–v0.12|Revisão v0.11–v0.12]] · [[05 - Pesquisa/Crítica de interface — jornadas v0.12|Crítica de interface]] · [[05 - Pesquisa/Jornadas de entrada|Jornadas de entrada]]
+**Trabalho:** [[02 - Hipóteses/_index|Hipóteses]] · [[06 - Propostas/_index|Propostas e tarefas]] · [[03 - Decisões/Decisões|Decisões]] · [[04 - Roadmap/Roadmap|Roadmap]] · [[05 - Pesquisa/Feedback de uso|Feedback de uso]] · [[05 - Pesquisa/Benchmarks|Benchmarks]] · [[05 - Pesquisa/Revisão v0.11–v0.12|Revisão v0.11–v0.12]] · [[05 - Pesquisa/Crítica de interface — jornadas v0.12|Crítica de interface]] · [[05 - Pesquisa/Jornadas de entrada|Jornadas de entrada]]
 
 ## Em movimento
 
