@@ -4,7 +4,7 @@
 
 **Base:** [[01 - Base/Visão e tese|Visão e tese]] · [[01 - Base/Princípios|Princípios]] · [[01 - Base/Usuários|Usuários]] · [[01 - Base/Glossário|Glossário]] · [[01 - Base/Métricas|Métricas]] · [[01 - Base/Concorrentes|Concorrentes]]
 
-**Trabalho:** [[02 - Hipóteses/_index|Hipóteses]] · [[03 - Decisões/Decisões|Decisões]] · [[04 - Roadmap/Roadmap|Roadmap]] · [[05 - Pesquisa/Feedback de uso|Feedback de uso]] · [[05 - Pesquisa/Benchmarks|Benchmarks]] · [[05 - Pesquisa/Revisão v0.11–v0.12|Revisão v0.11–v0.12]] · [[05 - Pesquisa/Crítica de interface — jornadas v0.12|Crítica de interface]] · [[05 - Pesquisa/Jornadas de entrada|Jornadas de entrada]]
+**Trabalho:** [[02 - Hipóteses/_index|Hipóteses]] · [[06 - Propostas/_index|Propostas e tarefas]] · [[03 - Decisões/Decisões|Decisões]] · [[04 - Roadmap/Roadmap|Roadmap]] · [[05 - Pesquisa/Feedback de uso|Feedback de uso]] · [[05 - Pesquisa/Benchmarks|Benchmarks]] · [[05 - Pesquisa/Revisão v0.11–v0.12|Revisão v0.11–v0.12]] · [[05 - Pesquisa/Crítica de interface — jornadas v0.12|Crítica de interface]] · [[05 - Pesquisa/Jornadas de entrada|Jornadas de entrada]]
 
 ## Em movimento
 

@@ -345,3 +345,10 @@ Log cronológico e cumulativo. Nunca apague: decisão posterior revoga anterior 
 - **Razão:** perguntado se valia "arquivo no centro" (Visão e tese) ou "conversa no centro" (Princípios), o fundador respondeu que o centro é "a possibilidade de conectar diversas fontes e ter one single source of truth da empresa, com times não técnicos trabalhando juntos. Independente da IA." Visão e tese ganha a frase de posicionamento e o problema passa a começar pelo conhecimento espalhado; o Princípio 5 passa a dizer que nenhuma tela essencial depende de conversar. Sinal relacionado: o feedback de 28/10 de que "chat + arquivos" quebra o modo de trabalho, contra [[H01 — Conversa como visão principal, arquivos no palco]].
 - **Quem decidiu:** fundador, com a redação do assistente.
 
+### D-049 — Propostas ganham pasta própria e as tarefas são os acionáveis delas
+
+- **Data:** 2026-10-28
+- **Alternativa rejeitada:** tarefas numa lista à parte ou num quadro (mais um lugar para manter em dia, sem o porquê ao lado); tarefas como linhas do Roadmap (o Roadmap anda por versão, não por item com dono); continuar sem propostas (o modelo existia, mas nenhuma proposta tinha onde morar).
+- **Razão:** o fundador pediu notas e tarefas a partir de melhorias, com um fluxo para propor, validar a interface e seguir. A pasta Propostas recebe uma nota por proposta ("Pxx — Título"); as tarefas são o checklist dos Acionáveis, com dono, e um painel junta as abertas. O caminho feedback → triagem → correção, hipótese ou proposta → revisão → tarefas está em Sobre este espaço. Aprovado pelo fundador ("Avance então") depois da recomendação de 28/10.
+- **Quem decidiu:** fundador, com o desenho do assistente.
+

@@ -21,8 +21,24 @@ Você é o **Head of Product do Nanquim**. Trabalha em português, com objetivid
 03 - Decisões/        ← log cronológico e cumulativo (D-001, D-002…)
 04 - Roadmap/         ← Agora · Próximo · Depois, amarrado às hipóteses
 05 - Pesquisa/        ← benchmarks e o log de feedback de uso (dogfooding)
+06 - Propostas/       ← uma proposta por nota, "Pxx — Título"; as tarefas são os acionáveis dela
 99 - Templates/       ← Hipótese, Decisão, Proposta, Feedback
 ```
+
+## Caminho de uma melhoria
+
+```
+feedback (Feedback de uso, status novo)
+  → triagem semanal
+  → correção direta no app         (só conserto, sem mudar princípio nem interface)
+  | hipótese  (02 - Hipóteses)     (aposta com sinal, mecanismo e como validar)
+  | proposta  (06 - Propostas)     (mexe em princípio, em interface ou em mais de uma hipótese)
+  → revisão  (head-of-product; critico-de-interface quando é interface)
+  → aprovada → tarefas  (checklist "- [ ] o que fazer — dono" nos Acionáveis)
+  → Roadmap aponta para a proposta → publicada
+```
+
+Cada linha do Feedback de uso aponta no Destino para a correção, a hipótese ou a proposta. Tarefa só existe dentro de uma proposta aprovada; o que não tem proposta nem hipótese no Roadmap é dívida de produto.
 
 ## Ciclo de vida
 

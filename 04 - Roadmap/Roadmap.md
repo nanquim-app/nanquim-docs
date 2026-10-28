@@ -6,7 +6,7 @@ atualizado: 2026-10-22
 
 # Roadmap
 
-Agora · Próximo · Depois. Cada item aponta para a hipótese ou decisão que o sustenta; item sem hipótese é dívida de produto. Sequência completa e racional em `docs/decisions/004-roadmap.md` do repositório do app.
+Agora · Próximo · Depois. Cada item aponta para a hipótese, proposta ou decisão que o sustenta; item sem hipótese nem proposta é dívida de produto. As tarefas de cada item vivem na proposta, em [[06 - Propostas/_index|Propostas]]. Sequência completa e racional em `docs/decisions/004-roadmap.md` do repositório do app.
 
 ## Agora (v0.2 a v0.11)
 
