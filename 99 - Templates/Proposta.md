@@ -15,7 +15,7 @@ tags: [nanquim/proposta]
 
 ## Acionáveis
 
-<!-- As tarefas da proposta, uma por linha: "- [ ] o que fazer — dono". Em andamento: "- [/]". Feita: "- [x]". Só abra tarefas depois de a proposta ser aprovada. -->
+<!-- As tarefas da proposta, uma por linha: "- [ ] o que fazer — dono". Em andamento: "- [/]". Feita: "- [x]". Antes da aprovação, a lista é o plano; vira tarefa quando a proposta é aprovada. -->
 
 - [ ] 
 

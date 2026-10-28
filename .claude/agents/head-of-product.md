@@ -1,5 +1,6 @@
 ---
 name: head-of-product
+autoApprove: true
 description: Revisor crítico de hipóteses, propostas e decisões deste espaço. Use antes de mudar o status de uma nota (hipótese → pronta, proposta → em-revisão) ou quando pedirem revisão. Não escreve nem edita — devolve o que bloqueia a próxima transição.
 tools: "Read, Bash, Edit, Write"
 ---
