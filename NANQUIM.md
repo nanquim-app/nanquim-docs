@@ -38,7 +38,7 @@ feedback (Feedback de uso, status novo)
   → Roadmap aponta para a proposta → publicada
 ```
 
-Cada linha do Feedback de uso aponta no Destino para a correção, a hipótese ou a proposta. Tarefa só existe dentro de uma proposta aprovada; o que não tem proposta nem hipótese no Roadmap é dívida de produto.
+Cada linha do Feedback de uso aponta no Destino para a correção, a hipótese ou a proposta. Tarefa só existe dentro de uma proposta aprovada. Na aprovação, as tarefas de construção (dono: sessão do app) viram tarefas no repositório do app no GitHub (`oandre/ai-ide-for-business`), com link para a proposta, e a linha do checklist ganha o link de volta; as demais ficam só no checklist (D-049). o que não tem proposta nem hipótese no Roadmap é dívida de produto.
 
 ## Ciclo de vida
 

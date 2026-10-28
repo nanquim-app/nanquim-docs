@@ -15,7 +15,7 @@ tags: [nanquim/proposta]
 
 ## Acionáveis
 
-<!-- As tarefas da proposta, uma por linha: "- [ ] o que fazer — dono". Em andamento: "- [/]". Feita: "- [x]". Antes da aprovação, a lista é o plano; vira tarefa quando a proposta é aprovada. -->
+<!-- As tarefas da proposta, uma por linha: "- [ ] o que fazer — dono". Em andamento: "- [/]". Feita: "- [x]". Antes da aprovação, a lista é o plano. Na aprovação, as de dono "sessão do app" viram tarefas no repositório do app no GitHub e a linha ganha o link (D-049). -->
 
 - [ ] 
 

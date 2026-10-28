@@ -42,7 +42,7 @@ Enquanto a proposta não for aprovada, isto é o plano; vira tarefa na aprovaç�
 - [x] Revisão do crítico de interface sobre o lado, a janela estreita e o controle — crítico de interface, 28/10
 - [ ] Revisão do head-of-product para passar a em-revisão — André
 - [ ] Decisão que revoga a D-012 e, em parte, a D-044, depois da aprovação — André
-- [ ] Controle de três estados no alto, conversa à direita, transições, estados vazios, divisória e três atalhos — sessão de interface do app
+- [ ] Controle de três estados no alto, conversa à direita, transições, estados vazios, divisória e três atalhos — sessão do app
 - [ ] Medir a largura mínima de "Os dois" no notebook do fundador — André
 - [ ] "Pedido" no Glossário — André
 - [ ] Proposta própria para os modos de ver o arquivo e o "Manter aberto" — André
