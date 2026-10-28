@@ -337,3 +337,11 @@ Log cronológico e cumulativo. Nunca apague: decisão posterior revoga anterior 
 - **Razão:** o fundador pediu um jeito mais fácil de testar o que estamos fazendo para iterar. `npm run follow`, na mesma pasta onde ele roda o `release:mac`, abre o app a partir do código e acompanha a `main`: a cada 20 segundos busca a versão nova, a janela se atualiza nas mudanças de tela e o app reabre nas outras, instalando dependências novas quando preciso. Usa os mesmos ajustes, espaços e chaves do app instalado (feche o instalado antes); `--fresh` abre uma cópia limpa, como no primeiro uso, ao lado do instalado; com o nome de um ramo, acompanha esse ramo. O instalador continua sendo o teste final de cada release. Testado aqui contra um repositório local: mudança de tela, do processo principal e de dependências, fechar o app e Ctrl+C.
 - **Quem decidiu:** fundador ("Como que eu consigo pra testar mais facilmente o que estamos fazendo pra conseguir iterar"), com a solução proposta pelo assistente.
 
+### D-048 — O centro do produto é a fonte única da verdade da empresa, não a IA
+
+- **Data:** 2026-10-28
+- **REVOGA em parte D-004**, no que ela fazia da conversa o centro do produto (Princípio 5). A disposição da tela que a D-004 e a D-012 definem continua valendo até a proposta de layout ser aprovada.
+- **Alternativa rejeitada:** a conversa como centro (Princípio 5 até hoje: o produto seria um assistente com arquivos ao lado e perderia valor para quem não usa IA); o arquivo como centro também na tela (volta ao desenho da v0.1, que a D-004 já rejeitou, e não responde ao pedido de escolher entre arquivo cheio, conversa cheia ou os dois).
+- **Razão:** perguntado se valia "arquivo no centro" (Visão e tese) ou "conversa no centro" (Princípios), o fundador respondeu que o centro é "a possibilidade de conectar diversas fontes e ter one single source of truth da empresa, com times não técnicos trabalhando juntos. Independente da IA." Visão e tese ganha a frase de posicionamento e o problema passa a começar pelo conhecimento espalhado; o Princípio 5 passa a dizer que nenhuma tela essencial depende de conversar. Sinal relacionado: o feedback de 28/10 de que "chat + arquivos" quebra o modo de trabalho, contra [[H01 — Conversa como visão principal, arquivos no palco]].
+- **Quem decidiu:** fundador, com a redação do assistente.
+
