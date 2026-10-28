@@ -8,5 +8,5 @@
   "catalog": "github",
   "description": "Repositórios, issues, pull requests e os quadros do GitHub Projects além deste espaço.",
   "id": "github",
-  "access": "read"
+  "access": "read-write"
 }
