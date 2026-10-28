@@ -41,6 +41,8 @@ Agora · Próximo · Depois. Cada item aponta para a hipótese, proposta ou deci
 
 | Item | Sustentação |
 |---|---|
+| Portão de entrada do beta fechado (conversas de descoberta, crítica nova, assinatura no Mac, ativação medida) | [[06 - Propostas/P02 — Critério de pronto para o beta\|P02]] (rascunho), D-048 |
+| Arquivo, pedido ou os dois, com o pedido sempre à direita | [[06 - Propostas/P01 — Arquivo, conversa ou os dois, com a conversa sempre do mesmo lado\|P01]] (rascunho), [[H01 — Conversa como visão principal, arquivos no palco]] |
 | Validação com arquivos reais (planilha de régua, Word com tabelas, Banco de dados preparado pelo app com um Postgres de verdade) | H07, H10, H11 — próximas ações |
 | Slides alterados na revisão (filmstrip, antes/depois por slide) | ADR-012 (adiado: nenhum deck no product-planning) |
 | Custo por rascunho e regras do espaço dentro do `config.json` (piso de confiança, modelos permitidos, aviso de orçamento) | D-033 |
