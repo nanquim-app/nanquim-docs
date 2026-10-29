@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="presentation" content="slides">
+<title>Nanquim — a base do produto</title>
+<style>
+  :root { --ink: #1d1d1f; --muted: #6e6e73; --pen: #2f5bd3; --paper: #fbfaf7; --rule: #e4e1da; }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--paper); color: var(--ink); font-family: -apple-system, "Inter", "Segoe UI", sans-serif; }
+  section { width: 100vw; height: 100vh; aspect-ratio: 16 / 9; padding: 8vh 9vw; display: flex; flex-direction: column; justify-content: center; gap: 3vh; }
+  h1 { font-size: 7vh; line-height: 1.05; letter-spacing: -0.02em; }
+  h2 { font-size: 5vh; line-height: 1.12; letter-spacing: -0.01em; max-width: 80vw; }
+  p, li { font-size: 3vh; line-height: 1.4; color: var(--muted); }
+  ul, ol { padding-left: 1.2em; display: flex; flex-direction: column; gap: 1.4vh; }
+  li strong { color: var(--ink); font-weight: 600; }
+  .line { width: 8vh; height: 0.6vh; background: var(--pen); border-radius: 1vh; }
+  .eyebrow { font-size: 2vh; letter-spacing: 0.08em; text-transform: uppercase; color: var(--pen); }
+  .quote { font-size: 3.4vh; line-height: 1.4; color: var(--ink); border-left: 0.6vh solid var(--pen); padding-left: 3vh; max-width: 75vw; }
+  .note { font-size: 2.2vh; color: var(--muted); }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { text-align: left; padding: 1.3vh 2vh 1.3vh 0; border-bottom: 1px solid var(--rule); font-size: 2.5vh; line-height: 1.35; vertical-align: top; }
+  th { font-size: 2vh; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+  td:first-child { color: var(--ink); font-weight: 600; white-space: nowrap; }
+  td { color: var(--muted); }
+</style>
+</head>
+<body>
+
+<section data-slide>
+  <div class="line"></div>
+  <h1>Nanquim: a fonte única da verdade da empresa</h1>
+  <p>O que está na Base do produto: problema, tese, para quem, princípios, concorrentes e como vamos medir.</p>
+</section>
+
+<section data-slide>
+  <span class="eyebrow">O problema</span>
+  <h2>O que a empresa sabe está espalhado, e a IA piorou o quadro</h2>
+  <ul>
+    <li>Documentos no Drive, páginas no Notion, planilhas, números em sistemas: ninguém sabe qual versão vale, quem mudou o quê, nem como desfazer.</li>
+    <li>Com IA em janelas de chat, o time pede, copia, cola e perde o histórico; ninguém sabe o que foi feito por pessoa e o que foi feito por agente.</li>
+    <li>Engenharia resolveu isso há anos com revisão e desfazer. Ninguém levou isso para quem não programa.</li>
+  </ul>
+</section>
+
+<section data-slide>
+  <span class="eyebrow">Posicionamento</span>
+  <h2>Pessoas e agentes mudam o mesmo material, com cada mudança revisada e reversível</h2>
+  <p class="quote">Diferente do Notion, nada muda sem revisão e tudo fica em arquivos abertos, que qualquer ferramenta lê.</p>
+  <p>O valor não depende da IA: um time sem nenhum agente já ganha a fonte única, a revisão e o desfazer. A IA acelera o trabalho dentro das mesmas regras.</p>
+  <p class="note">A frase é do fundador (28/10) e ainda não foi testada com ninguém de fora; validar nas entrevistas do beta.</p>
+</section>
+
+<section data-slide>
+  <span class="eyebrow">A tese</span>
+  <h2>Por baixo é um repositório versionado; na tela, linguagem de negócio</h2>
+  <ol>
+    <li>As fontes que o time já usa entram no espaço ou são consultadas a partir dele.</li>
+    <li>Pessoas e agentes leem e editam os mesmos arquivos: textos, planilhas, páginas.</li>
+    <li>Toda escrita do agente nasce em um rascunho e vira um checkpoint atribuído.</li>
+    <li>Revisar é ver o antes e depois renderizado e incorporar com um clique, com desfazer.</li>
+    <li>O mesmo espaço continua legível pelas ferramentas de engenharia: negócio e engenharia no mesmo lugar.</li>
+  </ol>
+</section>
+
+<section data-slide>
+  <span class="eyebrow">O que o Nanquim não é</span>
+  <h2>Não é chat, não é banco proprietário, não é cliente git</h2>
+  <ul>
+    <li><strong>Não é um chat com upload de arquivos:</strong> a fonte da verdade é o centro; a conversa é um dos jeitos de trabalhar nela.</li>
+    <li><strong>Não é um banco de dados proprietário:</strong> tudo é arquivo em disco, versionado.</li>
+    <li><strong>Não é um cliente git:</strong> ninguém vê commit, branch ou rebase.</li>
+  </ul>
+</section>
+
+<section data-slide>
+  <span class="eyebrow">Para quem</span>
+  <h2>Começamos por quem já sente falta de histórico e revisão</h2>
+  <table>
+    <tr><th>Perfil</th><th>O que o Nanquim muda</th></tr>
+    <tr><td>Fundador / Head de produto</td><td>Uma ferramenta só; revisão com antes e depois; agentes e personas do espaço</td></tr>
+    <tr><td>Analista / PM de growth</td><td>Scripts e conectores no lugar de copiar e colar</td></tr>
+    <tr><td>Líder de operação</td><td>Edita planilhas e páginas com o agente, sem perder histórico</td></tr>
+    <tr><td>Revisor (diretor, CFO)</td><td>Aprova propostas e números sem aprender git</td></tr>
+    <tr><td>Engenheiro</td><td>Mesmo repositório; nada a instalar além do que já usa</td></tr>
+  </table>
+  <p class="note">Nenhum perfil foi entrevistado formalmente ainda; a fonte é o uso interno.</p>
+</section>
+
+<section data-slide>
+  <span class="eyebrow">A jornada</span>
+  <h2>Cada momento tem um sinal claro de sucesso</h2>
+  <ol>
+    <li><strong>Primeiro uso:</strong> abre uma pasta e configura nome e chave. Sucesso = primeira versão salva.</li>
+    <li><strong>Primeira rodada com o agente:</strong> pede algo, vê os arquivos mudarem, revisa. Sucesso = primeiro rascunho do agente incorporado.</li>
+    <li><strong>Time:</strong> convida alguém, recebe uma proposta, comenta. Sucesso = primeiro rascunho de outra pessoa incorporado.</li>
+    <li><strong>Rotina:</strong> execuções agendadas caem como rascunhos; revisar vira hábito semanal.</li>
+  </ol>
+</section>
+
+<section data-slide>
+  <span class="eyebrow">Princípios · 1 a 5</span>
+  <h2>Cada princípio tem uma consequência prática</h2>
+  <ol>
+    <li><strong>O arquivo é a fonte da verdade.</strong> Nada vive só no app.</li>
+    <li><strong>Agentes nunca escrevem no Principal.</strong> O botão de revisar existe em toda rodada que mudou algo.</li>
+    <li><strong>Linguagem de negócio, sempre.</strong> Toda frase da interface passa por esse filtro.</li>
+    <li><strong>O que você não tocou não muda.</strong> O editor preserva exatamente o que não foi editado.</li>
+    <li><strong>A fonte da verdade no centro; a IA é um jeito de trabalhar nela.</strong> Nenhuma tela essencial depende de conversar.</li>
+  </ol>
+</section>
+
+<section data-slide>
+  <span class="eyebrow">Princípios · 6 a 10</span>
+  <h2>Mostrar, dar controle e caber no que o time já usa</h2>
+  <ol start="6">
+    <li><strong>Mostrar, não explicar.</strong> Antes e depois renderizado, células em vez de texto cru.</li>
+    <li><strong>Confiança é um dial.</strong> Somente leitura, revisar cada alteração ou autônomo, por pessoa e por espaço.</li>
+    <li><strong>Local-first, neutro de provedor.</strong> Chaves no chaveiro, modelo à escolha.</li>
+    <li><strong>Compatível com engenharia.</strong> As convenções que já existem são lidas, não reinventadas.</li>
+    <li><strong>Interface sofisticada.</strong> Tipografia de documento, densidade profissional, estados vazios que ensinam.</li>
+  </ol>
+</section>
+
+<section data-slide>
+  <span class="eyebrow">Vocabulário</span>
+  <h2>Na tela, ninguém vê commit nem branch</h2>
+  <table>
+    <tr><th>Na interface</th><th>O que acontece</th></tr>
+    <tr><td>Rascunho</td><td>Único lugar onde o agente escreve</td></tr>
+    <tr><td>Salvar versão</td><td>Grava o estado atual, com mensagem sugerida pelo assistente</td></tr>
+    <tr><td>Revisar e incorporar</td><td>Mostra o antes e depois por formato e leva para o Principal</td></tr>
+    <tr><td>Desfazer incorporação</td><td>Sempre disponível</td></tr>
+    <tr><td>Publicar</td><td>Envia as versões para o time</td></tr>
+  </table>
+</section>
+
+<section data-slide>
+  <span class="eyebrow">Concorrentes</span>
+  <h2>Cada referência é forte em uma parte; ninguém junta revisão, arquivo aberto e agente</h2>
+  <table>
+    <tr><th>Produto</th><th>Onde ganhamos</th></tr>
+    <tr><td>Claude Desktop / Cowork</td><td>Palco com antes e depois e revisão; histórico; qualquer modelo</td></tr>
+    <tr><td>Claude Docs</td><td>O arquivo é Markdown no seu espaço, não preso ao serviço</td></tr>
+    <tr><td>Obsidian</td><td>Agente, revisão e time</td></tr>
+    <tr><td>Notion</td><td>Histórico real, desfazer, formato aberto</td></tr>
+    <tr><td>Cursor / Claude Code</td><td>Vocabulário e formatos de negócio</td></tr>
+  </table>
+</section>
+
+<section data-slide>
+  <span class="eyebrow">Onde está a vantagem</span>
+  <h2>A vantagem é estrutural: revisão e desfazer que concorrentes não copiam sem refazer a base</h2>
+  <ul>
+    <li><strong>Versionamento como fosso, escondido.</strong> Quem guarda conteúdo em banco próprio precisaria reescrever o armazenamento.</li>
+    <li><strong>Compatível com a engenharia.</strong> Mesmo repositório, mesmos agentes e playbooks.</li>
+    <li><strong>Segurança por padrão.</strong> Escrita só em rascunho, ferramentas confinadas ao espaço, segredos bloqueados.</li>
+    <li><strong>Local-first e neutro de provedor.</strong> Arquivos no disco, modelo à escolha.</li>
+    <li><strong>A proposta como unidade de colaboração.</strong> Carrega intenção, mudança e aprovação.</li>
+  </ul>
+</section>
+
+<section data-slide>
+  <span class="eyebrow">Métricas</span>
+  <h2>A unidade de valor é o trabalho revisado que entrou</h2>
+  <p class="quote">Métrica primária (proposta): incorporações por espaço ativo por semana.</p>
+  <ul>
+    <li><strong>Ativação:</strong> espaços novos com uma incorporação em 7 dias.</li>
+    <li><strong>Rodadas revisadas:</strong> rodadas do agente revisadas em até 24h.</li>
+    <li><strong>Desfazer:</strong> incorporações desfeitas sobre o total, como sinal de qualidade.</li>
+  </ul>
+  <p class="note">Nenhuma métrica está medida ainda; a primeira medição sairá do histórico dos espaços que usamos.</p>
+</section>
+
+<section data-slide>
+  <div class="line"></div>
+  <h2>O que falta para sair da tese e ir para a evidência</h2>
+  <ul>
+    <li>Entrevistar os perfis de usuário: nenhum foi entrevistado formalmente.</li>
+    <li>Testar a frase de posicionamento com gente de fora, nas entrevistas do beta.</li>
+    <li>Medir a métrica primária; até lá, todo Impacto na priorização é provisório.</li>
+  </ul>
+  <p>Perguntas e próximos passos.</p>
+</section>
+
+</body>
+</html>
