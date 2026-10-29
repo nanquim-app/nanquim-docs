@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="presentation" content="slides">
+<title>Nanquim — pitch no formato YC</title>
+<style>
+  :root { --ink: #1f2023; --muted: #5f6066; --faint: #8a8b90; --pen: #2254C1; --paper: #fbfaf7; --line: #e4e2dc; }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--paper); color: var(--ink); font-family: "Inter", -apple-system, "Segoe UI", sans-serif; }
+  section { position: relative; width: 100vw; height: 100vh; aspect-ratio: 16 / 9; padding: 8vh 9vw; display: flex; flex-direction: column; justify-content: center; gap: 3vh; }
+  h1, h2 { font-family: "Instrument Sans", -apple-system, "Inter", sans-serif; font-weight: 600; font-stretch: 94%; color: var(--ink); }
+  h1 { font-size: 7vh; line-height: 1.05; letter-spacing: -0.02em; }
+  h2 { font-size: 5vh; line-height: 1.12; letter-spacing: -0.01em; max-width: 78vw; }
+  p, li { font-size: 3vh; line-height: 1.4; color: var(--muted); }
+  ul { padding-left: 1.2em; display: flex; flex-direction: column; gap: 1.4vh; max-width: 76vw; }
+  strong { color: var(--ink); font-weight: 600; }
+  .line { width: 8vh; height: 0.6vh; background: var(--pen); border-radius: 1vh; }
+  .lead { font-size: 3.4vh; color: var(--ink); max-width: 70vw; }
+  .small { font-size: 2.4vh; }
+  .source { position: absolute; left: 9vw; right: 9vw; bottom: 4vh; font-size: 1.7vh; color: var(--faint); }
+  .pen { color: var(--pen); }
+  .flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2vw; margin-top: 1vh; }
+  .step { border-top: 0.5vh solid var(--line); padding-top: 2vh; }
+  .step:last-child { border-top-color: var(--pen); }
+  .step b { display: block; font-family: "Instrument Sans", -apple-system, sans-serif; font-weight: 600; font-size: 3.2vh; color: var(--ink); margin-bottom: 0.8vh; }
+  .step span { font-size: 2.5vh; color: var(--muted); line-height: 1.35; }
+  table { border-collapse: collapse; width: 100%; max-width: 82vw; }
+  th, td { text-align: left; vertical-align: top; padding: 1.3vh 1.6vw 1.3vh 0; font-size: 2.4vh; line-height: 1.35; border-bottom: 1px solid var(--line); }
+  th { color: var(--ink); font-weight: 600; }
+  td { color: var(--muted); }
+  td:first-child { color: var(--ink); font-weight: 600; white-space: nowrap; }
+  .cols { display: grid; grid-template-columns: 1.4fr 1fr; gap: 4vw; align-items: start; }
+  .cols h3 { font-family: "Instrument Sans", -apple-system, sans-serif; font-weight: 600; font-size: 2.8vh; color: var(--ink); margin-bottom: 1.4vh; }
+  .cols ul { gap: 1vh; }
+  .cols li { font-size: 2.5vh; }
+</style>
+</head>
+<body>
+
+<section data-slide>
+  <div class="line"></div>
+  <h1>Nanquim</h1>
+  <p class="lead">Your team and AI edit your files, not ours.</p>
+  <p>Um app de Mac em que o time e os colegas de IA trabalham nos mesmos arquivos da empresa, e nada vale até alguém aprovar.</p>
+  <p class="small">Para fundadores e investidores: an IDE for the rest of your company. · Versão 0.20, beta só com convite · outubro de 2026</p>
+  <p class="source">Frases decididas em 25/10 depois de quatro rodadas de banca (Relato da Mecanizou, no site); posicionamento em Visão e tese (D-048).</p>
+</section>
+
+<section data-slide>
+  <h2>O que a empresa sabe está espalhado, e a IA espalha mais rápido</h2>
+  <ul>
+    <li>Documentos no Drive, páginas no Notion, planilhas, números em sistemas: ninguém sabe qual versão vale.</li>
+    <li>Com IA, cada um pede num chat, copia, cola e perde o histórico.</li>
+    <li>Quem revisa não vê o que mudou. Quem errou não tem como desfazer.</li>
+    <li>E o resultado depende de quem usa a IA melhor, não de um jeito da empresa.</li>
+  </ul>
+  <p class="source">Visão e tese; Relato da Mecanizou (25/10).</p>
+</section>
+
+<section data-slide>
+  <h2>A IA deixou o rascunho de graça. O escasso é trabalho que alguém assina.</h2>
+  <ul>
+    <li>Engenharia resolveu isso há anos: rascunho à parte, revisão, histórico e desfazer. Ninguém levou isso para quem não programa.</li>
+    <li>Quanto melhor a IA escrever, mais rascunho chega e mais vale ter onde ler, aprovar e desfazer.</li>
+    <li>Os fornecedores de IA querem o registro do trabalho na nuvem deles. As empresas vão querer nos próprios arquivos.</li>
+  </ul>
+  <p class="source">Posicionamento do site (24/10) e a ficha YC do quadro de posicionamento (25/10).</p>
+</section>
+
+<section data-slide>
+  <h2>Uma fonte só, onde pessoas e IA mudam o mesmo material com revisão</h2>
+  <ul>
+    <li>Reúne o que já existe: pastas, a exportação do Google Drive, planilhas e fontes de dados.</li>
+    <li>Colegas de IA, com nome e limites, rascunham numa cópia à parte. Nada muda sem aprovação.</li>
+    <li>Revisar é ver o que mudou dentro do documento, da planilha ou da página, e aprovar ou desfazer.</li>
+    <li>Vale sem IA: um time sem nenhum agente já ganha a fonte única, a revisão e o desfazer.</li>
+  </ul>
+  <p class="source">D-048 (28/10); Princípios 1, 2 e 5.</p>
+</section>
+
+<section data-slide>
+  <h2>Você pede. O time rascunha. Você aprova.</h2>
+  <div class="flow">
+    <div class="step"><b>Nina</b><span>levanta os números, com fonte</span></div>
+    <div class="step"><b>Tomás</b><span>rascunha a proposta numa cópia à parte</span></div>
+    <div class="step"><b>Helena</b><span>revisa, só lê</span></div>
+    <div class="step"><b class="pen">Você</b><span>vê o que mudou e aprova, ou não</span></div>
+  </div>
+  <p>Cada versão guarda dois nomes: quem rascunhou e quem aprovou.</p>
+  <p class="source">Exemplo ilustrativo com as figuras do time da marca. Fluxo do quadro de posicionamento (25/10).</p>
+</section>
+
+<section data-slide>
+  <h2>Os arquivos são da empresa, não nossos</h2>
+  <ul>
+    <li>Pastas comuns e o GitHub da empresa. O Nanquim não hospeda os arquivos.</li>
+    <li>Os mesmos arquivos que Claude Code, Cursor e a engenharia já leem.</li>
+    <li>Traz a IA que o time já usa: o Claude Code da pessoa ou chaves da Anthropic, OpenAI e Google.</li>
+    <li>Formatos que o mundo usa: Markdown, CSV, Excel, Word, PowerPoint e HTML.</li>
+  </ul>
+  <p class="source">Visão e tese, "Onde está a vantagem"; Relato da Mecanizou, iteração 2.</p>
+</section>
+
+<section data-slide>
+  <h2>Todos vendem quem faz o trabalho. Ninguém guarda quem assinou.</h2>
+  <table>
+    <tr><th></th><th>Forte em</th><th>Onde o Nanquim ganha</th></tr>
+    <tr><td>Claude e Cowork</td><td>o loop do agente, pastas locais, conectores</td><td>o registro fica nos arquivos da empresa; mais de um fornecedor de IA</td></tr>
+    <tr><td>Notion</td><td>polimento, muitos tipos de conteúdo</td><td>arquivos abertos, histórico real, formatos que qualquer ferramenta lê</td></tr>
+    <tr><td>Obsidian</td><td>texto puro, pastas, plugins</td><td>colegas de IA, revisão e time</td></tr>
+    <tr><td>Cabinet</td><td>Markdown com git e agentes, código aberto</td><td>time de pessoas com regra de aprovação; Excel, Word e PowerPoint; app sem terminal</td></tr>
+  </table>
+  <p class="source">Concorrentes; Posicionamento do site (24/10); Relato da Mecanizou, iterações 3 e 4.</p>
+</section>
+
+<section data-slide>
+  <h2>Começamos estreito: startups de 5 a 30 pessoas em que os engenheiros já usam IA e o resto do time não</h2>
+  <div class="cols">
+    <div>
+      <h3>Ideal agora</h3>
+      <ul>
+        <li>Mac, com o contexto já em arquivos.</li>
+        <li>Um fundador técnico já usa Claude Code ou Cursor.</li>
+        <li>Alguém de operações, vendas, finanças ou produto precisa trabalhar ali.</li>
+        <li>O técnico instala; quem não programa usa.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Ainda não</h3>
+      <ul>
+        <li>Quem trabalha sozinho com IA.</li>
+        <li>Empresas grandes com login corporativo.</li>
+        <li>Edição simultânea do mesmo arquivo.</li>
+        <li>Só Windows.</li>
+      </ul>
+    </div>
+  </div>
+  <p class="source">Quadro de posicionamento, "Para quem é o Nanquim" (25/10); Usuários.</p>
+</section>
+
+<section data-slide>
+  <h2>Ainda não há usuário de fora. Há um produto em uso diário dentro de casa.</h2>
+  <ul>
+    <li>O Nanquim é planejado no próprio Nanquim: 49 decisões e 67 registros de uso neste espaço.</li>
+    <li>Primeiro sinal de fora: na Mecanizou, produto trabalha em três ferramentas (Claude, Obsidian e GitHub) para um trabalho só.</li>
+    <li>Site no ar em nanquimapp.com, com fila e convites. Versão 0.20 para Mac.</li>
+    <li>Nada está medido ainda. Ninguém de fora foi entrevistado.</li>
+  </ul>
+  <p class="source">Decisões (D-001 a D-049); Feedback de uso (20/10 a 28/10); Relato da Mecanizou (25/10); Sobre o site; Métricas; Usuários.</p>
+</section>
+
+<section data-slide>
+  <h2>O beta mede uma coisa: alguém que não programa continua aprovando trabalho</h2>
+  <ul>
+    <li><strong>Métrica principal:</strong> aprovações por espaço ativo por semana.</li>
+    <li><strong>Ativação:</strong> primeira aprovação em até 7 dias.</li>
+    <li><strong>Time de verdade:</strong> uma aprovação de um rascunho de outra pessoa.</li>
+    <li><strong>Seguir:</strong> a pessoa não técnica ainda aprova na terceira semana, sem a gente pedir.</li>
+  </ul>
+  <p class="source">Métricas (proposta, nada instrumentado); P02 — Critério de pronto para o beta (rascunho); Posicionamento do site.</p>
+</section>
+
+<section data-slide>
+  <h2>Do convite ao beta aberto em quatro etapas</h2>
+  <table>
+    <tr><td>até 8/11</td><td>Pronto para convidar: instalador, site, canal de retorno e roteiro de aceite.</td></tr>
+    <tr><td>9/11 a 6/12</td><td>Beta em pares: um técnico com uma pessoa não técnica do time, conversa semanal.</td></tr>
+    <tr><td>dez e jan</td><td>Ajustar e ampliar por indicação. Passa quando alguém indica sem a gente pedir.</td></tr>
+    <tr><td>fev e mar de 2027</td><td>Beta aberto: lista de espera pública, lançamento fora do Brasil, teste de preço.</td></tr>
+  </table>
+  <p class="source">Linha do tempo do quadro de posicionamento (site, 25/10); Roadmap, "Próximo".</p>
+</section>
+
+<section data-slide>
+  <h2>Grátis para uma pessoa. Pago por quem aprova num espaço de time.</h2>
+  <ul>
+    <li>A IA o cliente paga direto ao fornecedor. O Nanquim não revende modelo.</li>
+    <li>Paga quem aprova, porque aprovar é o trabalho que o Nanquim guarda.</li>
+    <li>É hipótese. Preço e tamanho de mercado entram com o teste de preço, em 2027.</li>
+  </ul>
+  <p class="source">Ficha YC do quadro de posicionamento (25/10), marcada como hipótese.</p>
+</section>
+
+<section data-slide>
+  <h2>Um fundador e um time de colegas de IA, construindo o Nanquim no Nanquim</h2>
+  <ul>
+    <li><strong>André Simões</strong>, fundador.</li>
+    <li>A documentação de produto, o site e a marca são escritos por colegas de IA e aprovados por ele.</li>
+  </ul>
+  <p class="source">Sobre este espaço; Sobre o site.</p>
+</section>
+
+<section data-slide>
+  <div class="line"></div>
+  <h2>O que pedimos: times de 5 a 30 pessoas para o beta em pares, a partir de 9/11</h2>
+  <p>Um técnico que já usa Claude Code ou Cursor e uma pessoa do time que não programa.</p>
+  <p>beta@nanquimapp.com · nanquimapp.com</p>
+  <p class="source">Linha do tempo do quadro de posicionamento; Sobre o site (26/10).</p>
+</section>
+
+</body>
+</html>
