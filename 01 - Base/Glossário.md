@@ -5,26 +5,29 @@ status: ativo
 
 # Glossário
 
-Vocabulário da interface e o que ele é por baixo. Novo termo de interface entra aqui antes de entrar no produto.
+Vocabulário da interface e o que ele é por baixo. As palavras seguem o Vocabulário da marca (pasta Marca, Posicionamento e voz); o que a marca não cobre é decisão deste espaço. Novo termo de interface entra aqui antes de entrar no produto. A nota avisa quando o app ainda diz outra coisa.
 
 | Na interface | Por baixo | Nota |
 |---|---|---|
-| **Espaço** (de trabalho) | repositório git local | Uma pasta; um vault do Obsidian serve como está |
+| **Espaço** | repositório git local | Uma pasta de trabalho do time; um vault do Obsidian serve como está. Nunca "repositório" nem "workspace" |
 | **Principal** | branch padrão (`main` ou `master`) | Detectado, nunca assumido |
-| **Rascunho** | branch `draft/<slug>` | Único lugar onde o agente escreve |
-| **Salvar versão** | commit | Mensagem sugerida pelo assistente |
-| **Checkpoint** | commit `[checkpoint]` com `Co-authored-by` do agente | Escondido do histórico por padrão |
-| **Revisar e incorporar** | merge `--no-ff` com trailer `Nanquim-Draft` | Diff renderizado por formato |
-| **Desfazer incorporação** | `revert -m 1` | Sempre disponível; reincorporar reverte o revert |
-| **Histórico / Restaurar** | log e checkout de arquivo | Não destrutivo |
+| **Pedido** | sessão do agente | O que se pede ao time, numa conversa. Nunca "prompt" nem "sessão" |
+| **Colega de IA** | agente em `.nanquim/agents/<id>.md` ou `.claude/agents/<id>.md` | Nome, função, rosto e limites; é chamado com `@id`. Nunca "bot" nem "agente". O app mostra "Agentes" desde a v0.17 |
+| **Rascunho** | branch `draft/<slug>` | A proposta de mudança, à parte; único lugar onde o colega de IA escreve |
+| **Versão** / **Salvar versão** | commit | Um momento guardado; mensagem sugerida pelo assistente |
+| **Etapa** | commit `[checkpoint]` com `Co-authored-by` do agente | Escondida do Histórico por padrão |
+| **Aprovar** | merge `--no-ff` com trailer `Nanquim-Draft` | Faz a proposta valer no espaço; antes, *O que mudou* mostra o diff renderizado por formato. Nunca "fazer merge" nem "incorporar" |
+| **Desfazer** | `revert -m 1` | Sempre disponível; aprovar de novo reverte o revert. O app ainda diz "Desfazer incorporação" e "Incorporado" |
+| **Histórico** | log | Todas as versões, com quem e quando |
+| **Restaurar** | checkout da versão, salvo como versão nova | Volta a uma versão sem apagar as outras; vale para um arquivo ou para o espaço todo |
 | **Trazer novidades** | fetch + merge | Conflitos resolvidos por arquivo |
 | **Publicar** | push | |
-| **Enviar para revisão** | pull request | Via GitHub |
+| **Propor ao time** / **Proposta** | pull request | Via GitHub |
 | **Exigir rascunhos** | política em `.nanquim/config.json` | Bloqueia salvar direto no Principal |
-| **Palco** | área de abas ao lado da conversa | Arquivos, diffs, revisão, aba Espaço |
+| **Palco** | área de abas ao lado da conversa | Arquivos, diffs, revisão, aba Espaço. Nome de trabalho: não aparece na tela |
 | **Comentário** | thread em `.nanquim/comments.json` ancorada a um trecho | `@assistente` passa para a conversa |
-| **Persona** | agente em `.claude/agents/*.md` | Revisor com critérios fixos, não edita |
-| **Playbook** | `SKILL.md` em `.nanquim/playbooks/` ou `.claude/skills/` | Aparece com `/` na caixa de texto |
+| **Roteiro** | `SKILL.md` em `.nanquim/playbooks/` ou `.claude/skills/` | Instruções reutilizáveis; aparece com `/` na caixa de texto. Nunca "playbook" nem "skill" |
+| **Sobre este espaço** | `NANQUIM.md` (`TRUNKPAD.md` nos espaços antigos) | O que o time precisa saber deste espaço. Nunca "brief" |
 | **Script permitido** | entrada em `.nanquim/scripts.json` | Única forma de o agente executar algo |
 | **Conector** | servidor MCP em `.nanquim/connectors.json` | Ferramentas externas para o agente |
 
@@ -59,4 +62,3 @@ Vocabulário da interface e o que ele é por baixo. Novo termo de interface entr
 ## Termos do motor (v0.11)
 
 - **Motor da IA** — quem pensa pelo assistente: *Modelo via API* (o Nanquim chama o provedor com a sua chave) ou *Claude Code* (o `claude` instalado e logado na sua máquina, dirigido pelo Nanquim, que continua cuidando de rascunhos, regras, aprovações e versões).
-- **Colega** — agente nomeado do espaço (`.nanquim/agents/<id>.md` ou `.claude/agents/<id>.md`), com figura, escopo de escrita e limites por ferramenta; é chamado com `@id`.
