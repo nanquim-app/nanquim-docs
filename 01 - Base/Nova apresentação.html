@@ -45,10 +45,18 @@
   section {
     position: relative; overflow: hidden;
     width: 100vw; height: 100vh; aspect-ratio: 16 / 9;
-    padding: 8vh 8vw 11vh;
-    display: flex; flex-direction: column; justify-content: center; gap: 3.2vh;
+    padding: var(--s7) 8vw var(--s7);
+    display: flex; flex-direction: column; justify-content: flex-start; gap: var(--s3);
     background: var(--bg-app);
   }
+
+  /*
+    Espaçamento: uma escala só, em vh, para o vertical e o horizontal baterem no 16:9.
+    Título → conteúdo: 4,8 · entre blocos: 2,4 · entre cartões: 2,4 · dentro do cartão: 3,2.
+    Todo slide de conteúdo começa o título na mesma altura; só a capa, a virada e as frases
+    grandes ficam centradas, de propósito.
+  */
+  :root { --s1: 0.8vh; --s2: 1.6vh; --s3: 2.4vh; --s4: 3.2vh; --s5: 4.8vh; --s6: 6.4vh; --s7: 12vh; --gap: 2.4vh; --pad: 3.2vh; --wide: 84vw; }
 
   /* Tipografia: Instrument Sans nos títulos, Inter no texto. */
   h1, h2, h3, .name, .stat b, .big {
@@ -56,19 +64,19 @@
     letter-spacing: -0.024em; text-wrap: balance; color: var(--ink);
   }
   h1 { font-size: 8.4vh; line-height: 1.04; max-width: 78vw; }
-  h2 { font-size: 5.4vh; line-height: 1.1; max-width: 78vw; }
-  h3 { font-size: 2.8vh; line-height: 1.2; }
+  h2 { font-size: 5.4vh; line-height: 1.1; max-width: 78vw; margin-bottom: var(--s3); }
+  h3 { font-size: 2.6vh; line-height: 1.2; }
   p, li { font-size: 2.7vh; line-height: 1.45; color: var(--muted); max-width: 62vw; }
-  ul { padding-left: 1.1em; display: flex; flex-direction: column; gap: 1.4vh; }
+  ul { padding-left: 1.1em; display: flex; flex-direction: column; gap: var(--s2); }
   li::marker { color: var(--faint); }
   strong { color: var(--ink); font-weight: 600; }
   mark { background: linear-gradient(transparent 55%, var(--grifo) 55%, var(--grifo) 92%, transparent 92%); color: var(--ink); padding: 0 0.1em; }
   .tabular { font-variant-numeric: tabular-nums; }
   .meta { font-size: 1.9vh; color: var(--faint); }
 
-  /* Rodapé de todo slide: a fonte à esquerda, o símbolo à direita. */
-  .source { position: absolute; left: 8vw; right: 16vw; bottom: 4.2vh; font-size: 1.6vh; line-height: 1.4; color: var(--faint); max-width: none; }
-  .symbol { position: absolute; right: 8vw; bottom: 3.6vh; width: 3.4vh; height: 3.4vh; }
+  /* Rodapé de todo slide: a fonte à esquerda, o símbolo à direita, na mesma linha. */
+  .source { position: absolute; left: 8vw; right: 16vw; bottom: var(--s5); font-size: 1.6vh; line-height: 2.4vh; color: var(--faint); max-width: none; }
+  .symbol { position: absolute; right: 8vw; bottom: var(--s5); width: 2.4vh; height: 2.4vh; }
 
   .card { background: var(--bg-paper); border: 1px solid var(--line); border-radius: var(--radius-panel); box-shadow: var(--shadow-card); }
 
@@ -97,7 +105,7 @@
   @media (prefers-reduced-motion: reduce) { .figure { animation: none !important; } }
 
   /* O time de pé numa linha de pauta: a assinatura visual das boas-vindas. */
-  .team-line { position: absolute; left: 8vw; right: 8vw; bottom: 9vh; display: flex; justify-content: flex-end; gap: 1.4vw; padding: 0 1vw; }
+  .team-line { position: absolute; left: 8vw; right: 8vw; bottom: 10vh; display: flex; justify-content: flex-end; gap: var(--s3); padding: 0 var(--s3); }
   .team-line::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0.9vh; height: 1px; background: var(--line-strong); }
   .team-line .figure { --size: 12vh; z-index: 1; }
 
@@ -111,31 +119,32 @@
   }
   .ruled > * { position: relative; }
   .ruled > .source, .ruled > .team-line { position: absolute; }
-  .opening { justify-content: flex-start; padding-top: 10vh; }
-  .signature { align-self: flex-start; height: 4.6vh; width: auto; margin-bottom: 2.4vh; }
+  .opening { padding-top: 10vh; gap: var(--s3); }
+  .signature { align-self: flex-start; height: 4.4vh; width: auto; margin-bottom: var(--s4); }
+  .opening h1 { margin-bottom: var(--s1); }
   .opening .lead { font-size: 3vh; color: var(--muted); max-width: 58vw; }
   .pencil { color: var(--pencil); font-weight: 480; }
   .inked { text-decoration: underline var(--pen); text-decoration-thickness: 0.6vh; text-underline-offset: 1.1vh; text-decoration-skip-ink: none; }
 
-  /* Tinta: o fundo da marca no escuro, para a virada do argumento. */
-  .tinta { background: var(--tinta); }
-  .tinta h2 { color: var(--tinta-text); font-size: 7vh; line-height: 1.06; max-width: 80vw; }
+  /* Tinta: o fundo da marca no escuro, para a virada do argumento. Centrado, de propósito. */
+  .tinta { background: var(--tinta); justify-content: center; }
+  .tinta h2 { color: var(--tinta-text); font-size: 7vh; line-height: 1.06; max-width: 80vw; margin-bottom: var(--s4); }
   .tinta li { color: var(--tinta-muted); max-width: 66vw; }
   .tinta li::marker { color: var(--tinta-faint); }
   .tinta .source { color: var(--tinta-faint); }
   .tinta .pencil { color: var(--tinta-faint); }
 
-  /* 3. Solução: as fontes entram, o espaço guarda o que foi aprovado. */
-  .split { display: grid; grid-template-columns: 1.1fr 1fr; gap: 4vw; align-items: center; }
-  .split ul { gap: 1.6vh; }
+  /* Duas colunas: texto à esquerda, a imagem à direita. */
+  .split { display: grid; grid-template-columns: 1.1fr 1fr; gap: var(--s6); align-items: center; max-width: var(--wide); }
   .split li { max-width: none; }
-  .stack { display: flex; flex-direction: column; gap: 3vh; }
-  .stack h2 { font-size: 4.8vh; }
+  .stack { display: flex; flex-direction: column; }
+  .stack h2 { font-size: 4.8vh; margin-bottom: var(--s5); }
   .stack li { font-size: 2.5vh; max-width: none; }
+  section:has(> .split.problem) { justify-content: center; }
 
   /* 2. O problema: a pilha de versões espalhadas. */
   .pile { position: relative; height: 58vh; }
-  .file { position: absolute; padding: 1.6vh 1.2vw; display: flex; align-items: center; gap: 0.9vw; white-space: nowrap; font-size: 2.1vh; color: var(--ink); }
+  .file { position: absolute; padding: var(--s2) var(--s3); display: flex; align-items: center; gap: var(--s2); white-space: nowrap; font-size: 2.1vh; color: var(--ink); }
   .file b { display: grid; place-items: center; width: 3.8vh; height: 4.6vh; border-radius: 0.6vh; font-size: 1.6vh; font-weight: 600; color: #fff; }
   .file small { display: block; font-size: 1.6vh; color: var(--faint); }
   .f1 { top: 1vh; left: 4%; transform: rotate(-5deg); } .f1 b { background: #2b579a; }
@@ -145,54 +154,68 @@
   .f5 { top: 40vh; left: 8%; transform: rotate(-6deg); } .f5 b { background: #217346; }
   .f6 { top: 47vh; left: 40%; transform: rotate(5deg); } .f6 b { background: var(--faint); }
 
-  .hub { display: flex; flex-direction: column; gap: 1.4vh; }
-  .chips { display: flex; flex-wrap: wrap; gap: 0.8vw; }
-  .chip { padding: 1vh 1vw; border-radius: 999px; background: var(--bg-subtle); font-size: 2vh; color: var(--muted); }
-  .arrow { font-size: 3vh; color: var(--faint); padding-left: 1vw; line-height: 1; }
-  .space { padding: 2.4vh 1.6vw; display: flex; flex-direction: column; gap: 1.2vh; box-shadow: var(--shadow-raised); }
-  .space .head { display: flex; align-items: center; gap: 0.8vw; font-size: 2.2vh; font-weight: 600; color: var(--ink); }
-  .space .head svg { width: 3.2vh; height: 3.2vh; }
-  .row { display: flex; align-items: center; justify-content: space-between; gap: 1vw; padding: 1vh 0.8vw; border-radius: var(--radius-card); background: var(--bg-app); font-size: 2vh; color: var(--ink); }
-  .row .who { display: flex; align-items: center; gap: 0.6vw; color: var(--faint); font-size: 1.8vh; }
+  /* 3. Solução: as fontes entram, o espaço guarda o que foi aprovado. */
+  .hub { display: flex; flex-direction: column; gap: var(--s2); }
+  .chips { display: flex; flex-wrap: wrap; gap: var(--s1); }
+  .chip { padding: var(--s1) var(--s2); border-radius: 999px; background: var(--bg-subtle); font-size: 2vh; color: var(--muted); }
+  .arrow { font-size: 3vh; color: var(--faint); padding-left: var(--s2); line-height: 1; }
+  .space { padding: var(--pad); display: flex; flex-direction: column; gap: var(--s1); box-shadow: var(--shadow-raised); }
+  .space .head { display: flex; align-items: center; gap: var(--s1); margin-bottom: var(--s1); font-size: 2.2vh; font-weight: 600; color: var(--ink); }
+  .space .head svg { width: 3vh; height: 3vh; }
+  .row { display: flex; align-items: center; justify-content: space-between; gap: var(--s2); padding: var(--s2); border-radius: var(--radius-card); background: var(--bg-app); font-size: 2vh; color: var(--ink); }
+  .row .who { display: flex; align-items: center; gap: var(--s1); color: var(--faint); font-size: 1.8vh; }
   .row .figure { --size: 3.6vh; }
-  .badge { padding: 0.4vh 0.7vw; border-radius: 0.4vh; font-size: 1.7vh; font-weight: 600; }
+  .badge { padding: 0.4vh var(--s1); border-radius: 0.4vh; font-size: 1.7vh; font-weight: 600; white-space: nowrap; }
   .badge.ok { background: #e1f9e6; color: var(--success); }
   .badge.draft { background: var(--bg-subtle); color: var(--muted); }
 
-  /* 4. Como funciona: três colegas e você, com as peças do app. */
-  .flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.4vw; max-width: 84vw; }
-  .step { padding: 2.2vh 1.3vw 2.4vh; display: flex; flex-direction: column; gap: 1vh; }
-  .step .figure { --size: 10vh; margin-left: -0.4vw; }
-  .name { font-size: 3vh; line-height: 1.2; }
-  .step p { font-size: 2.2vh; line-height: 1.4; max-width: none; }
-  .role { font-size: 1.8vh !important; color: var(--faint) !important; }
-  .diff { font-size: 1.8vh; line-height: 1.35; border-radius: 0.6vh; padding: 0.6vh 0.6vw; }
+  /* 4. Uma fonte, tudo à vista: o documento com o que mudou e o histórico ao lado. */
+  .proof { display: grid; grid-template-columns: 1.3fr 1fr; gap: var(--gap); max-width: var(--wide); }
+  .doc, .history { padding: var(--pad); display: flex; flex-direction: column; gap: var(--s2); }
+  .doc { box-shadow: var(--shadow-raised); }
+  .doc-head { display: flex; align-items: center; justify-content: space-between; gap: var(--s2); padding-bottom: var(--s2); border-bottom: 1px solid var(--line); }
+  .doc-title { font-family: var(--display); font-weight: 600; font-stretch: 94%; letter-spacing: -0.012em; font-size: 2.6vh; color: var(--ink); }
+  .doc-title small { display: block; font-family: var(--text); font-weight: 400; letter-spacing: 0; font-size: 1.7vh; color: var(--faint); }
+  .doc p { font-size: 2.1vh; max-width: none; color: var(--ink); }
+  .diff { font-size: 2vh; line-height: 1.4; border-radius: 0.6vh; padding: var(--s1) var(--s2); }
   .diff.rem { background: var(--remove-bg); color: var(--remove-text); text-decoration: line-through; }
   .diff.add { background: var(--add-bg); color: var(--add-text); }
-  .step.draft { border-style: dashed; border-color: var(--line-strong); box-shadow: none; }
-  .step.you { background: var(--pen-subtle); border-color: var(--pen); box-shadow: var(--shadow-raised); }
-  .step.you .name { color: var(--pen-text); }
-  .button { display: inline-flex; align-items: center; align-self: flex-start; height: 5.4vh; padding: 0 1.4vw; border-radius: var(--radius-control); background: var(--pen); color: #fff; font-size: 2.2vh; font-weight: 600; white-space: nowrap; }
-  .step .button { margin: 2.4vh 0 2vh; }
-  .signed { font-size: 1.8vh; color: var(--faint); }
-  .signed b { color: var(--success); font-weight: 600; }
+  .diffs { display: flex; flex-direction: column; gap: 0.6vh; }
+  .note { display: flex; gap: var(--s1); align-items: flex-start; padding: var(--s1) var(--s2); border-radius: 0.6vh; background: #fdf3bc; font-size: 1.9vh; line-height: 1.4; color: var(--ink); }
+  .note b { font-weight: 600; }
+  .actions { display: flex; align-items: center; gap: var(--s3); margin-top: auto; padding-top: var(--s1); }
+  .button { display: inline-flex; align-items: center; align-self: flex-start; height: 5vh; padding: 0 var(--s3); border-radius: var(--radius-control); background: var(--pen); color: #fff; font-size: 2.1vh; font-weight: 600; white-space: nowrap; }
+  .link { font-size: 2vh; font-weight: 500; color: var(--pen-text); }
+  .link.quiet { color: var(--muted); }
+  .history h3 { padding-bottom: var(--s2); border-bottom: 1px solid var(--line); }
+  .event { display: grid; grid-template-columns: 4vh 1fr; gap: var(--s2); align-items: start; }
+  .event .figure { --size: 4vh; }
+  .initial { width: 4vh; height: 4vh; border-radius: 50%; display: grid; place-items: center; background: var(--bg-subtle); color: var(--ink); font-size: 1.7vh; font-weight: 600; }
+  .event p { font-size: 1.9vh; line-height: 1.4; max-width: none; }
+  .event p b { color: var(--ink); font-weight: 600; }
+  .event small { display: block; font-size: 1.6vh; color: var(--faint); }
+  .restore { color: var(--pen-text); font-weight: 500; }
+  .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap); max-width: var(--wide); margin-top: var(--s1); }
+  .pillars p { font-size: 2.1vh; max-width: none; padding-top: var(--s2); border-top: 0.3vh solid var(--line-strong); }
+  .pillars p:first-child { border-top-color: var(--pen); }
 
   /* 5. Tração: os números grandes, com a fonte embaixo de cada um. */
-  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4vw; max-width: 84vw; }
-  .stat { padding: 2.6vh 1.6vw; display: flex; flex-direction: column; gap: 0.6vh; }
-  .stat b { font-size: 9vh; line-height: 1; font-variant-numeric: tabular-nums; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap); max-width: var(--wide); }
+  .stat { padding: var(--pad); display: flex; flex-direction: column; gap: var(--s1); }
+  .stat b { font-size: 9vh; line-height: 1; font-variant-numeric: tabular-nums; margin-bottom: var(--s1); }
   .stat p { font-size: 2.3vh; color: var(--ink); max-width: none; }
   .stat small { font-size: 1.7vh; color: var(--faint); }
+  .after { margin-top: var(--s2); max-width: 70vw; }
 
   /* 7. Vantagem: quatro provas em cartões. */
-  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4vw; max-width: 84vw; }
-  .grid .card { padding: 2.6vh 1.8vw; }
-  .grid p { font-size: 2.5vh; max-width: none; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); max-width: var(--wide); }
+  .grid .card { padding: var(--s5) var(--pad); min-height: 19vh; display: flex; align-items: center; }
+  .grid p { font-size: 2.7vh; max-width: none; }
 
   /* Tabelas dentro de um cartão. */
-  .table { max-width: 84vw; overflow: hidden; }
+  .table { max-width: var(--wide); overflow: hidden; }
   table { border-collapse: collapse; width: 100%; }
-  th, td { text-align: left; vertical-align: top; padding: 1.6vh 1.4vw; font-size: 2.3vh; line-height: 1.4; border-top: 1px solid var(--line); }
+  th, td { text-align: left; vertical-align: top; padding: var(--s2) var(--s4); font-size: 2.3vh; line-height: 1.4; border-top: 1px solid var(--line); }
   tr:first-child th { border-top: 0; }
   th { background: var(--bg-subtle); color: var(--muted); font-weight: 600; }
   th.us { background: var(--pen-subtle); color: var(--pen-text); }
@@ -201,37 +224,38 @@
   td:first-child { color: var(--ink); font-weight: 600; white-space: nowrap; }
 
   /* 9. Para quem: o ideal num cartão, o "ainda não" mais quieto. */
-  .cols { display: grid; grid-template-columns: 1.3fr 1fr; gap: 1.4vw; max-width: 84vw; }
-  .cols > div { padding: 3vh 2vw; }
+  .cols { display: grid; grid-template-columns: 1.3fr 1fr; gap: var(--gap); max-width: var(--wide); }
+  .cols > div { padding: var(--pad); }
   .cols .quiet { background: var(--bg-subtle); border-color: transparent; box-shadow: none; }
-  .cols h3 { margin-bottom: 1.6vh; }
-  .cols ul { gap: 1.1vh; }
+  .cols h3 { margin-bottom: var(--s3); }
+  .cols ul { gap: var(--s2); }
   .cols li { font-size: 2.4vh; max-width: none; }
 
-  /* 10. Modelo de negócio: uma frase grande. */
-  .statement h2 { font-size: 7.4vh; line-height: 1.06; max-width: 80vw; }
+  /* 10. Modelo de negócio: uma frase grande, centrada. */
+  .statement { justify-content: center; }
+  .statement h2 { font-size: 7.4vh; line-height: 1.06; max-width: 80vw; margin-bottom: var(--s4); }
 
   /* 11. Plano: uma linha do tempo com quatro marcos. */
-  .timeline { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.4vw; max-width: 84vw; padding-top: 3.4vh; }
-  .timeline::before { content: ''; position: absolute; left: 0; right: 0; top: 1vh; height: 0.3vh; border-radius: 1vh; background: linear-gradient(to right, var(--pen) 0 22%, var(--line-strong) 22% 100%); }
-  .milestone { position: relative; padding: 2.2vh 1.3vw; display: flex; flex-direction: column; gap: 0.8vh; }
-  .milestone::before { content: ''; position: absolute; top: -3.4vh; left: 1.3vw; width: 1.8vh; height: 1.8vh; border-radius: 50%; background: var(--bg-app); border: 0.4vh solid var(--line-strong); }
+  .timeline { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap); max-width: var(--wide); padding-top: var(--s4); }
+  .timeline::before { content: ''; position: absolute; left: 0; right: 0; top: 1.15vh; height: 0.3vh; border-radius: 1vh; background: linear-gradient(to right, var(--pen) 0 22%, var(--line-strong) 22% 100%); }
+  .milestone { position: relative; padding: var(--pad); display: flex; flex-direction: column; gap: var(--s1); }
+  .milestone::before { content: ''; position: absolute; top: calc(-1 * var(--s4)); left: var(--pad); width: 1.8vh; height: 1.8vh; border-radius: 50%; background: var(--bg-app); border: 0.4vh solid var(--line-strong); }
   .milestone.now::before { border-color: var(--pen); background: var(--pen); }
   .milestone.now { border-color: var(--pen); }
   .milestone b { font-size: 2.2vh; color: var(--ink); font-variant-numeric: tabular-nums; }
   .milestone p { font-size: 2.1vh; max-width: none; }
-  .measure { max-width: 84vw; font-size: 2.4vh; }
+  .measure { max-width: var(--wide); font-size: 2.4vh; margin-top: var(--s2); }
 
   /* 12. Time. */
-  .crew { display: flex; gap: 2vw; align-items: flex-end; }
-  .crew div { display: flex; flex-direction: column; align-items: center; gap: 0.6vh; }
+  .crew { display: flex; gap: var(--s5); align-items: flex-end; margin-top: var(--s3); }
+  .crew div { display: flex; flex-direction: column; align-items: center; gap: var(--s1); }
   .crew .figure { --size: 10vh; }
   .crew span { font-size: 1.9vh; color: var(--ink); font-weight: 600; }
-  .crew small { font-size: 1.6vh; color: var(--faint); }
+  .crew small { font-size: 1.6vh; color: var(--faint); margin-top: -0.6vh; }
 
   /* 13. O pedido. */
-  .ask h2 { font-size: 6vh; max-width: 74vw; }
-  .ask .button { height: 6.4vh; font-size: 2.6vh; padding: 0 1.8vw; }
+  .ask h2 { font-size: 6vh; max-width: 74vw; margin-bottom: 0; }
+  .ask .button { height: 6.4vh; font-size: 2.6vh; padding: 0 var(--s4); margin-top: var(--s2); }
 </style>
 </head>
 <body>
@@ -249,7 +273,7 @@
 </section>
 
 <section data-slide>
-  <div class="split">
+  <div class="split problem">
     <div class="stack">
       <h2>O que a empresa sabe está espalhado, e a IA espalha mais rápido</h2>
       <ul>
@@ -296,15 +320,35 @@
 </section>
 
 <section data-slide>
-  <h2>Você pede. O time rascunha. Você aprova.</h2>
-  <div class="flow">
-    <div class="card step"><span class="figure nina working"></span><span class="name">Nina</span><p>levanta os números, com fonte</p><p class="role">colega de IA</p></div>
-    <div class="card step draft"><span class="figure tomas working"></span><span class="name">Tomás</span><p>rascunha a proposta numa cópia à parte</p><span class="diff rem">Revisão da régua: a cada trimestre</span><span class="diff add">Revisão da régua: todo mês</span><p class="role">colega de IA</p></div>
-    <div class="card step"><span class="figure helena thinking"></span><span class="name">Helena</span><p>revisa, só lê</p><p class="role">colega de IA</p></div>
-    <div class="card step you"><span class="button">Aprovar</span><span class="name">Você</span><p>vê o que mudou e aprova, ou não</p><span class="signed">Rascunho de Tomás · <b>aprovado por você</b></span></div>
+  <h2>Todo mundo muda o mesmo arquivo, e cada mudança fica à vista</h2>
+  <div class="proof">
+    <div class="card doc">
+      <div class="doc-head">
+        <span class="doc-title">Régua de preços<small>Operação · a versão que vale</small></span>
+        <span class="badge draft">Rascunho de Tomás</span>
+      </div>
+      <p>Vale para todos os canais. Quem revisa é a operação, com o financeiro.</p>
+      <div class="diffs">
+        <span class="diff rem">Revisão da régua: a cada trimestre</span>
+        <span class="diff add">Revisão da régua: todo mês, pela operação</span>
+      </div>
+      <span class="note"><b>Ana:</b> confirma com o financeiro antes de valer?</span>
+      <div class="actions"><span class="button">Aprovar</span><span class="link quiet">Editar</span><span class="link quiet">Comentar</span></div>
+    </div>
+    <div class="card history">
+      <h3>Histórico</h3>
+      <div class="event"><span class="figure tomas working"></span><p><b>Tomás</b>, colega de IA, rascunhou a revisão mensal<small>agora</small></p></div>
+      <div class="event"><span class="initial">A</span><p><b>Ana</b> comentou no trecho da revisão<small>há 20 minutos</small></p></div>
+      <div class="event"><span class="initial">R</span><p><b>Rafa</b> aprovou o rascunho da Bia em Processos<small>ontem</small></p></div>
+      <div class="event"><span class="initial">↺</span><p><b>Versão de 21/10</b>, guardada para voltar quando quiser · <span class="restore">Restaurar</span><small>21/10</small></p></div>
+    </div>
   </div>
-  <p>Cada versão guarda dois nomes: quem rascunhou e quem aprovou.</p>
-  <p class="source">Exemplo ilustrativo com as figuras do time da marca. Fluxo do quadro de posicionamento (25/10).</p>
+  <div class="pillars">
+    <p><strong>Uma fonte só.</strong> Pessoas e colegas de IA mudam o mesmo arquivo, não cópias.</p>
+    <p><strong>Tudo à vista.</strong> O que mudou, quem mudou e quando, dentro do documento.</p>
+    <p><strong>Qualquer um altera.</strong> Edita, comenta ou pede. Nada vale até aprovar, e tudo se desfaz.</p>
+  </div>
+  <p class="source">Tela ilustrativa. D-048 (28/10); Princípios 2, 6 e 7; cada versão guarda quem rascunhou e quem aprovou (Posicionamento do site, 24/10).</p>
   <svg class="symbol" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Nanquim"><line x1="10.8" y1="52.9" x2="53.4" y2="52.9" stroke="#1B1E24" stroke-width="7.3" stroke-linecap="round"/><path d="M11.62 45.87 C10.78 45.48 9.72 44.39 9.23 43.42 C7.34 39.69 7.42 32.05 9.40 26.62 C11.80 20.05 17.93 14.82 27.67 11.02 C33.82 8.62 39.42 7.43 43.72 7.61 C46.93 7.74 49.12 8.55 50.94 10.26 C53.77 12.93 55.30 16.76 56.24 23.55 C56.56 25.84 56.61 34.38 56.32 36.47 C56.22 37.18 56.07 38.26 55.99 38.89 C55.49 42.60 54.32 45.11 52.72 45.93 C52.20 46.20 51.65 46.20 32.25 46.20 C12.33 46.20 12.33 46.20 11.62 45.87 Z M20.90 31.7a4.2 7.2 0 1 0 8.40 0a4.2 7.2 0 1 0 -8.40 0Z M35.20 31.7a4.2 7.2 0 1 0 8.40 0a4.2 7.2 0 1 0 -8.40 0Z" fill="#2254C1" fill-rule="evenodd"/></svg>
 </section>
 
@@ -315,7 +359,7 @@
     <div class="card stat"><b>67</b><p>registros de uso, do que travou ao que ficou bom</p><small>Feedback de uso, 20/10 a 28/10</small></div>
     <div class="card stat"><b>0.20</b><p>versão para Mac, com site no ar e fila de convites</p><small>Sobre o site, 28/10</small></div>
   </div>
-  <p>Primeiro sinal de fora: na Mecanizou, produto trabalha em três ferramentas (Claude, Obsidian e GitHub) para um trabalho só. <mark>Nada está medido ainda.</mark> Ninguém de fora foi entrevistado.</p>
+  <p class="after">Primeiro sinal de fora: na Mecanizou, produto trabalha em três ferramentas (Claude, Obsidian e GitHub) para um trabalho só. <mark>Nada está medido ainda.</mark> Ninguém de fora foi entrevistado.</p>
   <p class="source">Decisões; Feedback de uso; Relato da Mecanizou (25/10); Sobre o site; Métricas; Usuários.</p>
   <svg class="symbol" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Nanquim"><line x1="10.8" y1="52.9" x2="53.4" y2="52.9" stroke="#1B1E24" stroke-width="7.3" stroke-linecap="round"/><path d="M11.62 45.87 C10.78 45.48 9.72 44.39 9.23 43.42 C7.34 39.69 7.42 32.05 9.40 26.62 C11.80 20.05 17.93 14.82 27.67 11.02 C33.82 8.62 39.42 7.43 43.72 7.61 C46.93 7.74 49.12 8.55 50.94 10.26 C53.77 12.93 55.30 16.76 56.24 23.55 C56.56 25.84 56.61 34.38 56.32 36.47 C56.22 37.18 56.07 38.26 55.99 38.89 C55.49 42.60 54.32 45.11 52.72 45.93 C52.20 46.20 51.65 46.20 32.25 46.20 C12.33 46.20 12.33 46.20 11.62 45.87 Z M20.90 31.7a4.2 7.2 0 1 0 8.40 0a4.2 7.2 0 1 0 -8.40 0Z M35.20 31.7a4.2 7.2 0 1 0 8.40 0a4.2 7.2 0 1 0 -8.40 0Z" fill="#2254C1" fill-rule="evenodd"/></svg>
 </section>
