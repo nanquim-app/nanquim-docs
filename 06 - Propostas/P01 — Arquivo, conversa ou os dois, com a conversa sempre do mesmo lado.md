@@ -44,7 +44,7 @@ Enquanto a proposta não for aprovada, isto é o plano; vira tarefa na aprovaç�
 - [ ] Decisão que revoga a D-012 e, em parte, a D-044, depois da aprovação — André
 - [ ] Controle de três estados no alto, conversa à direita, transições, estados vazios, divisória e três atalhos — sessão do app
 - [ ] Medir a largura mínima de "Os dois" no notebook do fundador — André
-- [ ] "Pedido" no Glossário — André
+- [x] "Pedido" no Glossário — head-of-product, 30/10
 - [ ] Proposta própria para os modos de ver o arquivo e o "Manter aberto" — André
 - [ ] Rever a H01: repontuar ou trocar o enunciado para "três estados com a conversa fixa" — André
 
