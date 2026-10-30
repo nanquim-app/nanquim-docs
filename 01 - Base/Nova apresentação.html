@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="presentation" content="slides">
+<title>Nova apresentação</title>
+<style>
+  :root { --ink: #1d1d1f; --muted: #6e6e73; --pen: #2f5bd3; --paper: #fbfaf7; }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--paper); color: var(--ink); font-family: -apple-system, "Inter", "Segoe UI", sans-serif; }
+  section { width: 100vw; height: 100vh; aspect-ratio: 16 / 9; padding: 8vh 9vw; display: flex; flex-direction: column; justify-content: center; gap: 3vh; }
+  h1 { font-size: 7vh; line-height: 1.05; letter-spacing: -0.02em; }
+  h2 { font-size: 5vh; letter-spacing: -0.01em; }
+  p, li { font-size: 3vh; line-height: 1.4; color: var(--muted); }
+  ul { padding-left: 1.2em; display: flex; flex-direction: column; gap: 1.4vh; }
+  .line { width: 8vh; height: 0.6vh; background: var(--pen); border-radius: 1vh; }
+</style>
+</head>
+<body>
+<section data-slide>
+  <div class="line"></div>
+  <h1>Nova apresentação</h1>
+  <p>Uma frase sobre o que esta apresentação mostra.</p>
+</section>
+<section data-slide>
+  <h2>Hoje</h2>
+  <ul>
+    <li>O contexto</li>
+    <li>O que propomos</li>
+    <li>Próximos passos</li>
+  </ul>
+</section>
+<section data-slide>
+  <h2>Obrigado</h2>
+  <p>Perguntas e próximos passos.</p>
+</section>
+</body>
+</html>
