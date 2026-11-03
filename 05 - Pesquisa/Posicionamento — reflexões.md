@@ -1,12 +1,12 @@
 ---
 tags: [nanquim/pesquisa]
 status: ativo
-atualizado: 2026-11-02
+atualizado: 2026-11-03
 ---
 
 # Posicionamento: reflexões
 
-Nota viva da discussão de posicionamento. Nada aqui é decisão: o que for decidido entra em [[03 - Decisões/Decisões|Decisões]] e nas notas de base. Para comparar as apostas e dar sua avaliação, use o [[05 - Pesquisa/Posicionamento — mapa interativo.html|Mapa interativo]].
+Nota viva da discussão de posicionamento. Nada aqui é decisão: o que for decidido entra em [[03 - Decisões/Decisões|Decisões]] e nas notas de base. Para comparar as apostas e dar sua avaliação, use o [[05 - Pesquisa/Posicionamento — mapa interativo.html|Mapa interativo]]. A proposta inteira, em slides, está na [[05 - Pesquisa/Posicionamento — apresentação.html|Apresentação de posicionamento]].
 
 ## Como iterar
 
@@ -41,7 +41,7 @@ Nota viva da discussão de posicionamento. Nada aqui é decisão: o que for deci
 Fonte: [página principal](https://letter.dev/), [preços](https://letter.dev/pricing) e [descrição para agentes](https://letter.dev/agents.md), lidas em 02/11/2026. Uma busca rápida não achou fonte independente, e a página mostra logos, sem depoimentos nem resultados. Vale como referência de mensagem, não como prova de tração.
 
 - **Vende um trabalho, não um mecanismo.** O nicho está em "growth engineering", e o plano mais escolhido se descreve como "A growth engineer shipping every day".
-- **Não espera um pedido.** Lê o site e o mercado, acha o que está errado, propõe o que fazer e constrói. O Nanquim hoje funciona quase só quando alguém pede, com as rotinas como exceção.
+- **Não espera um pedido.** Lê o site e o mercado, acha o que está errado, propõe o que fazer, constrói a mudança à parte e abre para aprovação (descrição para agentes, 02/11/2026). O Nanquim hoje funciona quase só quando alguém pede, com as rotinas como exceção.
 - **Blocos prontos do ofício.** Com nome próprio, e dizendo quais ferramentas substituem.
 - **Filtra pelo hábito.** "Built for teams that grow with git" exclui muita gente logo na primeira linha.
 - **O que não se transfere.** O público dele já sabe ler uma alteração de código, então ele não enfrenta nosso problema difícil: alguém que não programa revisar o trabalho.
@@ -79,10 +79,11 @@ Servem para comparar as apostas. Só contam para o portão do [[06 - Propostas/P
 
 ## Teste antes de escolher o público
 
-Rodar à mão, no product-planning, o ciclo de achar o que está errado e propor rascunhos, usando o Revisor e uma rotina. Se os achados forem úteis para o fundador e o Rafa e virarem rascunhos aprovados, o ciclo vira o centro do conceito. Se virarem ruído, ficamos no modelo de pedir e aprovar.
+Rodar à mão, no product-planning, o ciclo de achar o que está errado e propor rascunhos, usando o Revisor e uma rotina. Com o fundador, o Rafa e pelo menos uma pessoa de operação ou comercial revisando, já que os dois são de produto. Se os achados forem úteis e virarem rascunhos aprovados, o ciclo passa a fazer parte do conceito, como o que mantém a fonte em dia. Se virarem ruído, ficamos no modelo de pedir e aprovar.
 
 ## Registro das rodadas
 
 | Data | O que mudou |
 |---|---|
 | 2026-11-02 | Primeira versão, a partir da discussão sobre o Letter. Notas do mapa são a leitura do assistente, sem avaliação do fundador. Revisão do Revisor aplicada: notas de startups e da combinação revistas, médias retiradas por parecerem dado. |
+| 2026-11-03 | Apresentação de posicionamento: a proposta inteira em dez slides, com o ciclo como o que mantém a fonte em dia, sem revogar a D-048. |

@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="presentation" content="slides">
+<title>Posicionamento do Nanquim: entrar estreito, chegar longe</title>
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  :root {
+    --paper: #ffffff; --app: #f6f7f8; --subtle: #eceef0;
+    --ink: #1b1e24; --ink-2: #53575f; --ink-3: #686c73;
+    --line: #e0e2e5; --pencil: #8a8e96;
+    --pen: #2254c1; --pen-soft: #e9f0ff; --pen-text: #1b3f97;
+    --grifo: #fcea7f;
+    --display: "Instrument Sans Variable", "Instrument Sans", -apple-system, "Inter", "Segoe UI", sans-serif;
+  }
+  body { font-family: -apple-system, "Inter", "Segoe UI", sans-serif; color: var(--ink); background: var(--paper); }
+  section { width: 100vw; height: 100vh; aspect-ratio: 16 / 9; padding: 8vh 9vw 9vh; display: flex; flex-direction: column; justify-content: center; gap: 3vh; position: relative; background: var(--paper); overflow: hidden; }
+  section::after { content: attr(data-mark); position: absolute; left: 9vw; bottom: 4.5vh; font-size: 1.8vh; color: var(--ink-3); }
+  h1 { font: 600 7vh/1.05 var(--display); letter-spacing: -0.024em; max-width: 18ch; }
+  h2 { font: 600 5vh/1.12 var(--display); letter-spacing: -0.018em; max-width: 26ch; }
+  h3 { font: 600 2.8vh/1.25 var(--display); margin-bottom: 0.8vh; }
+  p, li { font-size: 2.8vh; line-height: 1.4; }
+  .sub { color: var(--ink-2); max-width: 60ch; }
+  .note { font-size: 2vh; color: var(--ink-3); }
+  ul, ol { padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 1.6vh; }
+
+  .cover { background: var(--app); justify-content: flex-end; padding-bottom: 14vh; }
+  .cover .who { font-size: 2.6vh; color: var(--ink-2); }
+  .stroke { display: block; width: 26vw; height: 0; margin: 1vh 0 2vh; border-top: 0.5vh solid var(--pen); }
+
+  table { border-collapse: collapse; width: 100%; }
+  th, td { text-align: left; vertical-align: top; padding: 1.4vh 1.4vw 1.4vh 0; border-top: 1px solid var(--line); font-size: 2.4vh; line-height: 1.35; }
+  th { color: var(--ink-3); font-weight: 500; font-size: 2vh; border-top: 0; }
+  td:first-child { color: var(--ink-2); width: 17%; }
+  td:nth-child(2) { width: 38%; font-weight: 600; }
+
+  .cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3vw; }
+  .cols > div { border-top: 0.4vh solid var(--pen); padding-top: 2vh; }
+  .cols .q { font-size: 2.2vh; color: var(--ink-3); margin-bottom: 1vh; }
+  .cols .a { font: 600 3.2vh/1.2 var(--display); margin-bottom: 1.2vh; }
+  .cols .d { font-size: 2.3vh; color: var(--ink-2); }
+  .cols .later { border-top: 0.4vh dashed var(--pencil); }
+
+  .pencil { border-left: 0.35vh dashed var(--pencil); padding-left: 1.6vw; }
+  .ink { border-left: 0.35vh solid var(--pen); padding-left: 1.6vw; }
+
+  .statement { font: 500 3.4vh/1.4 var(--display); max-width: 54ch; }
+  .statement b { font-weight: 700; color: var(--pen-text); }
+  .statement + .statement { color: var(--ink-2); font-size: 2.8vh; }
+
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 4vw; align-items: start; }
+  .tag { font-size: 2vh; color: var(--ink-3); margin-bottom: 0.6vh; }
+  .quote { font: 600 3vh/1.25 var(--display); }
+
+  .cycle { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.6vw; }
+  .cycle > div { padding: 2vh 1.2vw; background: var(--app); border-radius: 1vh; }
+  .cycle > div.sign { background: var(--pen-soft); }
+  .cycle h3 { font-size: 3vh; }
+  .cycle p { font-size: 2.3vh; color: var(--ink-2); }
+
+  ol.steps { counter-reset: s; }
+  ol.steps li { counter-increment: s; display: grid; grid-template-columns: 4vh 1fr; gap: 1.2vw; }
+  ol.steps li::before { content: counter(s); font: 600 2.8vh/1.4 var(--display); color: var(--pen); }
+  ol.steps li span { color: var(--ink-2); }
+  mark { background: var(--grifo); color: inherit; padding: 0 0.3vw; }
+</style>
+</head>
+<body>
+
+<section data-slide class="cover">
+  <span class="stroke"></span>
+  <h1>Posicionamento do Nanquim: entrar estreito, chegar longe</h1>
+  <p class="who">Uma proposta a lápis para o André decidir, depois da conversa sobre o Letter. 03/11/2026.</p>
+</section>
+
+<section data-slide data-mark="Fontes: Posicionamento e voz da Marca; site; Visão e tese; Critério de pronto para o beta">
+  <h2>Hoje contamos três histórias, e o critério do beta aponta para um quarto público</h2>
+  <table>
+    <thead><tr><th>Onde</th><th>O que diz</th><th>Para quem</th></tr></thead>
+    <tbody>
+      <tr><td>Marca</td><td>Seu time de IA faz. Você aprova.</td><td>Pessoas de negócio que não são de tecnologia</td></tr>
+      <tr><td>Site</td><td>One set of files. Your whole team. Your AI.</td><td>Startups de 5 a 30 pessoas que já usam Claude Code ou Cursor; na descrição do espaço do site, pessoas de negócio</td></tr>
+      <tr><td>Visão e tese</td><td>Fonte única da verdade da empresa</td><td>Times de negócio; primeiro fundadores, PMs e analistas</td></tr>
+      <tr><td>Critério do beta</td><td>Sem frase própria</td><td>Times pequenos, sem engenharia por perto</td></tr>
+    </tbody>
+  </table>
+  <p class="sub">Antes de escolher uma frase melhor, falta escolher para quem ela é.</p>
+</section>
+
+<section data-slide data-mark="Fonte: letter.dev, páginas principal, preços e para agentes, lidas em 02/11/2026; sem prova independente de tração">
+  <h2>O Letter vende um ofício e não espera ser chamado</h2>
+  <ul>
+    <li class="ink"><b>Nomeia o trabalho, não a tecnologia.</b> "Growth engineering", e o plano mais escolhido se descreve como "A growth engineer shipping every day".</li>
+    <li class="ink"><b>Acha, propõe e constrói sozinho.</b> Lê o site e o mercado, constrói a mudança à parte e abre para alguém aprovar.</li>
+    <li class="ink"><b>Filtra pelo hábito.</b> "Built for teams that grow with git" exclui muita gente logo na primeira linha.</li>
+    <li class="pencil"><b>O que não serve para nós:</b> o público dele já lê código. O nosso problema é fazer quem não programa assinar o trabalho.</li>
+  </ul>
+</section>
+
+<section data-slide data-mark="Decisões reabertas: Mapa de posicionamento, 02/11/2026. Cowork e Microsoft: Axios, 30/01/2026; Yahoo Finance, sem data conferida">
+  <h2>Startup, produto e negócio respondem a perguntas diferentes</h2>
+  <div class="cols">
+    <div><p class="q">Em que empresa entramos</p><p class="a">Startups</p><p class="d">Em que alguém já constrói com IA e o resto do time precisa entrar.</p></div>
+    <div><p class="q">Por qual trabalho</p><p class="a">Decisões de produto com as áreas</p><p class="d">Da demanda à aprovação, com produto e área no mesmo material.</p></div>
+    <div class="later"><p class="q">Até onde queremos chegar</p><p class="a">A empresa inteira</p><p class="d">Times de negócio são o destino, não a porta.</p></div>
+  </div>
+  <p class="sub">Como porta de entrada, times de negócio reabrem cinco decisões (D-008, D-009, D-017, D-026, D-043) e ficam no caminho que Cowork e Microsoft estão tomando.</p>
+</section>
+
+<section data-slide data-mark="Proposta a lápis, sem teste com gente de fora. O &quot;achar&quot; ainda não existe no produto (Mapa de posicionamento). Diferença: Posicionamento do site, 24/10/2026">
+  <h2>A proposta de posicionamento</h2>
+  <p class="statement">Para <b>startups em que alguém já constrói com IA</b> e o resto do time precisa decidir junto, o Nanquim é <b>onde produto e as áreas decidem a partir do mesmo material</b>: a IA acha o que está errado e rascunha, e cada área assina.</p>
+  <p class="statement">Diferente do Cowork e do Notion, o registro do trabalho fica nos arquivos da empresa, e não na nuvem do fornecedor.</p>
+</section>
+
+<section data-slide data-mark="Lugar-comum: Posicionamento do site, 24/10/2026. Fonte única como centro: D-048. A frase candidata não foi testada">
+  <h2>O que fica, o que muda de lugar e o que sai da manchete</h2>
+  <div class="two">
+    <div>
+      <div class="ink" style="margin-bottom:3vh"><p class="tag">Fica, como assinatura</p><p class="quote">O time rascunha a lápis. Você passa a nanquim.</p></div>
+      <div class="pencil"><p class="tag">Candidata a testar nas conversas</p><p class="quote">As decisões da empresa em dia. A IA rascunha, cada área assina.</p></div>
+    </div>
+    <ul>
+      <li><b>Muda de lugar:</b> "fonte única da verdade" continua sendo o centro do produto (D-048), mas como destino, não como manchete.</li>
+      <li><b>Sai da manchete:</b> "time de IA" e "aprova antes de agir", que viraram lugar-comum.</li>
+      <li><b>Fica no apoio:</b> arquivos da empresa e os dois nomes em cada versão.</li>
+    </ul>
+  </div>
+</section>
+
+<section data-slide data-mark="Contagem: Mapa de posicionamento, aposta combinada, 02/11/2026">
+  <h2>O produto ganha um ciclo que mantém o material em dia</h2>
+  <div class="cycle">
+    <div><h3>Achar</h3><p>Decisão que contradiz outra, número sem fonte, documento velho.</p></div>
+    <div><h3>Propor</h3><p>O que decidir esta semana, a partir das demandas e dos sinais.</p></div>
+    <div><h3>Rascunhar</h3><p>Proposta, spec e atualização para investidores.</p></div>
+    <div class="sign"><h3>Assinar</h3><p>Produto e área aprovam. Fica o nome de quem rascunhou e de quem assinou.</p></div>
+  </div>
+  <p class="sub">Para esta aposta, 1 item já temos, 5 temos em parte e 3 faltam. Os que faltam: a lista de achados, trazer como rascunho o que foi feito no Claude Code e o modelo de atualização para investidores. Nada disso reabre decisões.</p>
+</section>
+
+<section data-slide data-mark="Fontes: Usuários; Relato da Mecanizou, 25/10/2026; Feedback de uso; Posicionamento do site, 24/10/2026; Critério de pronto para o beta">
+  <h2>A aposta ainda está a lápis: a evidência é fina</h2>
+  <ul>
+    <li class="pencil"><b>Um único relato.</b> O seu, sobre como a Mecanizou trabalha sem o Nanquim. O uso no product-planning ainda não foi exercitado.</li>
+    <li class="pencil"><b>Ninguém de fora foi ouvido.</b> A banca das frases era simulada, e as fontes externas são de fornecedores.</li>
+    <li class="pencil"><b>O Cowork pode copiar o ciclo.</b> O que custa mais para ele é o trabalho morar na empresa. Áreas diferentes assinando também pesa, mas isso é opinião nossa.</li>
+    <li class="pencil"><b>Contraria o critério do beta,</b> que pede times sem engenharia por perto. Aquela proposta precisa ser revista.</li>
+  </ul>
+</section>
+
+<section data-slide data-mark="Três conversas é chute desta proposta. O sinal da terceira semana vem do posicionamento do site">
+  <h2>Como passar a nanquim</h2>
+  <ol class="steps">
+    <li><div><b>Testar o ciclo à mão no product-planning.</b> <span>Com você, o Rafa e pelo menos uma pessoa de operação ou comercial revisando. Se os achados virarem rascunhos aprovados, o ciclo entra no conceito.</span></div></li>
+    <li><div><b>Conversar com pelo menos três startups.</b> <span>Cada uma com alguém que já constrói com IA e alguém que não programa e revisa. Só contam para o beta depois de rever o critério.</span></div></li>
+    <li><div><b>Abrir o beta com esse filtro.</b> <span>Sem uma pessoa que não programa, a tese de decidir junto não é testada.</span></div></li>
+    <li><div><b>Olhar a terceira semana.</b> <span>Se ninguém que não programa continua aprovando sem a gente pedir, sobra um Obsidian melhor, e a aposta cai.</span></div></li>
+  </ol>
+</section>
+
+<section data-slide data-mark="O que for decidido entra em Decisões e nas notas de base">
+  <h2>O que preciso que você decida</h2>
+  <ol class="steps">
+    <li><div><b>Levar esta aposta às conversas:</b> <span>startups, pelo trabalho de decisões de produto com as áreas.</span></div></li>
+    <li><div><b>Rever o público do critério do beta</b> <span>para bater com essa aposta.</span></div></li>
+    <li><div><b>Tratar o ciclo como o que mantém a fonte em dia,</b> <span>sem revogar a D-048.</span></div></li>
+    <li><div><b>Rever a promessa da Marca e a frase de Visão e tese,</b> <span>se a aposta for levada. A Marca fica com quem cuida daquela pasta.</span></div></li>
+    <li><div><b>Registrar em Decisões a conta do Nanquim e a conexão de leitura com o Drive,</b> <span>ainda não conferida, que divergem da D-008, da D-017 e da D-043.</span></div></li>
+  </ol>
+</section>
+
+</body>
+</html>
